@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/orientable",
+    "textures": {
+        "front": "mel:block/aura_grinder_front",
+        "side": "mel:block/aura_grinder_side",
+        "top": "mel:block/aura_grinder_top"
+    }
+}

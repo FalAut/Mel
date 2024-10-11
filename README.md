@@ -1,2 +1,0 @@
-# Mel
-Minecraft Modpack

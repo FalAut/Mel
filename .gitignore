@@ -1,0 +1,57 @@
+**
+!.gitignore
+!.prettierrc
+!.README.md
+!CHANGELOG.md
+!manifest.json
+!modlist.html
+!.github/
+!.github/**
+
+## Config
+!config/
+!config/fml.toml
+!config/forge-common.toml
+!config/modernfix-mixins.properties
+!config/ftbquests
+!config/ftbquests/**
+!config/capsule
+!config/capsule/rewards
+!config/capsule-common.toml
+!config/patchouli-client.toml
+!config/invtweaks-client.toml
+!config/ars_nouveau-client.toml
+!config/ars_nouveau-common.toml
+!config/farmingforblockheads
+!config/farmingforblockheads/**
+!config/embeddium-options.json
+!config/embeddium++.toml
+!config/sodium-extra-options.json
+!config/occultism-client.toml
+
+## Defaultconfigs
+!defaultconfigs/
+!defaultconfigs/ftbchunks
+!defaultconfigs/ftbchunks/client-config.snbt
+!defaultconfigs/ftbquests
+!defaultconfigs/ftbquests/client-config.snbt
+!defaultconfigs/wizards_reborn-server.toml
+!defaultconfigs/immersiveengineering-server.toml
+!defaultconfigs/fluxnetworks-server.toml
+
+## KubeJS
+!kubejs/
+!kubejs/**
+kubejs/README.txt
+kubejs/jsconfig.json
+kubejs/config/probejs.json
+
+## Hotai
+!hotai/
+!hotai/**
+
+!ldlib/
+!ldlib/**
+
+!resourcepacks/
+!resourcepacks/**

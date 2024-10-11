@@ -1,0 +1,32 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "chapter6"
+	group: "334FCA74F6C078BA"
+	id: "1560997510B2B040"
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			id: "692E2AD97A3FD21D"
+			tasks: [{
+				id: "78E213153A0F40D1"
+				item: "wizards_reborn:arcanum"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -1.0d
+		}
+		{
+			id: "4F0FF40FCC56925D"
+			tasks: [{
+				id: "3485DFA46D0E37A2"
+				item: "wizards_reborn:arcane_workbench"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -1.0d
+		}
+	]
+	title: "chapter6"
+}

@@ -1,0 +1,58 @@
+name: Create Modpack Release
+
+on:
+    push:
+        branches:
+            - main
+        paths:
+            - "CHANGELOG.md"
+
+jobs:
+    create-release:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 2
+
+            - name: Check CHANGELOG.md modification and set up environment
+              id: setup
+              run: |
+                  if git diff --name-only HEAD^ HEAD | grep -q "CHANGELOG.md"; then
+                    LATEST_VERSION=$(sed -n '/^##\s*v[0-9]/p' CHANGELOG.md | head -n1 | sed 's/^## v//')
+                    echo "changelog_modified=true" >> $GITHUB_OUTPUT
+                    echo "VERSION=$LATEST_VERSION" >> $GITHUB_OUTPUT
+                    echo "ZIP_NAME=Mel-$LATEST_VERSION.zip" >> $GITHUB_OUTPUT
+                  else
+                    echo "changelog_modified=false" >> $GITHUB_OUTPUT
+                  fi
+
+            - name: Update manifest.json version
+              if: steps.setup.outputs.changelog_modified == 'true'
+              run: |
+                  sed -i '/"name": *"Mel",/!b;n;s/"version": *"[^"]*"/"version": "${{ steps.setup.outputs.VERSION }}"/' manifest.json
+                  echo "Updated manifest.json with version ${{ steps.setup.outputs.VERSION }}"
+
+            - name: Create and package modpack
+              if: steps.setup.outputs.changelog_modified == 'true'
+              run: |
+                  mkdir overrides
+                  mv config defaultconfigs hotai kubejs ldlib overrides/
+                  zip -r ${{ steps.setup.outputs.ZIP_NAME }} overrides manifest.json modlist.html
+
+            - name: Extract CHANGELOG for current version
+              if: steps.setup.outputs.changelog_modified == 'true'
+              run: |
+                  sed -n "/^## v${{ steps.setup.outputs.VERSION }}/,/^## /p" CHANGELOG.md | sed '$d' > extracted_changelog.txt
+
+            - name: Create GitHub Release
+              if: steps.setup.outputs.changelog_modified == 'true'
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                  gh release create "v${{ steps.setup.outputs.VERSION }}" \
+                    ${{ steps.setup.outputs.ZIP_NAME }} \
+                    --title "Mel v${{ steps.setup.outputs.VERSION }}" \
+                    --notes-file extracted_changelog.txt

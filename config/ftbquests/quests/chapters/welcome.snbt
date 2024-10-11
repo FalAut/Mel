@@ -1,0 +1,82 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "welcome"
+	group: ""
+	id: "14131A6A0940B687"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			can_repeat: true
+			icon: "akashictome:tome"
+			id: "4767FCFEA4935927"
+			rewards: [{
+				id: "5D1D445DE53248BE"
+				item: {
+					Count: 1
+					id: "akashictome:tome"
+					tag: {
+						"akashictome:data": {
+							ae2: {
+								Count: 1b
+								id: "ae2:guide"
+							}
+							ars_nouveau: {
+								Count: 1b
+								id: "ars_nouveau:worn_notebook"
+							}
+							botania: {
+								Count: 1b
+								id: "botania:lexicon"
+								tag: {
+									"botania:elven_unlock": 1b
+								}
+							}
+							modularrouters: {
+								Count: 1b
+								id: "patchouli:guide_book"
+								tag: {
+									"patchouli:book": "modularrouters:book"
+								}
+							}
+							naturesaura: {
+								Count: 1b
+								id: "patchouli:guide_book"
+								tag: {
+									"patchouli:book": "naturesaura:book"
+								}
+							}
+						}
+					}
+				}
+				team_reward: true
+				type: "item"
+			}]
+			tasks: [{
+				id: "39AD7ABE1D560F88"
+				type: "checkmark"
+			}]
+			title: "{item.akashictome.tome}"
+			x: -0.5d
+			y: -2.0d
+		}
+		{
+			can_repeat: true
+			icon: "minecraft:poppy"
+			id: "7544C1D3E270BD2B"
+			rewards: [{
+				id: "74760683F391AD05"
+				item: "minecraft:poppy"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7CEA0107A75BD394"
+				type: "checkmark"
+			}]
+			x: -1.0d
+			y: -3.5d
+		}
+	]
+	title: "welcome"
+}

@@ -1,0 +1,179 @@
+{
+    "temperature": 0.7,
+    "downfall": 0.8,
+    "has_precipitation": false,
+    "carvers": {},
+    "effects": {
+        "fog_color": 12638463,
+        "foliage_color": 2210437,
+        "grass_color": 2031567,
+        "sky_color": 7978751,
+        "water_color": 7978751,
+        "water_fog_color": 329011
+    },
+    "features": [
+        [],
+        [],
+        ["minecraft:forest_rock", "ars_nouveau:placed_lights"],
+        [],
+        [],
+        [],
+        [],
+        ["thermal:tin_ore", "thermal:lead_ore", "thermal:silver_ore", "thermal:nickel_ore"],
+        [],
+        [
+            "minecraft:forest_flowers",
+            "minecraft:patch_large_fern",
+            "minecraft:trees_plains",
+            "minecraft:brown_mushroom_normal",
+            "minecraft:red_mushroom_normal",
+            "minecraft:patch_sugar_cane",
+            "minecraft:patch_pumpkin",
+            "mel:placed_dense_archwoods",
+            "ars_nouveau:mojang_grass",
+            "ars_nouveau:mojang_flowers",
+            "botania:mystical_flowers",
+            "ars_nouveau:placed_berry_bush"
+        ],
+        ["minecraft:freeze_top_layer"]
+    ],
+    "spawn_costs": {},
+    "spawners": {
+        "creature": [
+            {
+                "type": "ars_nouveau:starbuncle",
+                "maxCount": 5,
+                "minCount": 3,
+                "weight": 2
+            },
+            {
+                "type": "ars_nouveau:drygmy",
+                "maxCount": 3,
+                "minCount": 1,
+                "weight": 2
+            },
+            {
+                "type": "ars_nouveau:whirlisprig",
+                "maxCount": 3,
+                "minCount": 1,
+                "weight": 2
+            },
+            {
+                "type": "ars_nouveau:blazing_weald_walker",
+                "maxCount": 1,
+                "minCount": 1,
+                "weight": 3
+            },
+            {
+                "type": "ars_nouveau:cascading_weald_walker",
+                "maxCount": 1,
+                "minCount": 1,
+                "weight": 3
+            },
+            {
+                "type": "ars_nouveau:flourishing_weald_walker",
+                "maxCount": 1,
+                "minCount": 1,
+                "weight": 3
+            },
+            {
+                "type": "ars_nouveau:vexing_weald_walker",
+                "maxCount": 1,
+                "minCount": 1,
+                "weight": 3
+            },
+            {
+                "type": "minecraft:sheep",
+                "maxCount": 4,
+                "minCount": 4,
+                "weight": 12
+            },
+            {
+                "type": "minecraft:pig",
+                "maxCount": 4,
+                "minCount": 4,
+                "weight": 10
+            },
+            {
+                "type": "minecraft:chicken",
+                "maxCount": 4,
+                "minCount": 4,
+                "weight": 10
+            },
+            {
+                "type": "minecraft:cow",
+                "maxCount": 4,
+                "minCount": 4,
+                "weight": 8
+            }
+        ],
+        "monster": [
+            {
+                "type": "minecraft:spider",
+                "maxCount": 4,
+                "minCount": 4,
+                "weight": 100
+            },
+            {
+                "type": "minecraft:zombie",
+                "maxCount": 4,
+                "minCount": 4,
+                "weight": 95
+            },
+            {
+                "type": "minecraft:zombie_villager",
+                "maxCount": 1,
+                "minCount": 1,
+                "weight": 5
+            },
+            {
+                "type": "minecraft:skeleton",
+                "maxCount": 4,
+                "minCount": 4,
+                "weight": 100
+            },
+            {
+                "type": "minecraft:creeper",
+                "maxCount": 4,
+                "minCount": 4,
+                "weight": 100
+            },
+            {
+                "type": "minecraft:slime",
+                "maxCount": 4,
+                "minCount": 4,
+                "weight": 100
+            },
+            {
+                "type": "minecraft:enderman",
+                "maxCount": 4,
+                "minCount": 1,
+                "weight": 10
+            },
+            {
+                "type": "minecraft:witch",
+                "maxCount": 1,
+                "minCount": 1,
+                "weight": 5
+            },
+            {
+                "type": "ars_nouveau:wilden_stalker",
+                "maxCount": 10,
+                "minCount": 4,
+                "weight": 100
+            },
+            {
+                "type": "ars_nouveau:wilden_guardian",
+                "maxCount": 10,
+                "minCount": 4,
+                "weight": 100
+            },
+            {
+                "type": "ars_nouveau:wilden_hunter",
+                "maxCount": 10,
+                "minCount": 4,
+                "weight": 100
+            }
+        ]
+    }
+}

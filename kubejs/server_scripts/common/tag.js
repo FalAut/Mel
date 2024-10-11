@@ -1,0 +1,11 @@
+ServerEvents.tags("item", (event) => {
+    event.add("curios:charm", "mel:dream_lantern");
+    // event.add("lychee:fire_immune", "botania:grass_seeds");
+    event.add("botania:special_floating_flowers", "mel:flowing_source_flower");
+});
+
+ServerEvents.tags("block", (event) => {
+    event.add("minecraft:dirt", ["white_concrete", "botania:enchanted_soil"]);
+    event.add("stripped_logs", /:stripped.*log$/);
+    event.add("botania:special_floating_flowers", "mel:flowing_source_flower");
+});

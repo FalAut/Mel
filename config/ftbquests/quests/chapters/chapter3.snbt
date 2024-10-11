@@ -1,0 +1,515 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "chapter3"
+	group: "334FCA74F6C078BA"
+	icon: "ae2:condenser"
+	id: "390976FF234B8E3A"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			id: "17B793516831F2C7"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "3FD4E48EA9DDF75D"
+				item: "ae2:condenser"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["65F0A7C685287E99"]
+			id: "5D69ACDC565C4370"
+			rewards: [{
+				id: "77EE0AFB79A4CEBE"
+				item: {
+					Count: 1
+					id: "botania:elementium_axe"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				dimension: "minecraft:the_nether"
+				id: "56028B0593E0E1C1"
+				type: "dimension"
+			}]
+			x: 10.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["17B793516831F2C7"]
+			id: "25652CCA98D82B4A"
+			tasks: [{
+				id: "2387881280661A11"
+				item: "ae2:matter_ball"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["610A725A0DF114D0"]
+			id: "75BAD40844484C00"
+			tasks: [{
+				id: "67B16617CB591EEE"
+				item: "thermal:machine_frame"
+				type: "item"
+			}]
+			x: 3.5d
+			y: -0.5d
+		}
+		{
+			dependencies: [
+				"4BC4F7F11BD34028"
+				"6D6FA7BE1A487FB3"
+			]
+			id: "5993C21DE70CE752"
+			tasks: [{
+				id: "13977FA22215C08B"
+				item: "thermal:machine_smelter"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["17B793516831F2C7"]
+			id: "20FEC8DA43340AD4"
+			tasks: [{
+				id: "6042C38C42B4C06C"
+				item: "mekanism:ingot_steel"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -1.0d
+		}
+		{
+			id: "17B1CA485924D72F"
+			tasks: [{
+				id: "0DF01AEF6F77467B"
+				item: "ae2:quartz_vibrant_glass"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["75BAD40844484C00"]
+			id: "525DF809BFD2F98E"
+			tasks: [{
+				id: "6FB994B521421CEA"
+				item: {
+					Count: 1
+					id: "thermal:machine_press"
+					tag: {
+						BlockEntityTag: {
+							Energy: 0
+							EnergyMax: 50000
+							EnergyRecv: 200
+							EnergySend: 200
+							RSControl: {
+								RSMode: 0b
+								RSThreshold: 0b
+							}
+							Sides: [B;
+								0b
+								0b
+								0b
+								0b
+								0b
+								0b
+							]
+							Xfer: {
+								XferIn: 0b
+								XferOut: 0b
+							}
+						}
+					}
+				}
+				type: "item"
+			}]
+			x: 4.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["610A725A0DF114D0"]
+			id: "4ECE67E37358F721"
+			tasks: [{
+				id: "341BEF7E460A2BC3"
+				item: "thermal:press_gear_die"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 0.5d
+		}
+		{
+			dependencies: [
+				"20FEC8DA43340AD4"
+				"17B1CA485924D72F"
+				"25652CCA98D82B4A"
+			]
+			id: "610A725A0DF114D0"
+			tasks: [{
+				id: "0DE72ECF063E6C81"
+				item: "mel:assembly_room_controller"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"525DF809BFD2F98E"
+				"4ECE67E37358F721"
+			]
+			id: "4BC4F7F11BD34028"
+			tasks: [{
+				id: "415E09A9B2055ED8"
+				item: "thermal:iron_gear"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["610A725A0DF114D0"]
+			id: "6D6FA7BE1A487FB3"
+			tasks: [
+				{
+					id: "12A71F95049D78A4"
+					item: "thermal:rf_coil"
+					type: "item"
+				}
+				{
+					id: "7F3B592200968A32"
+					item: "thermal:redstone_servo"
+					type: "item"
+				}
+			]
+			x: 3.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"2C16FE50E04573D0"
+				"7B6AB8426C039D04"
+				"7C72035916849C9B"
+			]
+			id: "170A8B3BBCD68B1C"
+			tasks: [
+				{
+					id: "6A6B7084BA20C29D"
+					item: "thermal:lumium_ingot"
+					type: "item"
+				}
+				{
+					id: "568C0701A6F09D77"
+					item: "thermal:signalum_ingot"
+					type: "item"
+				}
+				{
+					id: "3C31278F58930B60"
+					item: "thermal:enderium_ingot"
+					type: "item"
+				}
+			]
+			x: 7.0d
+			y: 0.0d
+		}
+		{
+			id: "7C72035916849C9B"
+			tasks: [{
+				id: "164500FCBEEE0D41"
+				item: {
+					Count: 1
+					id: "thermal:machine_chiller"
+					tag: {
+						BlockEntityTag: {
+							Energy: 0
+							EnergyMax: 50000
+							EnergyRecv: 200
+							EnergySend: 200
+							RSControl: {
+								RSMode: 0b
+								RSThreshold: 0b
+							}
+							Sides: [B;
+								0b
+								0b
+								0b
+								0b
+								0b
+								0b
+							]
+							Xfer: {
+								XferIn: 0b
+								XferOut: 0b
+							}
+						}
+					}
+				}
+				type: "item"
+			}]
+			x: 6.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["3CB09F67529A4C06"]
+			id: "1252BBA8CDBBDE22"
+			tasks: [{
+				id: "093C66AAEEB28D59"
+				item: "naturesaura:token_terror"
+				type: "item"
+			}]
+			x: 13.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5D69ACDC565C4370"]
+			id: "714EE9862942A705"
+			subtitle: "{mel.chapter3.wither_skeleton_skull.subtitle}"
+			tasks: [{
+				id: "34BB299071A759CE"
+				item: "minecraft:wither_skeleton_skull"
+				type: "item"
+			}]
+			x: 11.5d
+			y: 0.0d
+		}
+		{
+			id: "227BDCCA7431278E"
+			tasks: [{
+				id: "0EE3011A728C0A33"
+				item: {
+					Count: 1
+					id: "mel:aggregation_sigil"
+					tag: {
+						Enchantments: [{
+							id: "mel:activate"
+							lvl: 1s
+						}]
+					}
+				}
+				type: "item"
+			}]
+			x: 8.0d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"170A8B3BBCD68B1C"
+				"227BDCCA7431278E"
+			]
+			id: "4A2B7E68773E4ADB"
+			tasks: [{
+				id: "5021E4EE76B491CE"
+				item: {
+					Count: 1
+					id: "mel:unstable_ingot"
+					tag: {
+						Stable: 100.0d
+					}
+				}
+				type: "item"
+			}]
+			x: 8.2d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6FB7473B4F1C4184"]
+			id: "296D3FA393F7E6DC"
+			tasks: [{
+				id: "2503F1A2B5F1C001"
+				item: "fluxnetworks:flux_dust"
+				type: "item"
+			}]
+			x: 5.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["714EE9862942A705"]
+			id: "3CB09F67529A4C06"
+			tasks: [{
+				id: "4D004BA2052FC5BE"
+				item: "minecraft:nether_star"
+				type: "item"
+			}]
+			x: 12.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5D69ACDC565C4370"]
+			id: "5A600B8B740341C6"
+			tasks: [{
+				id: "26A81613BDC21D7A"
+				item: "minecraft:netherite_scrap"
+				type: "item"
+			}]
+			x: 11.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["1252BBA8CDBBDE22"]
+			id: "213AEC247F498BD3"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "3B89997E587C0B96"
+				item: "botania:third_eye"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0C74AC4CB2A839A0"]
+			id: "65F0A7C685287E99"
+			tasks: [{
+				id: "55A5144039B5D583"
+				item: "naturesaura:token_rage"
+				type: "item"
+			}]
+			x: 9.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["296D3FA393F7E6DC"]
+			description: ["{image:mel:textures/image/mana_to_fluid.png width:212 height:170 align:center}"]
+			id: "72BC37D8287894FB"
+			min_width: 300
+			tasks: [{
+				id: "790919D891BC12F2"
+				item: {
+					Count: 1
+					id: "wizards_reborn:orbital_fluid_retainer"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 6.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"72BC37D8287894FB"
+				"240518FA0C977C14"
+			]
+			id: "7B6AB8426C039D04"
+			tasks: [
+				{
+					id: "3DE037D1FD8BC467"
+					item: "mel:liquid_mana_bucket"
+					type: "item"
+				}
+				{
+					id: "4A47F84D78E79D88"
+					item: "mel:liquid_source_bucket"
+					type: "item"
+				}
+			]
+			x: 6.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["4BC4F7F11BD34028"]
+			id: "2C16FE50E04573D0"
+			tasks: [{
+				id: "0CDB9036F41E36B5"
+				item: "mel:matter_mixer_controller"
+				type: "item"
+			}]
+			x: 5.7d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4BC4F7F11BD34028"]
+			id: "6FB7473B4F1C4184"
+			tasks: [{
+				id: "4EB370DB5812EF76"
+				item: "thermal:machine_pulverizer"
+				type: "item"
+			}]
+			x: 4.5d
+			y: -2.0d
+		}
+		{
+			description: ["{image:mel:textures/image/source_to_fluid.png width:160 height:163 align:center}"]
+			id: "240518FA0C977C14"
+			tasks: [{
+				id: "6AFC878C2F35967D"
+				item: "mel:source_fluidlink"
+				type: "item"
+			}]
+			x: 7.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5993C21DE70CE752"]
+			id: "4F55E5965BB452BC"
+			tasks: [
+				{
+					id: "3A2489C4E20EAB8C"
+					item: "thermal:tin_ingot"
+					type: "item"
+				}
+				{
+					id: "796BD767F6D62537"
+					item: "thermal:nickel_ingot"
+					type: "item"
+				}
+				{
+					id: "6F17D5CF1CD99684"
+					item: "thermal:lead_ingot"
+					type: "item"
+				}
+				{
+					id: "76ACDC8C70D19CA4"
+					item: "thermal:silver_ingot"
+					type: "item"
+				}
+			]
+			x: 5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4F55E5965BB452BC"]
+			id: "4A445EF2728FD56B"
+			tasks: [{
+				id: "24BECF7BC205F497"
+				item: "thermal:upgrade_augment_1"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["4A2B7E68773E4ADB"]
+			id: "0C74AC4CB2A839A0"
+			tasks: [{
+				id: "1A091C8D7D37A2BC"
+				item: "mel:unstable_singularity"
+				type: "item"
+			}]
+			x: 9.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["714EE9862942A705"]
+			id: "21005A1FD091F58F"
+			tasks: [{
+				id: "3C599D85118C74F1"
+				item: "mel:division_sigil"
+				type: "item"
+			}]
+			x: 11.5d
+			y: 1.0d
+		}
+	]
+	title: "chapter3"
+}

@@ -1,0 +1,27 @@
+{
+    "temperature": 0.5,
+    "downfall": 0.5,
+    "has_precipitation": true,
+    "effects": {
+        "sky_color": 8103167,
+        "fog_color": 12638463,
+        "water_color": 4159204,
+        "water_fog_color": 329011
+    },
+    "spawners": {},
+    "spawn_costs": {},
+    "carvers": {},
+    "features": [
+        ["mel:white_ground"],
+        ["mel:black_lines/west", "mel:black_lines/north", "mel:black_lines/east", "mel:black_lines/south"],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        ["mel:simple_poppy"],
+        []
+    ]
+}

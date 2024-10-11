@@ -1,0 +1,8 @@
+{
+    "feature": "mel:simple_poppy",
+    "placement": [
+        {
+            "type": "minecraft:biome"
+        }
+    ]
+}

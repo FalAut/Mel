@@ -1,0 +1,11 @@
+{
+    "type": "mel:misty_forest",
+    "generator": {
+        "type": "minecraft:noise",
+        "settings": "mel:misty_forest",
+        "biome_source": {
+            "type": "minecraft:fixed",
+            "biome": "mel:misty_forest"
+        }
+    }
+}

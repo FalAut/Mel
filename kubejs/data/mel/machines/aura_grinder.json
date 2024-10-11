@@ -1,0 +1,78 @@
+{
+  "name": {
+    "text": "machines.mel.aura_grinder"
+  },
+  "appearance": {
+    "custommachinery:block": "mel:block/aura_grinder",
+    "custommachinery:requires_tool": false
+  },
+  "components": [
+    {
+      "type": "custommachinery:item",
+      "id": "input",
+      "mode": "input"
+    },
+    {
+      "type": "custommachinery:item",
+      "id": "output",
+      "mode": "output"
+    }
+  ],
+  "gui": [
+    {
+      "type": "custommachinery:background",
+      "width": 180,
+      "height": 165
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "input",
+      "x": 45,
+      "y": 35
+    },
+    {
+      "type": "custommachinery:slot",
+      "id": "output",
+      "x": 110,
+      "y": 35
+    },
+    {
+      "type": "custommachinery:player_inventory",
+      "x": 10,
+      "y": 80
+    },
+    {
+      "type": "custommachinery:progress",
+      "tooltips": [
+        {
+          "text": "machine_tooltip.mel.progress.aura_grinder"
+        }
+      ],
+      "x": 75,
+      "y": 35,
+      "texture_filled": "mel:textures/gui/aura_grinder_progress_filled.png"
+    },
+    {
+      "type": "custommachinery:text",
+      "x": 7,
+      "y": 5,
+      "text": {
+        "text": "machines.mel.aura_grinder"
+      }
+    },
+    {
+      "type": "custommachinery:bar",
+      "texture_empty": "mel:textures/gui/aura_grinder_bar_empty.png",
+      "texture_filled": "mel:textures/gui/aura_grinder_bar_filled.png",
+      "tooltips": [
+        {
+          "text": "machine_tooltip.mel.bar.aura"
+        }
+      ],
+      "id": "aura_amount",
+      "x": 15,
+      "y": 15,
+      "max": 1000000
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "end"
+	group: "334FCA74F6C078BA"
+	id: "6FB458B787545FEF"
+	order_index: 6
+	quest_links: [ ]
+	quests: [{
+		id: "115617445B4CB6F6"
+		tasks: [{
+			id: "1B7AFF113FB76E5C"
+			item: "ae2:creative_item_cell"
+			type: "item"
+		}]
+		title: "为何一切还未结束"
+		x: 2.0d
+		y: 0.0d
+	}]
+	title: "end"
+}

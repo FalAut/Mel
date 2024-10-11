@@ -1,0 +1,26 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "note"
+	group: ""
+	id: "01C8E3CA9EB4379E"
+	order_index: 1
+	quest_links: [ ]
+	quests: [{
+		description: [
+			"为什么我要做这个章节？"
+			""
+			"好累"
+			""
+			"让我们在这结束"
+		]
+		id: "340B7E8B3D2E4045"
+		tasks: [{
+			id: "11F8CCBA80AE7BE0"
+			type: "checkmark"
+		}]
+		x: -1.0d
+		y: -1.5d
+	}]
+	title: "note"
+}

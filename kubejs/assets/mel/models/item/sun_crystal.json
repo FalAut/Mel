@@ -1,0 +1,44 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "mel:item/sun_crystal"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "solar": 0
+            },
+            "model": "mel:item/sun_crystal_0"
+        },
+        {
+            "predicate": {
+                "solar": 0.2
+            },
+            "model": "mel:item/sun_crystal_1"
+        },
+        {
+            "predicate": {
+                "solar": 0.4
+            },
+            "model": "mel:item/sun_crystal_2"
+        },
+        {
+            "predicate": {
+                "solar": 0.6
+            },
+            "model": "mel:item/sun_crystal_3"
+        },
+        {
+            "predicate": {
+                "solar": 0.8
+            },
+            "model": "mel:item/sun_crystal_4"
+        },
+        {
+            "predicate": {
+                "solar": 1
+            },
+            "model": "mel:item/sun_crystal"
+        }
+    ]
+}

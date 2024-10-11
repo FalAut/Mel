@@ -1,0 +1,7 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "mel:item/unstable_ingot",
+        "layer1": "mel:item/ingot_red_layer_20"
+    }
+}

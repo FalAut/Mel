@@ -1,0 +1,181 @@
+{
+    "name": {
+        "text": "machines.mel.engraving_table"
+    },
+    "appearance": {
+        "custommachinery:block": "mel:block/engraving_table",
+        "custommachinery:hardness": 1.5,
+        "custommachinery:requires_tool": false
+    },
+    "components": [
+        {
+            "type": "custommachinery:item",
+            "filter": ["mel:token_base", "diamond", "naturesaura:token_joy"],
+            "whitelist": true,
+            "id": "inputToken",
+            "mode": "input"
+        },
+        {
+            "type": "custommachinery:item",
+            "variant": "custommachinery:result",
+            "id": "outputToken",
+            "mode": "output"
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "input1",
+            "mode": "input"
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "input2",
+            "mode": "input"
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "input3",
+            "mode": "input"
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "input4",
+            "mode": "input"
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "input5",
+            "mode": "input"
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "input6",
+            "mode": "input"
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "input7",
+            "mode": "input"
+        },
+        {
+            "type": "custommachinery:item",
+            "id": "input8",
+            "mode": "input"
+        }
+    ],
+    "gui": [
+        {
+            "type": "custommachinery:background",
+            "width": 198,
+            "height": 192
+        },
+        {
+            "type": "custommachinery:player_inventory",
+            "x": 18,
+            "y": 100
+        },
+        {
+            "type": "custommachinery:progress",
+            "tooltips": [
+                {
+                    "text": "machine_tooltip.mel.progress.engraving_table"
+                }
+            ],
+            "x": 130,
+            "y": 40
+        },
+        {
+            "type": "custommachinery:slot",
+            "id": "outputToken",
+            "texture": "mel:textures/gui/token_overlay.png",
+            "x": 160,
+            "y": 40,
+            "width": 18,
+            "height": 18
+        },
+        {
+            "type": "custommachinery:slot",
+            "id": "input1",
+            "x": 70,
+            "y": 5
+        },
+        {
+            "type": "custommachinery:slot",
+            "id": "input2",
+            "x": 95,
+            "y": 15
+        },
+        {
+            "type": "custommachinery:slot",
+            "id": "input3",
+            "x": 105,
+            "y": 40
+        },
+        {
+            "type": "custommachinery:slot",
+            "id": "input4",
+            "x": 95,
+            "y": 65
+        },
+        {
+            "type": "custommachinery:slot",
+            "id": "input5",
+            "x": 70,
+            "y": 75
+        },
+        {
+            "type": "custommachinery:slot",
+            "id": "input6",
+            "x": 45,
+            "y": 65
+        },
+        {
+            "type": "custommachinery:slot",
+            "id": "input7",
+            "x": 35,
+            "y": 40
+        },
+        {
+            "type": "custommachinery:slot",
+            "id": "input8",
+            "x": 45,
+            "y": 15
+        },
+        {
+            "type": "custommachinery:text",
+            "x": 7,
+            "y": 5,
+            "text": {
+                "text": "machines.mel.engraving_table"
+            }
+        },
+        {
+            "type": "custommachinery:bar",
+            "texture_empty": "mel:textures/gui/aura_grinder_bar_empty.png",
+            "texture_filled": "mel:textures/gui/aura_grinder_bar_filled.png",
+            "tooltips": [
+                {
+                    "text": "machine_tooltip.mel.bar.aura"
+                }
+            ],
+            "id": "aura_amount",
+            "x": 20,
+            "y": 20,
+            "max": 1000000
+        },
+        {
+            "type": "custommachinery:slot",
+            "id": "inputToken",
+            "x": 70,
+            "y": 40,
+            "ghost": {
+                "items": ["mel:token_base"],
+                "color": {
+                    "alpha": 0.24705882
+                }
+            }
+        }
+    ],
+    "processor": {
+        "type": "custommachinery:craft"
+    }
+}

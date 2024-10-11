@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "mel:item/dream_fluid_bucket"
+    }
+}

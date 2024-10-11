@@ -1,0 +1,11 @@
+{
+    "type": "mel:otherworld",
+    "generator": {
+        "type": "minecraft:noise",
+        "settings": "mel:otherworld",
+        "biome_source": {
+            "type": "minecraft:fixed",
+            "biome": "mel:otherworld"
+        }
+    }
+}

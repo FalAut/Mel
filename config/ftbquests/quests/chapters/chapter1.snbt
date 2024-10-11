@@ -1,0 +1,618 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "chapter1"
+	group: "334FCA74F6C078BA"
+	icon: "mel:dream_star"
+	id: "414842640057A2DC"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			id: "683AA03529028A82"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "33ECF5CC411FA788"
+				item: "mel:dream_star"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["683AA03529028A82"]
+			id: "2C4CCAFF8C057303"
+			tasks: [{
+				id: "00C25F816DC895EE"
+				item: "mel:dream_block"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["683AA03529028A82"]
+			id: "7EFF8AA401073054"
+			tasks: [{
+				id: "5F43620815011F73"
+				item: "mel:dream_fluid_bucket"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0EF181ADCC2BD78C"]
+			id: "33FF1527D1246937"
+			tasks: [{
+				id: "0862FCA9AB688943"
+				item: {
+					Count: 1
+					id: "mel:wooden_shears"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 2.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["683AA03529028A82"]
+			id: "0EF181ADCC2BD78C"
+			tasks: [{
+				id: "2E52F34D24E72BB9"
+				item: "minecraft:oak_sapling"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["683AA03529028A82"]
+			id: "6238089818A2926E"
+			tasks: [{
+				id: "6E9AF771829CABE1"
+				item: "minecraft:water_bucket"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["683AA03529028A82"]
+			id: "7624D2AE8B2D42CE"
+			tasks: [{
+				id: "7C38D64B6EF969F1"
+				item: "minecraft:lava_bucket"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"0F9F0DF0B936E745"
+				"2EBCD8DF469CB6FF"
+			]
+			id: "3E9675E1ABC429B9"
+			tasks: [{
+				id: "3D090DD2B3029FF4"
+				item: "mel:fiber"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3E9675E1ABC429B9"]
+			id: "48D0CC04CEA4742B"
+			tasks: [{
+				id: "2019A2E4CBDD71BC"
+				item: "naturesaura:gold_fiber"
+				type: "item"
+			}]
+			x: 5.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["683AA03529028A82"]
+			id: "1DC6D914860F1285"
+			tasks: [
+				{
+					id: "5BB1B2D7EB50CD43"
+					item: "minecraft:white_concrete"
+					type: "item"
+				}
+				{
+					id: "24408BD40724065F"
+					item: "minecraft:gray_concrete"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"0EF181ADCC2BD78C"
+				"33FF1527D1246937"
+			]
+			id: "0F9F0DF0B936E745"
+			tasks: [{
+				id: "279607596E3B7B7A"
+				item: "minecraft:oak_leaves"
+				type: "item"
+			}]
+			x: 3.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["0F9F0DF0B936E745"]
+			id: "39730AC4D863B6EB"
+			tasks: [{
+				id: "7709F13C8704FE9C"
+				item: "minecraft:grass_block"
+				type: "item"
+			}]
+			x: 3.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0EF181ADCC2BD78C"]
+			id: "2EBCD8DF469CB6FF"
+			tasks: [{
+				id: "0E540125FEE8A552"
+				item: "mel:oak_mortar"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["48D0CC04CEA4742B"]
+			id: "0C05E172FDFFC328"
+			tasks: [{
+				id: "4586848248AD686A"
+				item: "naturesaura:gold_leaf"
+				type: "item"
+			}]
+			x: 5.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["2E52F34D24E72BB9"]
+			id: "5134908BA0FD9758"
+			tasks: [{
+				id: "0C189C4806B67FB8"
+				item: "naturesaura:wood_stand"
+				type: "item"
+			}]
+			x: 6.5d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"0C05E172FDFFC328"
+				"5134908BA0FD9758"
+				"4648D64F506FF6B4"
+			]
+			id: "560E6468D1517943"
+			tasks: [{
+				id: "1E4C2537F576182A"
+				item: "naturesaura:nature_altar"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["560E6468D1517943"]
+			id: "70E13569FD61AD48"
+			tasks: [{
+				id: "2AFD5F4DF375CECD"
+				item: "naturesaura:infused_stone"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 0.5d
+		}
+		{
+			dependencies: [
+				"560E6468D1517943"
+				"0EAC3867EE29E291"
+			]
+			id: "434993810E238E86"
+			tasks: [{
+				id: "57510219A8BB0207"
+				item: "mel:infused_wood"
+				type: "item"
+			}]
+			x: 7.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["434993810E238E86"]
+			id: "74378BE2AA785BF9"
+			tasks: [{
+				id: "4B9D289C60F71CBE"
+				item: "mel:token_base"
+				type: "item"
+			}]
+			x: 8.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["434993810E238E86"]
+			id: "7D334F1CB554A94B"
+			tasks: [{
+				id: "550FABC18F8CD4AA"
+				item: "mel:engraving_table"
+				type: "item"
+			}]
+			x: 8.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"74378BE2AA785BF9"
+				"7D334F1CB554A94B"
+			]
+			id: "27992DB89B7BC29D"
+			tasks: [{
+				id: "1B39274BB454F5CB"
+				item: "naturesaura:token_joy"
+				type: "item"
+			}]
+			x: 9.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["7624D2AE8B2D42CE"]
+			id: "05534E447EAA66A0"
+			tasks: [{
+				id: "138286EC2A431740"
+				item: "mel:aura_grinder"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["05534E447EAA66A0"]
+			id: "0FA113CABE84D85E"
+			tasks: [
+				{
+					id: "3CBE97D132AD468B"
+					item: "minecraft:gravel"
+					type: "item"
+				}
+				{
+					id: "3A7C6EF89214ACA3"
+					item: "minecraft:sand"
+					type: "item"
+				}
+			]
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0FA113CABE84D85E"]
+			id: "4648D64F506FF6B4"
+			tasks: [
+				{
+					id: "244369E1BF70F320"
+					item: "naturesaura:bottle_two_the_rebottling"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "4383DC98DA0588FE"
+					item: {
+						Count: 1
+						id: "naturesaura:aura_bottle"
+						tag: {
+							stored_type: "naturesaura:overworld"
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 5.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["70E13569FD61AD48"]
+			id: "75126E430EFF395D"
+			tasks: [{
+				id: "26D2586C5E53E958"
+				item: "naturesaura:offering_table"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4586848248AD686A"]
+			id: "63862C0D00CD48EE"
+			tasks: [{
+				id: "0422673B6ACFC30F"
+				item: "naturesaura:calling_spirit"
+				type: "item"
+			}]
+			x: 8.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2E52F34D24E72BB9"]
+			id: "74D6E424020C14E4"
+			tasks: [{
+				id: "55171B6354478A86"
+				item: "mel:wrapped_gift"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"74D6E424020C14E4"
+				"75126E430EFF395D"
+				"63862C0D00CD48EE"
+			]
+			id: "4C6F3892B4F38E0B"
+			tasks: [{
+				id: "6CF86E9A85EF2E53"
+				item: "mel:my_gift"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["4C6F3892B4F38E0B"]
+			id: "7C2D6C62922FB508"
+			tasks: [
+				{
+					id: "709730C4069F8F42"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					id: "446B167195EB359F"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					id: "6A46B96EC4DB493E"
+					item: "minecraft:copper_ingot"
+					type: "item"
+				}
+				{
+					id: "7084246A897752DF"
+					item: "minecraft:coal"
+					type: "item"
+				}
+				{
+					id: "3B3AF9940DE39395"
+					item: "minecraft:redstone"
+					type: "item"
+				}
+				{
+					id: "5EEE8A7AE5EEB254"
+					item: "minecraft:lapis_lazuli"
+					type: "item"
+				}
+				{
+					id: "651FAB633EBEB12E"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "0FE14B6E0A35B667"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+			]
+			x: 7.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["7C2D6C62922FB508"]
+			id: "78E11B0D446D4103"
+			tasks: [{
+				id: "4BA802B7ED4C3AB6"
+				item: "naturesaura:infused_iron"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"6C95247ADE07020A"
+				"340D9CC5D115AD42"
+			]
+			id: "650A934E657C4828"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "0A1A46FF4F862C8A"
+				item: "mel:dream_lantern"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["78E11B0D446D4103"]
+			id: "6C95247ADE07020A"
+			tasks: [{
+				id: "42B285FCA5183519"
+				item: "naturesaura:sky_ingot"
+				type: "item"
+			}]
+			x: 5.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["5134908BA0FD9758"]
+			id: "0EAC3867EE29E291"
+			tasks: [{
+				id: "6B14226F5547BC4F"
+				item: "naturesaura:ancient_sapling"
+				type: "item"
+			}]
+			x: 7.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6C95247ADE07020A"]
+			id: "33A3DD4A24E4DAAC"
+			tasks: [{
+				id: "250AAEC083DA794B"
+				item: {
+					Count: 1
+					id: "tiab:time_in_a_bottle"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 5.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["0EF181ADCC2BD78C"]
+			id: "75D4CF23ACD1ECB4"
+			tasks: [
+				{
+					id: "255F30A75CC3503E"
+					item: "minecraft:bone_meal"
+					type: "item"
+				}
+				{
+					id: "6029F34E394512CA"
+					item: "minecraft:composter"
+					type: "item"
+				}
+			]
+			x: 2.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["6C95247ADE07020A"]
+			id: "340D9CC5D115AD42"
+			tasks: [{
+				id: "7DCD121D52265F95"
+				item: {
+					Count: 1
+					id: "mel:sun_crystal"
+					tag: {
+						Solar: 100.0d
+					}
+				}
+				type: "item"
+			}]
+			x: 5.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["0EAC3867EE29E291"]
+			id: "0D015848E9C02147"
+			tasks: [{
+				id: "59A99BAC4407854C"
+				item: "mel:ancient_aura_generator_core"
+				type: "item"
+			}]
+			x: 7.5d
+			y: -2.5d
+		}
+		{
+			dependencies: [
+				"7C2D6C62922FB508"
+				"7DCD121D52265F95"
+			]
+			id: "606FBB64A6DF9173"
+			tasks: [{
+				id: "58E0C495F87298D7"
+				item: "naturesaura:conversion_catalyst"
+				type: "item"
+			}]
+			x: 8.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["606FBB64A6DF9173"]
+			id: "67C6081CE1D32EE0"
+			tasks: [{
+				id: "4AAA808F929BD057"
+				item: "minecraft:quartz"
+				type: "item"
+			}]
+			x: 9.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["606FBB64A6DF9173"]
+			id: "1428C654D3700C43"
+			tasks: [{
+				id: "7C4910F905911997"
+				item: "minecraft:glowstone_dust"
+				type: "item"
+			}]
+			x: 9.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["606FBB64A6DF9173"]
+			id: "68A397B833251489"
+			tasks: [{
+				id: "524395A066CBBB72"
+				item: "minecraft:amethyst_shard"
+				type: "item"
+			}]
+			x: 9.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["68A397B833251489"]
+			id: "6CF0ED53336664A1"
+			tasks: [{
+				id: "4EC9927098FE33A5"
+				item: "minecraft:ender_pearl"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["6CF0ED53336664A1"]
+			id: "46D9D55ED66C4CD1"
+			tasks: [
+				{
+					id: "47E940C385826AC0"
+					item: {
+						Count: 1
+						id: "entangled:block"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "03EF2D6F60489407"
+					item: {
+						Count: 1
+						id: "entangled:item"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			x: 11.5d
+			y: 3.5d
+		}
+	]
+	title: "chapter1"
+}
