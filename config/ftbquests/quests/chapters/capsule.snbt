@@ -4,7 +4,7 @@
 	filename: "capsule"
 	group: ""
 	id: "463C76A9534C4952"
-	order_index: 2
+	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{
@@ -71,34 +71,45 @@
 			icon: "minecraft:oak_sapling"
 			id: "7451057B70EC9510"
 			rewards: [{
-				id: "58A7DB4413A2FDB5"
+				auto: "disabled"
+				id: "3C84C75FE415A022"
 				item: {
 					Count: 1
 					id: "capsule:capsule"
 					tag: {
 						author: "?"
 						canRotate: 1b
-						color: 6196919
+						color: 7105644
 						display: {
-							color: 16777215
+							color: 7105644
 						}
 						isReward: 1b
-						label: "Dream Tree.nbt"
+						label: "First Tree.nbt"
 						oneUse: 1b
 						size: 7
 						state: 5
-						structureName: "config/capsule/rewards/dream_tree.nbt"
+						structureName: "config/capsule/rewards/first_tree.nbt"
 					}
 				}
+				team_reward: true
 				type: "item"
 			}]
-			tasks: [{
-				consume_items: true
-				count: 67L
-				id: "631D808ABB5BB8EC"
-				item: { Count: 67, id: "mel:dream_block" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: true
+					count: 6L
+					id: "0DCC201236782DCF"
+					item: { Count: 6, id: "minecraft:white_concrete" }
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 61L
+					id: "6156D39B7291BA1A"
+					item: { Count: 61, id: "minecraft:gray_concrete" }
+					type: "item"
+				}
+			]
 			x: -2.5d
 			y: 0.0d
 		}

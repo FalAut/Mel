@@ -1,7 +1,6 @@
 Platform.setModName("mel", "Mel");
 
 StartupEvents.modifyCreativeTab("kubejs:tab", (event) => {
-    event.setIcon("mel:dream_star");
     event.setDisplayName("Mel");
     event.remove("mel:sun_crystal");
     event.remove("mel:unstable_ingot");
@@ -25,14 +24,6 @@ StartupEvents.modifyCreativeTab("kubejs:tab", (event) => {
 });
 
 ItemEvents.modification((event) => {
-    let fireResistantItem = ["mel:dream_star", "mel:dream_block", "mel:dream_fluid_bucket"];
-
-    fireResistantItem.forEach((itemID) => {
-        event.modify(itemID, (item) => {
-            item.setFireResistant(true);
-        });
-    });
-
     Ingredient.all.stacks.forEach((itm) => {
         if (itm.edible) {
             event.modify(itm, (item) => {

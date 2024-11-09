@@ -4,17 +4,19 @@ StartupEvents.postInit((event) => {
         $PatchouliAPI.makeMultiblock(
             [
                 ["     ", "  A  ", " AAA ", "  A  ", "     "],
-                ["     ", " AAA ", " AAA ", " AAA ", "     "],
-                ["AAAAA", "AAAAA", "AAAAA", "AAAAA", "AAAAA"],
-                ["AAAAA", "AAAAA", "AAAAA", "AAAAA", "AAAAA"],
-                ["     ", "     ", "  A  ", "     ", "     "],
-                ["     ", "     ", "  A  ", "     ", "     "],
+                ["     ", " AAA ", " ABA ", " AAA ", "     "],
+                ["AAAAA", "AAAAA", "AABAA", "AAAAA", "AAAAA"],
+                ["AAAAA", "AAAAA", "AABAA", "AAAAA", "AAAAA"],
+                ["     ", "     ", "  B  ", "     ", "     "],
+                ["     ", "     ", "  B  ", "     ", "     "],
                 ["     ", "     ", "  0  ", "     ", "     "],
             ],
             new $Character("0"),
-            Block.getBlock("mel:dream_block"),
+            Blocks.WHITE_CONCRETE,
             new $Character("A"),
-            Block.getBlock("mel:dream_block")
+            Blocks.GRAY_CONCRETE,
+            new $Character("B"),
+            Blocks.WHITE_CONCRETE
         )
     );
 

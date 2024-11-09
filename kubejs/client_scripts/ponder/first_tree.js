@@ -1,8 +1,9 @@
 Ponder.registry((event) => {
-    event.create("oak_sapling").scene("first_tree", "第一颗树", "mel:first_tree", (scene, util) => {
+    event.create("oak_sapling").scene("first_tree", "First Tree", "mel:first_tree", (scene, util) => {
         scene.setSceneOffsetY(-1);
         scene.scaleSceneView(0.8);
         scene.showStructure(0);
+        scene.text(60, "首先，我们需要搭建一个结构");
         scene.idle(10);
         for (let y = 1; y <= 3; y++) {
             scene.world.showSection([2, y, 2], "down");
@@ -23,7 +24,8 @@ Ponder.registry((event) => {
         }
         scene.idle(10);
 
-        scene.showControls(20, [2, 1.5, 2.5], "left").rightClick().withItem("mel:dream_star");
+        scene.text(20, "搭建完毕后，右键底部的方块").attachKeyFrame();
+        scene.showControls(20, [2, 1.5, 2.5], "left").rightClick();
         scene.overlay.showOutline("red", 1, [2, 1, 2], 20);
         scene.idle(20);
 
@@ -35,6 +37,9 @@ Ponder.registry((event) => {
             }
         }
 
-        scene.world.createItemEntity(Vec3d(2.5, 1.5, 2.5), Vec3d.ZERO, "oak_sapling");
+        scene.world.createItemEntity([2.5, 1.5, 2.5], Vec3d.ZERO, "oak_sapling");
+
+        scene.idle(40);
+        scene.text(100, "可前往「胶囊」章节获取胶囊来快速放置这个结构");
     });
 });

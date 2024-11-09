@@ -1,9 +1,6 @@
 StartupEvents.registry("fluid", (event) => {
-    let dreamFluid = event
-        .create("mel:dream_fluid")
-        .stillTexture("mel:block/dream_fluid")
-        .flowingTexture("mel:block/dream_fluid");
-    dreamFluid.attributes = dreamFluid.createAttributes().tickDelay(1).convertToSource(true);
+    const gensousitu = event.create("mel:gensousitu").thinTexture(0xffffff);
+    gensousitu.attributes = gensousitu.createAttributes().convertToSource(true);
 
     event.create("mel:liquid_mana").thinTexture(0x87ceeb);
     event.create("mel:liquid_source").thinTexture(0x800080);

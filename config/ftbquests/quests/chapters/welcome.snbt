@@ -3,79 +3,118 @@
 	default_quest_shape: ""
 	filename: "welcome"
 	group: ""
-	id: "14131A6A0940B687"
+	id: "3B53D31B7F26A320"
 	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{
-			can_repeat: true
-			icon: "akashictome:tome"
-			id: "4767FCFEA4935927"
-			rewards: [{
-				id: "5D1D445DE53248BE"
-				item: {
-					Count: 1
-					id: "akashictome:tome"
-					tag: {
-						"akashictome:data": {
-							ae2: {
-								Count: 1b
-								id: "ae2:guide"
-							}
-							ars_nouveau: {
-								Count: 1b
-								id: "ars_nouveau:worn_notebook"
-							}
-							botania: {
-								Count: 1b
-								id: "botania:lexicon"
-								tag: {
-									"botania:elven_unlock": 1b
-								}
-							}
-							modularrouters: {
-								Count: 1b
-								id: "patchouli:guide_book"
-								tag: {
-									"patchouli:book": "modularrouters:book"
-								}
-							}
-							naturesaura: {
-								Count: 1b
-								id: "patchouli:guide_book"
-								tag: {
-									"patchouli:book": "naturesaura:book"
-								}
+			id: "53EB8D2B73DBB6CC"
+			rewards: [
+				{
+					id: "0A52F62FBBF86DFC"
+					item: "ae2:creative_energy_cell"
+					type: "item"
+				}
+				{
+					id: "47221960C76FE6FE"
+					item: "ae2:drive"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "73212191B5845ABD"
+					item: "ae2:black_glass_cable"
+					type: "item"
+				}
+				{
+					id: "6128B6FEC264CE8F"
+					item: "ae2:crafting_terminal"
+					type: "item"
+				}
+				{
+					id: "2772BC0189A2F038"
+					item: {
+						Count: 1
+						id: "expatternprovider:infinity_cell"
+						tag: {
+							record: {
+								"#c": "ae2:i"
+								id: "minecraft:white_concrete"
 							}
 						}
 					}
+					type: "item"
 				}
-				team_reward: true
-				type: "item"
-			}]
+				{
+					id: "534EF4EBA4457C57"
+					item: {
+						Count: 1
+						id: "expatternprovider:infinity_cell"
+						tag: {
+							record: {
+								"#c": "ae2:i"
+								id: "minecraft:gray_concrete"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "45A01D5B3446DA35"
+					item: {
+						Count: 1
+						id: "ae2:item_storage_cell_4k"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			size: 2.0d
 			tasks: [{
-				id: "39AD7ABE1D560F88"
+				id: "698F64E2FD58D079"
 				type: "checkmark"
 			}]
-			title: "{item.akashictome.tome}"
-			x: -0.5d
-			y: -2.0d
+			x: 0.0d
+			y: 0.0d
 		}
 		{
 			can_repeat: true
+			description: [
+				"{mel.welcome.special_thanks.tyumen}"
+				"{\"translate\":\"mel.welcome.special_thanks.tyumens\",\"extra\":[{\"translate\":\"mel.welcome.special_thanks.bilibili\",\"color\":\"green\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://space.bilibili.com/32796946\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"mel.welcome.special_thanks.open_url\"}}},{\"text\":\" | \",\"color\":\"white\"},{\"translate\":\"mel.welcome.special_thanks.huya\",\"color\":\"green\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://www.huya.com/raini\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"mel.welcome.special_thanks.open_url\"}}}]}"
+			]
 			icon: "minecraft:poppy"
-			id: "7544C1D3E270BD2B"
+			id: "46991BFC9FC2D6C6"
+			min_width: 233
 			rewards: [{
-				id: "74760683F391AD05"
+				id: "46F5D16DC12A7E5E"
 				item: "minecraft:poppy"
 				type: "item"
 			}]
 			tasks: [{
-				id: "7CEA0107A75BD394"
+				id: "56F69640C5FBBDCA"
 				type: "checkmark"
 			}]
-			x: -1.0d
-			y: -3.5d
+			title: "{mel.welcome.special_thanks.title}"
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			can_repeat: true
+			icon: "akashictome:tome"
+			id: "03407C903157428A"
+			rewards: [{
+				id: "64274F76BB1C1B1E"
+				item: "akashictome:tome"
+				type: "item"
+			}]
+			tasks: [{
+				id: "75694B1483477882"
+				type: "checkmark"
+			}]
+			title: "{item.akashictome.tome}"
+			x: 2.5d
+			y: 2.0d
 		}
 	]
 	title: "welcome"

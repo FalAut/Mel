@@ -1,16 +1,11 @@
 StartupEvents.registry("item", (event) => {
-    event.create("mel:dream_star").glow(true);
     event.create("mel:wooden_shears", "shears").maxDamage(50);
     event.create("mel:fiber").color(0x4caf50).texture("naturesaura:item/gold_fiber");
     event.createCustom("mel:oak_mortar", () => new $MortarItem(new $Item$Properties().stacksTo(1), 400));
     event.create("mel:token_base");
     event.create("mel:gift_box");
     event.create("mel:wrapped_gift").glow(true);
-    event
-        .create("mel:my_gift")
-        .glow(true)
-        .formattedDisplayName(Text.translate("item.mel._gift", Text.of("我").obfuscated()).gold().bold());
-
+    event.create("mel:whos_gift").glow(true);
     event
         .create("mel:sun_crystal")
         .unstackable()
@@ -25,10 +20,6 @@ StartupEvents.registry("item", (event) => {
 
     event.createCustom("mel:dream_lantern", () => new $ItemAuraCache("dream_lantern", 2560000));
 
-    let structureName = "mel:maze";
-    let structure = $ResourceKey.create($ResourceKey.createRegistryKey("worldgen/structure"), structureName);
-
-    event.createCustom("mel:maze_eye", () => new $ItemStructureFinder("maze_eye", structure, 0xffffff, 1024));
     event
         .create("mel:unstable_ingot")
         .barWidth((i) => {

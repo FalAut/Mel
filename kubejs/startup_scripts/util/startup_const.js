@@ -22,3 +22,5 @@ const $RenderSystem = Java.loadClass("com.mojang.blaze3d.systems.RenderSystem");
 const $KubeJS = Java.loadClass("dev.latvian.mods.kubejs.KubeJS");
 const $Context = Java.loadClass("dev.latvian.mods.rhino.Context");
 const $Integer = Java.loadClass("java.lang.Integer");
+const $BlockHitResult = Java.loadClass("net.minecraft.world.phys.BlockHitResult");
+const $UseOnContext = Java.loadClass("net.minecraft.world.item.context.UseOnContext");

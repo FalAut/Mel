@@ -1,13 +1,9 @@
 StartupEvents.registry("block", (event) => {
-    event.create("mel:aura_grinder", "custommachinery");
-    event.create("mel:engraving_table", "custommachinery");
-    event.create("mel:dream_block").hardness(0).soundType("amethyst");
     event.create("mel:infused_wood").hardness(2).tag("minecraft:mineable/axe").woodSoundType();
     event.create("mel:maze_block").unbreakable().textureAll("block/gray_concrete").noValidSpawns(true);
     event.create("mel:mana_string_block").hardness(0.8).soundType("wool");
     event.create("mel:futura_block").hardness(1).tag("minecraft:needs_iron_tool").soundType("metal");
     event.create("mel:datura").hardness(0).defaultCutout().cropSoundType().noCollision().noItem();
-
     event.create("mel:ancient_aura_generator_core").blockEntity((info) => {
         info.enableSync();
         info.serverTick(20, 0, (be) => {

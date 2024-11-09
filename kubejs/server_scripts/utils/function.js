@@ -1,9 +1,9 @@
-function processDreamLantern(item) {
+function processDreamLantern(item, player) {
     if (item == "mel:dream_lantern") {
         let dreamLantern = item.getCapability($NaturesAuraAPI.CAP_AURA_CONTAINER).resolve().get();
         if (dreamLantern.storedAura >= FOG_AURA_COST) {
             dreamLantern.drainAura(FOG_AURA_COST, false);
-            Client.player.persistentData.putBoolean("has_dream_lantern", true);
+            player.sendData("has_dream_lantern", { hasDreamLantern: true });
             return true;
         }
     }

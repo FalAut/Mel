@@ -1,3 +1,7 @@
+/**
+ * @author Westernat
+ */
+
 StartupEvents.postInit((event) => {
     let $FluidInteractionRegistry = Java.loadClass("net.minecraftforge.fluids.FluidInteractionRegistry");
     let II = Java.loadClass("net.minecraftforge.fluids.FluidInteractionRegistry$InteractionInformation").__javaObject__;
@@ -50,16 +54,16 @@ StartupEvents.postInit((event) => {
         );
     }
 
-    blockGen("iron_ore", "iron_block", "mel:dream_fluid");
-    blockGen("gold_ore", "gold_block", "mel:dream_fluid");
-    blockGen("diamond_ore", "diamond_block", "mel:dream_fluid");
-    blockGen("lapis_ore", "lapis_block", "mel:dream_fluid");
-    blockGen("emerald_ore", "emerald_block", "mel:dream_fluid");
-    blockGen("coal_ore", "coal_block", "mel:dream_fluid");
-    blockGen("redstone_ore", "redstone_block", "mel:dream_fluid");
-    blockGen("copper_ore", "copper_block", "mel:dream_fluid");
-    blockGen("copper_ore", "exposed_copper", "mel:dream_fluid");
-    blockGen("copper_ore", "weathered_copper", "mel:dream_fluid");
-    blockGen("copper_ore", "oxidized_copper", "mel:dream_fluid");
-    blockGen("ancient_debris", "netherite_block", "mel:dream_fluid");
+    blockGen("iron_ore", "iron_block", "mel:gensousitu");
+    blockGen("gold_ore", "gold_block", "mel:gensousitu");
+    blockGen("diamond_ore", "diamond_block", "mel:gensousitu");
+    blockGen("lapis_ore", "lapis_block", "mel:gensousitu");
+    blockGen("emerald_ore", "emerald_block", "mel:gensousitu");
+    blockGen("coal_ore", "coal_block", "mel:gensousitu");
+    blockGen("redstone_ore", "redstone_block", "mel:gensousitu");
+    blockGen("copper_ore", "copper_block", "mel:gensousitu");
+    blockGen("copper_ore", "exposed_copper", "mel:gensousitu");
+    blockGen("copper_ore", "weathered_copper", "mel:gensousitu");
+    blockGen("copper_ore", "oxidized_copper", "mel:gensousitu");
+    blockGen("ancient_debris", "netherite_block", "mel:gensousitu");
 });

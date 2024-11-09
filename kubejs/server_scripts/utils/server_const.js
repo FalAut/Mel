@@ -1,5 +1,4 @@
 // priority: 99
-const LANTERN_AURA_COST = 10000;
 const FOG_AURA_COST = 1000;
 
 const $PatchouliAPI = Java.loadClass("vazkii.patchouli.api.PatchouliAPI").get();

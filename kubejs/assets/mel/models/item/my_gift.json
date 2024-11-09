@@ -1,7 +1,0 @@
-{
-    "parent": "mel:item/gift_box",
-    "textures": {
-        "0": "mel:item/my_gift",
-        "particle": "mel:item/my_gift"
-    }
-}

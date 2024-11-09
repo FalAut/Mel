@@ -2,8 +2,8 @@ ServerEvents.recipes((event) => {
     const { naturesaura } = event.recipes;
 
     naturesaura.tree_ritual("naturesaura:nature_altar", [
-        "oak_sapling",
         Item.of("naturesaura:aura_bottle", '{stored_type:"naturesaura:overworld"}').strongNBT(),
+        "oak_sapling",
         "oak_sapling",
         "oak_sapling",
         "smooth_stone",
@@ -85,5 +85,5 @@ ServerEvents.recipes((event) => {
     naturesaura.altar("minecraft:quartz", "minecraft:lapis_lazuli", "naturesaura:conversion_catalyst");
     naturesaura.altar("botania:vivid_seeds", "botania:grass_seeds");
 
-    naturesaura.offering("mel:my_gift", "mel:wrapped_gift");
+    naturesaura.offering("mel:whos_gift", "mel:wrapped_gift");
 });

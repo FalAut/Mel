@@ -12,12 +12,3 @@ ServerEvents.loaded((event) => {
         server.persistentData.putBoolean("first_load", true);
     }
 });
-
-PlayerEvents.loggedIn((event) => {
-    const { player } = event;
-
-    if (!player.persistentData.getBoolean("first_login")) {
-        player.give("mel:dream_star");
-        player.persistentData.putBoolean("first_login", true);
-    }
-});

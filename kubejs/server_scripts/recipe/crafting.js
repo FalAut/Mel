@@ -1,8 +1,8 @@
 ServerEvents.recipes((event) => {
-    const { minecraft, kubejs } = event.recipes;
+    const { kubejs } = event.recipes;
 
     function fourShaped(/**@type  {OutputItem_} */ output, /**@type  {InputItem_} */ input) {
-        minecraft.crafting_shaped(output, ["AA", "AA"], {
+        kubejs.shaped(output, ["AA", "AA"], {
             A: input,
         });
 
@@ -19,10 +19,8 @@ ServerEvents.recipes((event) => {
         });
     }
 
-    fourShaped("mel:dream_block", "mel:dream_star");
-
     function fullShaped(/**@type  {OutputItem_} */ output, /**@type  {InputItem_} */ input) {
-        minecraft.crafting_shaped(output, ["AAA", "AAA", "AAA"], {
+        kubejs.shaped(output, ["AAA", "AAA", "AAA"], {
             A: input,
         });
 
@@ -41,18 +39,13 @@ ServerEvents.recipes((event) => {
 
     fullShaped("mel:mana_string_block", "botania:mana_string");
 
-    minecraft.crafting_shapeless("2x mel:dream_star", "mel:dream_star");
-    minecraft.crafting_shapeless("4x mel:dream_star", "mel:dream_block");
-    minecraft.crafting_shapeless("forbidden_arcanus:aurum_chest_boat", [
-        "forbidden_arcanus:aurum_boat",
-        "#forge:chests/wooden",
-    ]);
-    minecraft.crafting_shapeless("forbidden_arcanus:edelwood_chest_boat", [
+    kubejs.shapeless("forbidden_arcanus:aurum_chest_boat", ["forbidden_arcanus:aurum_boat", "#forge:chests/wooden"]);
+    kubejs.shapeless("forbidden_arcanus:edelwood_chest_boat", [
         "forbidden_arcanus:edelwood_boat",
         "#forge:chests/wooden",
     ]);
-    minecraft.crafting_shapeless("mel:flowing_source_flower", ["#botania:floating_flowers", "mel:source_flower"]);
-    minecraft.crafting_shapeless("9x botania:mana_string", "mel:mana_string_block");
+    kubejs.shapeless("mel:flowing_source_flower", ["#botania:floating_flowers", "mel:source_flower"]);
+    kubejs.shapeless("9x botania:mana_string", "mel:mana_string_block");
 
     kubejs
         .shapeless("mel:token_base", ["mel:infused_wood", "#axes", "#forge:shears"])
@@ -80,7 +73,26 @@ ServerEvents.recipes((event) => {
         )
         .keepIngredient("mel:dream_lantern");
 
-    kubejs.shapeless("mel:futura_block", ["mel:dream_block", "ae2:controller"]).keepIngredient("ae2:controller");
+    kubejs.shapeless("mel:futura_block", "ae2:controller").keepIngredient("ae2:controller");
+
+    kubejs.shaped("bucket", ["A A", " A "], {
+        A: "white_concrete",
+    });
+
+    kubejs.shaped("mel:gensousitu_bucket", ["ABC", "D D", " D "], {
+        A: "water_bucket",
+        B: "naturesaura:calling_spirit",
+        C: "lava_bucket",
+        D: "white_concrete",
+    });
+
+    kubejs.shaped("mel:fire_starter", ["A ", " A"], {
+        A: "stick",
+    });
+
+    kubejs.shaped("4x chest", ["AAA", "A A", "AAA"], {
+        A: "#logs",
+    });
 
     kubejs
         .shaped(Item.of("mel:unstable_ingot", "{Stable:100.0d}"), [" A ", " B ", "C D"], {
@@ -101,49 +113,35 @@ ServerEvents.recipes((event) => {
         })
         .keepIngredient("mel:division_sigil");
 
-    minecraft.crafting_shaped("bucket", ["A A", " A "], {
-        A: "mel:dream_star",
-    });
-
-    minecraft.crafting_shaped("water_bucket", ["AAA", " B "], {
-        A: "mel:dream_star",
-        B: "bucket",
-    });
-
-    minecraft.crafting_shaped("lava_bucket", [" B ", "AAA"], {
-        A: "mel:dream_star",
-        B: "bucket",
-    });
-
-    minecraft.crafting_shaped("mel:wooden_shears", [" A", "A "], {
+    kubejs.shaped("mel:wooden_shears", [" A", "A "], {
         A: "#planks",
     });
 
-    minecraft.crafting_shaped("mel:oak_mortar", ["BAB", " B "], {
+    kubejs.shaped("mel:oak_mortar", ["BAB", " B "], {
         A: "stick",
         B: "oak_planks",
     });
 
-    minecraft.crafting_shaped("mel:aura_grinder", ["ABA", "CDC", "ACA"], {
+    kubejs.shaped("mel:aura_grinder", ["ABA", "CDC", "ACA"], {
         A: "naturesaura:gold_powder",
         B: "oak_sapling",
         C: "mel:fiber",
         D: "furnace",
     });
 
-    minecraft.crafting_shaped("mel:gift_box", ["ABA", "BCB", "ABA"], {
+    kubejs.shaped("mel:gift_box", ["ABA", "BCB", "ABA"], {
         A: "red_dye",
         B: "naturesaura:gold_powder",
         C: "chest",
     });
 
-    minecraft.crafting_shaped("botania:fertilizer", ["ABB", "BB "], {
+    kubejs.shaped("botania:fertilizer", ["ABB", "BB "], {
         A: "bone_meal",
         B: "#botania:petals",
     });
 
-    minecraft.crafting_shaped("mel:wrapped_gift", ["ABC", "DEF", "GHI"], {
-        A: "mel:dream_star",
+    kubejs.shaped("mel:wrapped_gift", ["ABC", "DEF", "GHI"], {
+        A: "stone",
         B: "minecraft:oak_sapling",
         C: "naturesaura:gold_fiber",
         D: "naturesaura:gold_leaf",
@@ -154,80 +152,79 @@ ServerEvents.recipes((event) => {
         I: "naturesaura:calling_spirit",
     });
 
-    minecraft.crafting_shaped("4x botania:livingwood_log", ["AA", "AA"], {
+    kubejs.shaped("4x botania:livingwood_log", ["AA", "AA"], {
         A: "botania:livingwood",
     });
 
-    minecraft.crafting_shaped("botania:mana_pool", ["ABA", "AAA"], {
+    kubejs.shaped("botania:mana_pool", ["ABA", "AAA"], {
         A: "botania:livingrock",
         B: "naturesaura:token_joy",
     });
 
-    minecraft.crafting_shaped("botania:mana_spreader", ["AAA", "BC ", "AAA"], {
+    kubejs.shaped("botania:mana_spreader", ["AAA", "BC ", "AAA"], {
         A: "#botania:livingwood_logs",
         B: "naturesaura:infused_iron",
         C: "#botania:petals",
     });
 
-    minecraft.crafting_shaped("grass_block", ["AAA", "AAA", "AAA"], {
+    kubejs.shaped("grass_block", ["AAA", "AAA", "AAA"], {
         A: "#leaves",
     });
 
-    minecraft.crafting_shaped("mel:ancient_aura_generator_core", ["ABA", "BCB", "ABA"], {
+    kubejs.shaped("mel:ancient_aura_generator_core", ["ABA", "BCB", "ABA"], {
         A: "naturesaura:gold_powder",
         B: Item.of("naturesaura:aura_bottle", '{stored_type:"naturesaura:overworld"}').strongNBT(),
         C: "naturesaura:ancient_bark",
     });
 
-    minecraft.crafting_shaped("naturesaura:calling_spirit", [" A ", "ABA", " A "], {
+    kubejs.shaped("naturesaura:calling_spirit", [" A ", "A A", " A "], {
         A: "naturesaura:gold_powder",
-        B: "mel:dream_star",
     });
 
-    minecraft.crafting_shaped("ars_nouveau:source_jar", ["AAA", "BCB", "AAA"], {
+    kubejs.shaped("ars_nouveau:source_jar", ["AAA", "BCB", "AAA"], {
         A: "ars_nouveau:archwood_slab",
         B: "botania:elf_glass",
         C: "ars_nouveau:source_gem",
     });
 
-    minecraft.crafting_shaped("ae2:charger", ["ABA", "A  ", "ABA"], {
+    kubejs.shaped("ae2:charger", ["ABA", "A  ", "ABA"], {
         A: "ae2:smooth_quartz_slab",
         B: "botania:elementium_ingot",
     });
 
-    minecraft.crafting_shaped("ae2:inscriber", ["ABA", "C A", "ABA"], {
+    kubejs.shaped("ae2:inscriber", ["ABA", "C A", "ABA"], {
         A: "ae2:smooth_quartz_slab",
         B: "sticky_piston",
         C: "botania:elementium_ingot",
     });
 
-    minecraft.crafting_shaped("botania:apothecary_default", ["ABA", " A ", "AAA"], {
+    kubejs.shaped("botania:apothecary_default", ["ABA", " A ", "AAA"], {
         A: "cobblestone",
         B: "poppy",
     });
 
-    minecraft.crafting_shaped("occultism:otherworld_goggles", [" A ", "ABA", " C "], {
+    kubejs.shaped("occultism:otherworld_goggles", [" A ", "ABA", " C "], {
         A: "ars_nouveau:magebloom_fiber",
         B: "occultism:infused_lenses",
         C: "occultism:lens_frame",
     });
 
-    minecraft.crafting_shaped("occultism:soul_gem", [" A ", "ABA", " A "], {
+    kubejs.shaped("occultism:soul_gem", [" A ", "ABA", " A "], {
         A: "occultism:iesnium_ingot",
         B: "occultism:spirit_attuned_gem",
     });
 
-    minecraft.crafting_shaped("forbidden_arcanus:darkstone", ["AAA", "ABA", "AAA"], {
+    kubejs.shaped("forbidden_arcanus:darkstone", ["AAA", "ABA", "AAA"], {
         A: "occultism:burnt_otherstone",
         B: "occultism:otherstone",
     });
 
-    minecraft.crafting_shaped("ae2:quartz_glass", ["ABA", "BAB", "ABA"], {
+    kubejs.shaped("ae2:quartz_glass", ["ABA", "BAB", "ABA"], {
         A: "ae2:certus_quartz_dust",
         B: "botania:mana_glass",
     });
 
-    minecraft.crafting_shaped("mel:assembly_room_controller", ["ABA", "CDE", "AFA"], {
+    kubejs.shaped("mel:assembly_room_controller", ["ABA", "CDE", "AFA"], {
         A: "mekanism:block_steel",
         B: "ae2:calculation_processor",
         C: "ae2:engineering_processor",
@@ -236,7 +233,7 @@ ServerEvents.recipes((event) => {
         F: "ae2:printed_silicon",
     });
 
-    minecraft.crafting_shaped("mel:item_input", ["ABA", "CDE", "AFA"], {
+    kubejs.shaped("mel:item_input", ["ABA", "CDE", "AFA"], {
         A: "mekanism:block_steel",
         B: "ae2:cell_component_1k",
         C: "ae2:engineering_processor",
@@ -245,7 +242,7 @@ ServerEvents.recipes((event) => {
         F: "ae2:printed_silicon",
     });
 
-    minecraft.crafting_shaped("mel:item_output", ["AFA", "CDE", "ABA"], {
+    kubejs.shaped("mel:item_output", ["AFA", "CDE", "ABA"], {
         A: "mekanism:block_steel",
         B: "ae2:cell_component_1k",
         C: "ae2:engineering_processor",
@@ -254,7 +251,7 @@ ServerEvents.recipes((event) => {
         F: "ae2:printed_silicon",
     });
 
-    minecraft.crafting_shaped("mel:energy_input", ["ABA", "CDE", "AFA"], {
+    kubejs.shaped("mel:energy_input", ["ABA", "CDE", "AFA"], {
         A: "mekanism:block_steel",
         B: "ae2:cell_component_1k",
         C: "ae2:engineering_processor",
@@ -263,7 +260,7 @@ ServerEvents.recipes((event) => {
         F: "ae2:printed_silicon",
     });
 
-    minecraft.crafting_shaped("thermal:machine_press", [" A ", "BCB", "DED"], {
+    kubejs.shaped("thermal:machine_press", [" A ", "BCB", "DED"], {
         A: "iron_block",
         B: "thermal:iron_plate",
         C: "thermal:machine_frame",
@@ -271,7 +268,7 @@ ServerEvents.recipes((event) => {
         E: "thermal:redstone_servo",
     });
 
-    minecraft.crafting_shaped("mel:matter_mixer_controller", ["ABA", "EDE", "ACA"], {
+    kubejs.shaped("mel:matter_mixer_controller", ["ABA", "EDE", "ACA"], {
         A: "mekanism:block_steel",
         B: "ae2:calculation_processor",
         C: "ae2:logic_processor",
@@ -279,7 +276,7 @@ ServerEvents.recipes((event) => {
         E: "thermal:iron_gear",
     });
 
-    minecraft.crafting_shaped("mel:fluid_input", ["ABA", "CDE", "AFA"], {
+    kubejs.shaped("mel:fluid_input", ["ABA", "CDE", "AFA"], {
         A: "mekanism:block_steel",
         B: "thermal:fluid_cell",
         C: "ae2:engineering_processor",
@@ -288,7 +285,7 @@ ServerEvents.recipes((event) => {
         F: "ae2:printed_silicon",
     });
 
-    minecraft.crafting_shaped("mel:fluid_output", ["AFA", "CDE", "ABA"], {
+    kubejs.shaped("mel:fluid_output", ["AFA", "CDE", "ABA"], {
         A: "mekanism:block_steel",
         B: "thermal:fluid_cell",
         C: "ae2:engineering_processor",
@@ -297,14 +294,22 @@ ServerEvents.recipes((event) => {
         F: "ae2:printed_silicon",
     });
 
-    minecraft.crafting_shaped("wizards_reborn:orbital_fluid_retainer", ["ABA", " C ", "CCC"], {
+    kubejs.shaped("wizards_reborn:orbital_fluid_retainer", ["ABA", " C ", "CCC"], {
         A: "thermal:electrum_plate",
         B: "thermal:fluid_cell",
         C: "fluxnetworks:flux_block",
     });
 
-    minecraft.crafting_shaped("mel:unstable_singularity", ["AAA", "ABA", "AAA"], {
+    kubejs.shaped("mel:unstable_singularity", ["AAA", "ABA", "AAA"], {
         A: "mel:unstable_ingot",
         B: "ae2:singularity",
+    });
+
+    kubejs.shaped("mel:fired_crucible", ["A A", "A A", "AAA"], {
+        A: "white_concrete",
+    });
+
+    kubejs.shaped("mel:oak_crucible", ["A A", "A A", "AAA"], {
+        A: "oak_log",
     });
 });
