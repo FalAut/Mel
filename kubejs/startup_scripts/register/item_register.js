@@ -36,19 +36,16 @@ StartupEvents.registry("item", (event) => {
             return Color.rgba(255, greenBlue, greenBlue, 100);
         });
 
-    event.create("mel:division_sigil").unstackable().displayName("分割徽章");
-    event.create("mel:aggregation_sigil").unstackable().displayName("聚合徽章");
-    event.create("mel:separation_sigil").unstackable().displayName("分离徽章");
-    event.create("mel:gathering_sigil").unstackable().displayName("聚集徽章");
-    event.create("mel:pseudo_inversion_sigil").unstackable().glow(true).displayName("伪逆徽章");
+    event.create("mel:addition_sigil").unstackable();
+    event.create("mel:subtraction_sigil").unstackable();
+    event.create("mel:multiplication_sigil").unstackable();
+    event.create("mel:division_sigil").unstackable();
+    event.create("mel:pseudo_inversion_sigil").unstackable().glow(true);
+
     event.create("mel:colorless_gem");
-    event.create("mel:fake_powder");
-    event.create("mel:nameless_crystal");
     event.create("mel:unstable_singularity");
     event
         .create("mel:dream_wings")
-        .texture("mekanism:item/hdpe_elytra")
-        .glow(true)
         .tag("curios:ring")
         .unstackable()
         .attachCapability(

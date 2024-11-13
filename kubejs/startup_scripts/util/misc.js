@@ -9,9 +9,9 @@ StartupEvents.modifyCreativeTab("kubejs:tab", (event) => {
         Item.of("mel:sun_crystal", "{Solar:100.0d}"),
         Item.of("mel:unstable_ingot", "{Stable:100.0d}"),
         Item.of("mel:division_sigil").enchant("mel:activate", 1),
-        Item.of("mel:aggregation_sigil").enchant("mel:activate", 1),
-        Item.of("mel:separation_sigil").enchant("mel:activate", 1),
-        Item.of("mel:gathering_sigil").enchant("mel:activate", 1),
+        Item.of("mel:addition_sigil").enchant("mel:activate", 1),
+        Item.of("mel:subtraction_sigil").enchant("mel:activate", 1),
+        Item.of("mel:multiplication_sigil").enchant("mel:activate", 1),
         Item.of(
             "ae2:meteorite_compass",
             '{display:{Name:\'{"translate":"item.mel.maze_compass","bold":true,"italic":false}\'}}'

@@ -5,18 +5,18 @@ ServerEvents.recipes((event) => {
         contextual: [
             {
                 type: "custom",
-                id: "aggregation_sigil_validate",
+                id: "addition_sigil_validate",
             },
         ],
         post: [
             {
                 type: "custom",
-                id: "aggregation_sigil_activation",
+                id: "addition_sigil_activation",
             },
         ],
         item_in: [
             {
-                item: "mel:aggregation_sigil",
+                item: "mel:addition_sigil",
             },
         ],
         falling_block: "anvil",

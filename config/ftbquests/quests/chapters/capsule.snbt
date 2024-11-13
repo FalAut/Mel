@@ -139,6 +139,7 @@
 				team_reward: true
 				type: "item"
 			}]
+			subtitle: "{\"translate\":\"mel.capsule.misty_forest_portal_subtitle\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/create ponder naturesaura:calling_spirit\"}}"
 			tasks: [
 				{
 					consume_items: true
@@ -541,11 +542,28 @@
 			icon: "botania:natura_pylon"
 			id: "05A9162469429213"
 			rewards: [{
-				exclude_from_claim_all: true
-				id: "6701F9EC80B23005"
-				table_id: 5550039668768738047L
+				auto: "enabled"
+				id: "2B52E9A96D37008E"
+				item: {
+					Count: 1
+					id: "capsule:capsule"
+					tag: {
+						author: "?"
+						canRotate: 0b
+						color: 8072841
+						display: {
+							color: 4869306
+						}
+						isReward: 1b
+						label: "Alfheim Portal.nbt"
+						oneUse: 1b
+						size: 5
+						state: 5
+						structureName: "config/capsule/rewards/alfheim_portal.nbt"
+					}
+				}
 				team_reward: true
-				type: "choice"
+				type: "item"
 			}]
 			tasks: [
 				{
@@ -853,5 +871,5 @@
 			y: 4.0d
 		}
 	]
-	title: "capsule"
+	title: "{mel.capsule.title}"
 }

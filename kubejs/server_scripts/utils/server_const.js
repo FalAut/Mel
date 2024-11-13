@@ -9,3 +9,5 @@ const $Integer = Java.loadClass("java.lang.Integer");
 const $StructurePlaceSettings = Java.loadClass(
     "net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings"
 );
+const $ResourceKey = Java.loadClass("net.minecraft.resources.ResourceKey");
+const DAMAGE_TYPE = $ResourceKey.createRegistryKey("damage_type");

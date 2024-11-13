@@ -168,7 +168,7 @@ StartupEvents.postInit((event) => {
     );
 
     $PatchouliAPI.registerMultiblock(
-        "mel:aggregation_sigil_activation_ritual",
+        "mel:addition_sigil_activation_ritual",
         $PatchouliAPI.makeMultiblock(
             [
                 ["_____", "_BBB_", "_B0B_", "_BBB_", "_____"],

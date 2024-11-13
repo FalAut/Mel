@@ -11,4 +11,5 @@ ServerEvents.recipes((event) => {
     event.replaceInput({ id: "botania:spark_upgrade_isolated" }, "botania:pixie_dust", "botania:mana_powder");
     event.replaceInput({ id: "thermal:machine_smelter" }, "thermal:invar_gear", "thermal:redstone_servo");
     event.replaceInput({ id: "modularrouters:blank_module" }, "paper", "iron_ingot");
+    event.replaceInput({ id: "thermal:chiller_ingot_cast" }, "minecraft:nether_brick", "#forge:ingots");
 });

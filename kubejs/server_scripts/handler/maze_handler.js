@@ -1,13 +1,15 @@
 LoquatEvents.playerEnteredArea((event) => {
-    const { area, player, areaManager } = event;
+    const { area, player, areaManager, level } = event;
     const { tags } = area;
     if (player.spectator) return;
     let startRoom = areaManager.byTag("start_room").findFirst().orElse(null);
 
-    // TODO: 把start end room的maze标签删了
     if (tags.contains("maze") && !tags.contains("start_room") && !tags.contains("end_room")) {
         player.tell(Text.gray("一股神秘的力量将你拖进了迷宫"));
         player.teleportTo(startRoom.center.x(), startRoom.center.y(), startRoom.center.z());
+        level
+            .getBlock(startRoom.center.x(), startRoom.center.y() - 1, startRoom.center.z())
+            .set("farmingforblockheads:market");
     }
 
     if (tags.contains("end_room")) {

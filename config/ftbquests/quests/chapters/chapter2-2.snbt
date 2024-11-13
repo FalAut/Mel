@@ -1,11 +1,11 @@
 {
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
-	filename: "chapter4"
-	group: "7299F76F5EAD0EDE"
+	filename: "chapter2-2"
+	group: "25B116B1000F1A1E"
 	icon: "botania:third_eye"
 	id: "6903916B9F04A536"
-	order_index: 3
+	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{
@@ -359,5 +359,5 @@
 			y: 0.0d
 		}
 	]
-	title: "chapter4"
+	title: "{mel.chapter2-2.title}"
 }

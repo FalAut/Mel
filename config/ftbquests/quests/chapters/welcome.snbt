@@ -116,6 +116,31 @@
 			x: 2.5d
 			y: 2.0d
 		}
+		{
+			can_repeat: true
+			description: [
+				"{mel.welcome.projecte.desc1}"
+				""
+				"{mel.welcome.projecte.desc2}"
+				""
+				"{mel.welcome.projecte.desc3}"
+			]
+			icon: "projecte:transmutation_tablet"
+			id: "75B2DA742222B8B7"
+			rewards: [{
+				id: "4F2DA7762FFE44BC"
+				item: "projecte:transmutation_tablet"
+				type: "item"
+			}]
+			subtitle: "{mel.welcome.projecte.subtitle}"
+			tasks: [{
+				id: "22E8C9CE45959651"
+				type: "checkmark"
+			}]
+			title: "{mel.welcome.projecte.title}"
+			x: 0.5d
+			y: 2.5d
+		}
 	]
-	title: "welcome"
+	title: "{mel.welcome.title}"
 }

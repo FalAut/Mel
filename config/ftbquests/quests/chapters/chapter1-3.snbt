@@ -1,7 +1,7 @@
 {
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
-	filename: "chapter3"
+	filename: "chapter1-3"
 	group: "7299F76F5EAD0EDE"
 	icon: "ae2:condenser"
 	id: "390976FF234B8E3A"
@@ -18,28 +18,6 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["65F0A7C685287E99"]
-			id: "5D69ACDC565C4370"
-			rewards: [{
-				id: "77EE0AFB79A4CEBE"
-				item: {
-					Count: 1
-					id: "botania:elementium_axe"
-					tag: {
-						Damage: 0
-					}
-				}
-				type: "item"
-			}]
-			tasks: [{
-				dimension: "minecraft:the_nether"
-				id: "56028B0593E0E1C1"
-				type: "dimension"
-			}]
-			x: 10.5d
 			y: 0.0d
 		}
 		{
@@ -218,6 +196,21 @@
 					item: "thermal:enderium_ingot"
 					type: "item"
 				}
+				{
+					id: "02AA22DF9928A30C"
+					item: "mel:molten_lumium_bucket"
+					type: "item"
+				}
+				{
+					id: "574A93041E7625F3"
+					item: "mel:molten_signalum_bucket"
+					type: "item"
+				}
+				{
+					id: "2B614320A5F44166"
+					item: "thermal:ender_bucket"
+					type: "item"
+				}
 			]
 			x: 7.0d
 			y: 0.0d
@@ -260,35 +253,12 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["3CB09F67529A4C06"]
-			id: "1252BBA8CDBBDE22"
-			tasks: [{
-				id: "093C66AAEEB28D59"
-				item: "naturesaura:token_terror"
-				type: "item"
-			}]
-			x: 13.5d
-			y: 0.0d
-		}
-		{
-			dependencies: ["5D69ACDC565C4370"]
-			id: "714EE9862942A705"
-			subtitle: "{mel.chapter3.wither_skeleton_skull.subtitle}"
-			tasks: [{
-				id: "34BB299071A759CE"
-				item: "minecraft:wither_skeleton_skull"
-				type: "item"
-			}]
-			x: 11.5d
-			y: 0.0d
-		}
-		{
 			id: "227BDCCA7431278E"
 			tasks: [{
 				id: "0EE3011A728C0A33"
 				item: {
 					Count: 1
-					id: "mel:aggregation_sigil"
+					id: "mel:addition_sigil"
 					tag: {
 						Enchantments: [{
 							id: "mel:activate"
@@ -331,52 +301,6 @@
 			}]
 			x: 5.5d
 			y: -3.0d
-		}
-		{
-			dependencies: ["714EE9862942A705"]
-			id: "3CB09F67529A4C06"
-			tasks: [{
-				id: "4D004BA2052FC5BE"
-				item: "minecraft:nether_star"
-				type: "item"
-			}]
-			x: 12.5d
-			y: 0.0d
-		}
-		{
-			dependencies: ["5D69ACDC565C4370"]
-			id: "5A600B8B740341C6"
-			tasks: [{
-				id: "26A81613BDC21D7A"
-				item: "minecraft:netherite_scrap"
-				type: "item"
-			}]
-			x: 11.5d
-			y: -1.0d
-		}
-		{
-			dependencies: ["1252BBA8CDBBDE22"]
-			id: "213AEC247F498BD3"
-			shape: "gear"
-			size: 2.0d
-			tasks: [{
-				id: "3B89997E587C0B96"
-				item: "botania:third_eye"
-				type: "item"
-			}]
-			x: 15.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["0C74AC4CB2A839A0"]
-			id: "65F0A7C685287E99"
-			tasks: [{
-				id: "55A5144039B5D583"
-				item: "naturesaura:token_rage"
-				type: "item"
-			}]
-			x: 9.5d
-			y: -1.0d
 		}
 		{
 			dependencies: ["296D3FA393F7E6DC"]
@@ -491,25 +415,16 @@
 		{
 			dependencies: ["4A2B7E68773E4ADB"]
 			id: "0C74AC4CB2A839A0"
+			shape: "gear"
+			size: 2.0d
 			tasks: [{
 				id: "1A091C8D7D37A2BC"
 				item: "mel:unstable_singularity"
 				type: "item"
 			}]
-			x: 9.5d
+			x: 9.7d
 			y: 0.0d
 		}
-		{
-			dependencies: ["714EE9862942A705"]
-			id: "21005A1FD091F58F"
-			tasks: [{
-				id: "3C599D85118C74F1"
-				item: "mel:division_sigil"
-				type: "item"
-			}]
-			x: 11.5d
-			y: 1.0d
-		}
 	]
-	title: "chapter3"
+	title: "{mel.chapter1-3.title}"
 }

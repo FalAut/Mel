@@ -21,7 +21,7 @@
                             "function": "minecraft:looting_enchant"
                         }
                     ],
-                    "name": "mel:aggregation_sigil"
+                    "name": "mel:addition_sigil"
                 }
             ],
             "rolls": 1.0

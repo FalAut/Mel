@@ -1,4 +1,6 @@
 ServerEvents.recipes((event) => {
+    event.remove({ output: "projecte:philosophers_stone" });
+
     let recipesToRemoveID = [
         "naturesaura:gold_fiber",
         "naturesaura:wood_stand",

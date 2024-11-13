@@ -1,5 +1,5 @@
 PlayerEvents.tick((event) => {
-    const { player } = event;
+    const { player, level } = event;
     if (player.age % 20) return;
 
     player.paint({
@@ -28,7 +28,7 @@ PlayerEvents.tick((event) => {
         }
     });
 
-    if (player.level.dimension == "mel:misty_forest") {
+    if (level.dimension == "mel:misty_forest") {
         let foundDreamLamp = player.inventory.allItems.some((item) => processDreamLantern(item, player));
 
         if (!foundDreamLamp) {
@@ -38,7 +38,7 @@ PlayerEvents.tick((event) => {
 
         if (!foundDreamLamp) {
             player.sendData("has_dream_lantern", { hasDreamLantern: false });
-            player.attack(10);
+            player.attack(getDamageSource(level, "mel:mist"), 10);
         }
     }
 });

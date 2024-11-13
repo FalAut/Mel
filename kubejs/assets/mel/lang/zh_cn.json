@@ -22,11 +22,14 @@
     "item.mel.unstable_ingot": "不稳定金属锭",
     "item.mel.maze_compass": "迷宫罗盘",
     "item.mel.colorless_gem": "无色彩宝石",
-    "item.mel.fake_powder": "虚假的粉末",
-    "item.mel.nameless_crystal": "无名的水晶",
     "item.mel.unstable_singularity": "不稳定奇点",
     "item.botania.third_eye": "梦之眼",
     "item.mel.fire_starter": "引火器",
+    "item.mel.addition_sigil": "聚合徽章",
+    "item.mel.subtraction_sigil": "削减徽章",
+    "item.mel.multiplication_sigil": "",
+    "item.mel.division_sigil": "分割徽章",
+    "item.mel.pseudo_inversion_sigil": "伪逆徽章",
 
     "block.mel.infused_wood": "灌注之木",
     "block.mel.misty_forest_portal": "迷雾森林传送门",
@@ -37,6 +40,9 @@
     "block.mel.gensousitu": "幻想质",
     "block.mel.liquid_mana": "液态魔力",
     "block.mel.liquid_source": "液态魔源",
+    "block.mel.molten_ender": "熔融末影珍珠",
+    "block.mel.molten_lumium": "熔融流明",
+    "block.mel.molten_signalum": "熔融信素",
     "block.mel.source_fluidlink": "魔源液化通道",
     "block.mel.maze_block": "迷宫方块",
     "block.mel.futura_block": "科幻方块",
@@ -57,6 +63,8 @@
     "mbd2.fired_crucible": "坩埚",
     "mbd2.aura_grinder": "灵气研磨机",
     "mbd2.engraving_table": "刻印台",
+    "mbd2.assembly_room": "装配室",
+    "mbd2.matter_mixer": "物质混合机",
 
     "fluid.mel.gensousitu": "幻想质",
     "fluid.mel.liquid_mana": "液态魔力",
@@ -73,9 +81,10 @@
     "message.mel.activation_ritual.prepared": "\n一切都已准备完毕。\n",
     "message.mel.activation_ritual.sacrifice": "在祭坛上献祭一个愿意献祭自己的生物。",
 
+    "death.attack.mistDamage": "%1$s 迷失了",
+
     "tooltip.mel.oak_sapling": "可以种在§f白色混凝土§r上",
     "tooltip.mel.oak_mortar": "右键研磨副手的物品",
-    "tooltip.mel.cosume_aura": "每转换 1 块消耗 1000 灵气",
     "tooltip.mel.source_flower": "已经没什么好害怕的了",
     "tooltip.mel.pseudo_inversion_sigil": "我有我自己的规则。",
     "tooltip.mel.meteorite_compass1": "右键定位最近的迷宫",
@@ -84,7 +93,7 @@
     "tooltip.mel.dream_latern": "右键返回重生点",
     "tooltip.mel.black_lotus": "将神秘花扔入虚空转化而来",
     "tooltip.mel.dream_wings": "戴上可获得创造式飞行",
-    "tooltip.mel.aggregation_sigil": "由荒野奇美拉掉落",
+    "tooltip.mel.addition_sigil": "由荒野奇美拉掉落",
     "tooltip.mel.division_sigil": "由凋灵掉落",
     "tooltip.mel.fire_starter": "对着方块长按右键引火",
     "tooltip.mel.fired_crucible_1": "将§7灰色混凝土§r右键放进去，也可以丢进去",
@@ -102,9 +111,10 @@
     "tooltip.mel.ancient_aura_generator_core_1": "需要多方块结构",
     "tooltip.mel.ancient_aura_generator_core_2": "在以核心半径3格范围内放置树叶",
     "tooltip.mel.ancient_aura_generator_core_3": "树叶会被核心吸收，从而转化为灵气",
-    "tooltip.mel.dream_lantern_1": "带上可免受迷雾森林中迷雾的伤害（每秒消耗梦之灯1000灵气）",
-    "tooltip.mel.dream_lantern_2": "并使你在迷雾森林中看得更清楚",
-    "tooltip.mel.dream_lantern_3": "向上看并右键可返回出生点",
+    "tooltip.mel.dream_lantern_1": "带上可免受迷雾森林中迷雾的伤害",
+    "tooltip.mel.dream_lantern_2": "（每秒消耗梦之灯1000灵气）",
+    "tooltip.mel.dream_lantern_3": "并使你在迷雾森林中看得更清楚",
+    "tooltip.mel.dream_lantern_4": "向上看并右键可返回出生点",
 
     "machine_tooltip.mel.bar.aura": "灵气",
     "machine_tooltip.mel.progress.engraving_table": "每次刻印消耗1000灵气",
@@ -132,12 +142,20 @@
     "mel.time.hours": "%s 小时",
     "mel.time.days": "%s 天",
 
-    "mel.lootable.alfheim_portal_x.title": "X轴方向",
-    "mel.lootable.alfheim_portal_z.title": "Z轴方向",
+    "mel.welcome.title": "欢迎",
+    "mel.capsule.title": "胶囊",
 
     "mel.chapter1.title": "I.聚合",
+    "mel.chapter1-1.title": "白纸黑字",
+    "mel.chapter1-2.title": "迷雾森林",
+    "mel.chapter1-3.title": "不稳定奇点",
+
     "mel.chapter2.title": "II.分割",
+    "mel.chapter2-1.title": "异界定址",
+    "mel.chapter2-2.title": "魔鬼之梦",
+
     "mel.chapter3.title": "III.削减",
+
     "mel.chapter4.title": "IV.伪逆",
 
     "mel.welcome.special_thanks.title": "特别感谢",
@@ -147,20 +165,21 @@
     "mel.welcome.special_thanks.bilibili": "B站主页",
     "mel.welcome.special_thanks.huya": "虎牙直播间",
 
-    "mel.chapter1-1.title": "白纸黑字",
-    "mel.chapter1-2.title": "迷雾森林",
-    "mel.chapter1-3.title": "不稳定奇点",
+    "mel.welcome.projecte.title": "【可选】简单模式",
+    "mel.welcome.projecte.subtitle": "你可以自行选择是否需要转化桌",
+    "mel.welcome.projecte.desc1": "等价交换模组不存在任务进程中，若不需要可删除此模组，没有影响",
+    "mel.welcome.projecte.desc2": "注意：所有物品的EMC被设置为1，只是EMC不会显示在物品提示上",
+    "mel.welcome.projecte.desc3": "注意：转换桌不记录NBT，因此一些特殊的物品（例如 瓶装阳光）无法正常转化",
 
-    "mel.chapter2-1.title": "异界定址",
-    "mel.chapter2-2.title": "魔鬼之梦",
+    "mel.capsule.misty_forest_portal_subtitle": "→【点我】← 查看如何激活迷雾森林传送门",
 
     "mel.chapter1-1.oak_sapling.subtitle": "→【点我】← 查看如何获得橡木树苗",
     "mel.chapter1-1.oak_sapling.desc1": "橡木树苗可以种在白色混凝土上",
     "mel.chapter1-1.oak_sapling.desc2": "可前往「胶囊」章节获取胶囊来快速放置这个结构",
 
-    "mel.chapter2.find_maze.title": "发现迷宫",
-    "mel.chapter2.enter_misty_forest.title": "进入迷雾森林",
-    "mel.chapter2.enter_misty_forest.subtitle": "在“胶囊”章节可以获取传送门的胶囊",
+    "mel.chapter1-2.find_maze.title": "发现迷宫",
+    "mel.chapter1-2.enter_misty_forest.title": "进入迷雾森林",
+    "mel.chapter1-2.enter_misty_forest.subtitle": "在“胶囊”章节可以获取传送门的胶囊",
 
-    "mel.chapter3.wither_skeleton_skull.subtitle": "源质钢斧可以提高头颅的掉率"
+    "mel.chapter2-1.wither_skeleton_skull.subtitle": "源质钢斧可以提高头颅的掉率"
 }

@@ -225,7 +225,6 @@ ServerEvents.recipes((event) => {
         output: {
             name: "botania:livingwood",
         },
-        success_function: "mel:remove_aura",
     });
 
     event.custom({
@@ -237,6 +236,5 @@ ServerEvents.recipes((event) => {
         output: {
             name: "botania:livingrock",
         },
-        success_function: "mel:remove_aura",
     });
 });

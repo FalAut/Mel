@@ -1,0 +1,116 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "chapter2-1"
+	group: "25B116B1000F1A1E"
+	icon: "naturesaura:token_rage"
+	id: "22B34E9A8442AE35"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["65F0A7C685287E99"]
+			id: "5D69ACDC565C4370"
+			rewards: [{
+				id: "77EE0AFB79A4CEBE"
+				item: {
+					Count: 1
+					id: "botania:elementium_axe"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				dimension: "minecraft:the_nether"
+				id: "56028B0593E0E1C1"
+				type: "dimension"
+			}]
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3CB09F67529A4C06"]
+			id: "1252BBA8CDBBDE22"
+			tasks: [{
+				id: "093C66AAEEB28D59"
+				item: "naturesaura:token_terror"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5D69ACDC565C4370"]
+			id: "714EE9862942A705"
+			subtitle: "{mel.chapter2-1.wither_skeleton_skull.subtitle}"
+			tasks: [{
+				id: "34BB299071A759CE"
+				item: "minecraft:wither_skeleton_skull"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["714EE9862942A705"]
+			id: "3CB09F67529A4C06"
+			tasks: [{
+				id: "4D004BA2052FC5BE"
+				item: "minecraft:nether_star"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5D69ACDC565C4370"]
+			id: "5A600B8B740341C6"
+			tasks: [{
+				id: "26A81613BDC21D7A"
+				item: "minecraft:netherite_scrap"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["1252BBA8CDBBDE22"]
+			id: "213AEC247F498BD3"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "3B89997E587C0B96"
+				item: "botania:third_eye"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			id: "65F0A7C685287E99"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "55A5144039B5D583"
+				item: "naturesaura:token_rage"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["714EE9862942A705"]
+			id: "21005A1FD091F58F"
+			tasks: [{
+				id: "3C599D85118C74F1"
+				item: "mel:division_sigil"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 1.0d
+		}
+	]
+	title: "{mel.chapter2-1.title}"
+}

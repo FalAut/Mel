@@ -1,5 +1,5 @@
 ServerEvents.recipes((event) => {
-    const { kubejs } = event.recipes;
+    const { kubejs, minecraft } = event.recipes;
 
     function fourShaped(/**@type  {OutputItem_} */ output, /**@type  {InputItem_} */ input) {
         kubejs.shaped(output, ["AA", "AA"], {
@@ -55,23 +55,17 @@ ServerEvents.recipes((event) => {
         .shapeless("botania:spark", ["mel:dream_lantern", "#botania:petals", "#botania:petals", "gold_nugget"])
         .keepIngredient("mel:dream_lantern");
 
-    kubejs
-        .shapeless(
-            Item.of(
-                "ae2:meteorite_compass",
-                '{display:{Name:\'{"translate":"item.mel.maze_compass","bold":true,"italic":false}\'}}'
-            ).withLore([
-                Text.translate("tooltip.mel.meteorite_compass1").gold().italic(false),
-                Text.translate("tooltip.mel.meteorite_compass2").gold().italic(false),
-                Text.translate("tooltip.mel.meteorite_compass3").gold().italic(false),
-            ]),
-            [
-                "mel:dream_lantern",
-                "minecraft:compass",
-                Item.of("naturesaura:aura_bottle", '{stored_type:"mel:mist"}').strongNBT(),
-            ]
-        )
-        .keepIngredient("mel:dream_lantern");
+    kubejs.shapeless(
+        Item.of(
+            "ae2:meteorite_compass",
+            '{display:{Name:\'{"translate":"item.mel.maze_compass","bold":true,"italic":false}\'}}'
+        ).withLore([
+            Text.translate("tooltip.mel.meteorite_compass1").gold().italic(false),
+            Text.translate("tooltip.mel.meteorite_compass2").gold().italic(false),
+            Text.translate("tooltip.mel.meteorite_compass3").gold().italic(false),
+        ]),
+        ["minecraft:compass", Item.of("naturesaura:aura_bottle", '{stored_type:"mel:mist"}').strongNBT()]
+    );
 
     kubejs.shapeless("mel:futura_block", "ae2:controller").keepIngredient("ae2:controller");
 
@@ -97,7 +91,7 @@ ServerEvents.recipes((event) => {
     kubejs
         .shaped(Item.of("mel:unstable_ingot", "{Stable:100.0d}"), [" A ", " B ", "C D"], {
             A: "thermal:enderium_ingot",
-            B: Item.of("mel:aggregation_sigil").enchant("mel:activate", 1).strongNBT(),
+            B: Item.of("mel:addition_sigil").enchant("mel:activate", 1).strongNBT(),
             C: "thermal:signalum_ingot",
             D: "thermal:lumium_ingot",
         })
@@ -311,5 +305,15 @@ ServerEvents.recipes((event) => {
 
     kubejs.shaped("mel:oak_crucible", ["A A", "A A", "AAA"], {
         A: "oak_log",
+    });
+
+    kubejs.shaped("farmingforblockheads:market", ["ABA", "C C", "CCC"], {
+        A: "#forge:planks/archwood",
+        B: "#forge:dyes/red",
+        C: "#forge:logs/archwood",
+    });
+
+    kubejs.shaped("thermal:press_gear_die", [" A ", "A A", " A "], {
+        A: "thermal:iron_plate",
     });
 });

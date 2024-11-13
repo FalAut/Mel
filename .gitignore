@@ -27,6 +27,13 @@
 !config/embeddium++.toml
 !config/sodium-extra-options.json
 !config/occultism-client.toml
+!config/ProjectE
+!config/ProjectE/client.toml
+!config/ProjectE/custom_emc.json
+!config/ProjectE/mapping.toml
+!config/ProjectE/processing.toml
+!config/jade
+!config/jade/plugins.json
 
 ## Defaultconfigs
 !defaultconfigs/

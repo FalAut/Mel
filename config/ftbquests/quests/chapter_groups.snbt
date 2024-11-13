@@ -1,3 +1,6 @@
 {
-	chapter_groups: [{ id: "7299F76F5EAD0EDE", title: "{mel.chapter1.title}" }]
+	chapter_groups: [
+		{ id: "7299F76F5EAD0EDE", title: "{mel.chapter1.title}" }
+		{ id: "25B116B1000F1A1E", title: "{mel.chapter2.title}" }
+	]
 }

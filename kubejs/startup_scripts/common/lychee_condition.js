@@ -26,11 +26,11 @@ LycheeEvents.customCondition("validate_misty_forest_portal", (event) => {
     };
 });
 
-LycheeEvents.customCondition("aggregation_sigil_validate", (event) => {
+LycheeEvents.customCondition("addition_sigil_validate", (event) => {
     event.condition.testFunc = (recipe, ctx, times) => {
         let itemEntity = ctx.getParam("this_entity");
         const { level, block } = itemEntity;
-        const multiblock = $PatchouliAPI.getMultiblock("mel:aggregation_sigil_activation_ritual");
+        const multiblock = $PatchouliAPI.getMultiblock("mel:addition_sigil_activation_ritual");
         if (multiblock.validate(level, block.pos.below(), "none")) {
             return times;
         }

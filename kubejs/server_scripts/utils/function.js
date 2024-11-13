@@ -24,3 +24,9 @@ function getFirstBlockAbove(level, pos) {
     }
     return null;
 }
+
+function getDamageSource(/** @type {Internal.Level}*/ level, /** @type {Internal.DamageType_}*/ damageType) {
+    const resourceKey = $ResourceKey.create(DAMAGE_TYPE, damageType);
+    const holder = level.registryAccess().registryOrThrow(DAMAGE_TYPE).getHolderOrThrow(resourceKey);
+    return new DamageSource(holder);
+}

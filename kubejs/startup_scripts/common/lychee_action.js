@@ -21,7 +21,7 @@ LycheeEvents.customAction("place_misty_forest_portal", (event) => {
         let itemEntity = ctx.getParam("this_entity");
         const { level, block } = itemEntity;
 
-        $PortalPlacer.attemptPortalLight(level, block.pos, $PortalIgnitionSource.ItemUseSource("bedrock"));
+        $PortalPlacer.attemptPortalLight(level, block.pos, $PortalIgnitionSource.ItemUseSource("barrier"));
         let lightningBoltEntity = block.createEntity("lightning_bolt");
 
         lightningBoltEntity.setVisualOnly(true);
@@ -30,13 +30,13 @@ LycheeEvents.customAction("place_misty_forest_portal", (event) => {
     };
 });
 
-LycheeEvents.customAction("aggregation_sigil_activation", (event) => {
+LycheeEvents.customAction("addition_sigil_activation", (event) => {
     event.action.applyFunc = (recipe, ctx, times) => {
         let itemEntity = ctx.getParam("this_entity");
         const { level, block } = itemEntity;
 
         const resultEntity = block.createEntity("item");
-        resultEntity.item = Item.of("mel:aggregation_sigil").enchant("mel:activate", 1);
+        resultEntity.item = Item.of("mel:addition_sigil").enchant("mel:activate", 1);
         resultEntity.moveTo(Vec3d.atCenterOf(block.pos.above()));
         resultEntity.setDeltaMovement(new Vec3d(0, 0.01, 0));
         resultEntity.setNoGravity(true);
@@ -45,7 +45,7 @@ LycheeEvents.customAction("aggregation_sigil_activation", (event) => {
 
         level.broadcastEntityEvent(resultEntity, 35);
 
-        const multiblock = $PatchouliAPI.getMultiblock("mel:aggregation_sigil_activation_ritual");
+        const multiblock = $PatchouliAPI.getMultiblock("mel:addition_sigil_activation_ritual");
         multiblock.simulate(level, block.pos.below(), "none", false).second.forEach((result) => {
             if (result.character == "A") {
                 level.setBlock(
