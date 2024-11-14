@@ -15,6 +15,7 @@
 !config/ftbquests
 !config/ftbquests/**
 !config/capsule
+!config/capsule/**
 !config/capsule/rewards
 !config/capsule-common.toml
 !config/patchouli-client.toml
