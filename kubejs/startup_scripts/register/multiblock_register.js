@@ -1,6 +1,6 @@
 StartupEvents.postInit((event) => {
     $PatchouliAPI.registerMultiblock(
-        "mel:dream_tree",
+        "mel:first_tree",
         $PatchouliAPI.makeMultiblock(
             [
                 ["     ", "  A  ", " AAA ", "  A  ", "     "],

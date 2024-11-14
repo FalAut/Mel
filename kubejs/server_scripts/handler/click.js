@@ -2,14 +2,13 @@ BlockEvents.rightClicked((event) => {
     const { hand, level, block, item, player, server } = event;
     if (hand != "MAIN_HAND") return;
 
-    let dreamTree = $PatchouliAPI.getMultiblock("mel:dream_tree");
+    let dreamTree = $PatchouliAPI.getMultiblock("mel:first_tree");
 
     if (dreamTree.validate(level, block.pos, "none")) {
         dreamTree
             .simulate(level, block.pos, "none", false)
             .second.forEach((result) => level.destroyBlock(result.worldPosition, false));
         block.popItemFromFace("oak_sapling", "up");
-        item.count--;
         player.swing();
     }
 

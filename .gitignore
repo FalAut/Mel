@@ -56,5 +56,6 @@ kubejs/config/probejs.json
 !hotai/
 !hotai/**
 
+## MBD2
 !ldlib/
 !ldlib/**

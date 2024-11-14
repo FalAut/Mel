@@ -46,7 +46,7 @@ StartupEvents.registry("item", (event) => {
     event.create("mel:unstable_singularity");
     event
         .create("mel:dream_wings")
-        .tag("curios:ring")
+        .tag("curios:curios")
         .unstackable()
         .attachCapability(
             CuriosCapabilityBuilder.CURIOS.itemStack()
