@@ -13,7 +13,7 @@
 			id: "341A543368E45E54"
 			shape: "gear"
 			size: 2.0d
-			subtitle: "{mel.chapter1-2.enter_misty_forest.subtitle}"
+			subtitle: "{\"translate\":\"mel.chapter1-2.enter_misty_forest.subtitle\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"0AA9F448417D561E\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"message.mel.clickopen\"}}}"
 			tasks: [{
 				dimension: "mel:misty_forest"
 				id: "74911D77994DC1FA"
@@ -117,6 +117,7 @@
 		{
 			dependencies: ["2AB33AA024C2DA5F"]
 			id: "67A66442CFED1732"
+			subtitle: "{mel.chapter1-2.elven_portal_conversion.subtitle}"
 			tasks: [{
 				id: "19BB31D35297C042"
 				item: "botania:shimmerrock"
@@ -173,6 +174,7 @@
 		{
 			dependencies: ["62399F5DF57F5561"]
 			id: "6BFDFA38118C2AA7"
+			subtitle: "{\"translate\":\"mel.chapter1-2.terra_plate.subtitle\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"7451057B70EC9510\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"message.mel.clickopen\"}}}"
 			tasks: [{
 				id: "04C9C16269524713"
 				item: "botania:terra_plate"
@@ -736,7 +738,10 @@
 		}
 		{
 			dependencies: ["056C442009E33606"]
+			description: ["{image:mel:textures/image/mana_to_source.png width:253 height:173 align:center}"]
 			id: "40E14E3636698CB3"
+			min_width: 300
+			subtitle: "{mel.chapter1-2.mana_to_source.subtitle}"
 			tasks: [{
 				id: "286782FA60653917"
 				item: "ars_nouveau:source_jar"

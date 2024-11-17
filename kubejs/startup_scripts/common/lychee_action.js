@@ -1,12 +1,35 @@
 LycheeEvents.customAction("add_solar", (event) => {
     event.action.applyFunc = (recipe, ctx, times) => {
+        /**@type {Internal.Entity} */
         let itemEntity = ctx.getParam("this_entity");
+        let count = itemEntity.item.count;
+
+        if (!itemEntity.nbt.Item.tag) {
+            itemEntity.mergeNbt({
+                Item: {
+                    Count: count,
+                    id: "mel:sun_crystal",
+                    tag: {
+                        Solar: 0,
+                    },
+                },
+            });
+        }
+
         let amount = itemEntity.nbt.Item.tag.Solar;
-        if (amount >= 100) return;
+        if (amount >= 100) {
+            itemEntity.mergeNbt({
+                Item: {
+                    Count: count,
+                    id: "mel:sun_crystal_full",
+                },
+            });
+            return;
+        }
 
         itemEntity.mergeNbt({
             Item: {
-                Count: 1,
+                Count: count,
                 id: "mel:sun_crystal",
                 tag: {
                     Solar: amount + 1,

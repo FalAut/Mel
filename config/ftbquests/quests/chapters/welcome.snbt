@@ -113,8 +113,8 @@
 				type: "checkmark"
 			}]
 			title: "{item.akashictome.tome}"
-			x: 2.5d
-			y: 2.0d
+			x: 0.0d
+			y: -2.5d
 		}
 		{
 			can_repeat: true
@@ -138,8 +138,34 @@
 				type: "checkmark"
 			}]
 			title: "{mel.welcome.projecte.title}"
-			x: 0.5d
+			x: 0.0d
 			y: 2.5d
+		}
+		{
+			can_repeat: true
+			icon: {
+				Count: 1
+				id: "expatternprovider:infinity_cell"
+				tag: {
+					record: {
+						"#c": "ae2:i"
+						id: "minecraft:white_concrete"
+					}
+				}
+			}
+			id: "3EE9E3DE66E3340D"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "4297B69B37F665DC"
+				table_id: 3921120320289517308L
+				type: "choice"
+			}]
+			tasks: [{
+				id: "57934F2B0BF1223E"
+				type: "checkmark"
+			}]
+			x: -2.5d
+			y: 0.0d
 		}
 	]
 	title: "{mel.welcome.title}"

@@ -9,7 +9,6 @@ StartupEvents.registry("item", (event) => {
     event
         .create("mel:sun_crystal")
         .unstackable()
-        .glow(true)
         .barWidth((i) => {
             if (i.nbt && i.nbt.contains("Solar") && i.nbt.getInt("Solar") != 0) {
                 return ((i.nbt.getInt("Solar") + 8) / 100) * 13;
@@ -17,7 +16,7 @@ StartupEvents.registry("item", (event) => {
             return 0;
         })
         .barColor((i) => Color.GOLD);
-
+    event.create("mel:sun_crystal_full").unstackable().glow(true);
     event.createCustom("mel:dream_lantern", () => new $ItemAuraCache("dream_lantern", 2560000));
 
     event
@@ -46,7 +45,7 @@ StartupEvents.registry("item", (event) => {
     event.create("mel:unstable_singularity");
     event
         .create("mel:dream_wings")
-        .tag("curios:curios")
+        .tag("curios:curio")
         .unstackable()
         .attachCapability(
             CuriosCapabilityBuilder.CURIOS.itemStack()

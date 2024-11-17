@@ -32,9 +32,6 @@ ServerEvents.recipes((event) => {
         item_in: [
             {
                 item: "mel:sun_crystal",
-                "lychee:tag": {
-                    Solar: 0,
-                },
             },
         ],
         block_in: "*",
@@ -65,18 +62,12 @@ ServerEvents.recipes((event) => {
         post: [
             {
                 type: "drop_item",
-                item: "mel:sun_crystal",
-                "lychee:tag": {
-                    Solar: 100,
-                },
+                item: "mel:sun_crystal_full",
             },
         ],
         item_in: [
             {
                 item: "mel:sun_crystal",
-                "lychee:tag": {
-                    Solar: 0,
-                },
             },
         ],
         block_in: "*",

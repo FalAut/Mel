@@ -1,28 +1,29 @@
 /**
  * @param {Internal.Level} level
- * @param {BlockPos} block
- * @returns {BlockPos}
+ * @param {BlockPos} blockPos
+ * @param {number} range
+ * @param {function(Internal.BlockState): boolean} condition
+ * @returns {BlockPos | null}
  */
-function getCoordsToPut(level, blockPos) {
-    const RANGE = 3;
+function getCoordsToPut(level, blockPos, range, condition) {
+    if (blockPos == null) return null;
+
     let possibleCoords = [];
 
-    for (let i = -RANGE; i <= RANGE; i++) {
-        for (let j = -RANGE; j <= RANGE; j++) {
-            for (let k = -RANGE; k <= RANGE; k++) {
-                if (blockPos == null) return null;
-
+    for (let i = -range; i <= range; i++) {
+        for (let j = -range; j <= range; j++) {
+            for (let k = -range; k <= range; k++) {
                 let pos = blockPos.offset(i, j, k);
                 let state = level.getBlockState(pos);
 
-                if (state.block instanceof $LeavesBlock) {
+                if (condition(state)) {
                     possibleCoords.push(pos);
                 }
             }
         }
     }
 
-    if (possibleCoords.length == 0) return null;
+    if (possibleCoords.length === 0) return null;
 
     return possibleCoords[level.random.nextInt(possibleCoords.length)];
 }

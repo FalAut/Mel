@@ -12,6 +12,7 @@
 			id: "683AA03529028A82"
 			shape: "gear"
 			size: 2.0d
+			subtitle: "{mel.chapter1-1.white_concrete.subtitle}"
 			tasks: [
 				{
 					id: "4886982D719595A4"
@@ -52,7 +53,7 @@
 				"{mel.chapter1-1.oak_sapling.desc2}"
 			]
 			id: "0EF181ADCC2BD78C"
-			subtitle: "{\"translate\":\"mel.chapter1-1.oak_sapling.subtitle\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/create ponder minecraft:oak_sapling\"}}"
+			subtitle: "{\"translate\":\"mel.chapter1-1.oak_sapling.subtitle\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/create ponder minecraft:oak_sapling\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"message.mel.clickopen\"}}}"
 			tasks: [{
 				id: "2E52F34D24E72BB9"
 				item: "minecraft:oak_sapling"

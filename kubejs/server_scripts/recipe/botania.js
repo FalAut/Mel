@@ -49,7 +49,7 @@ ServerEvents.recipes((event) => {
             "botania:mana_diamond",
             "botania:manasteel_ingot",
             "botania:mana_powder",
-            Item.of("mel:sun_crystal", "{Solar:100b}").strongNBT(),
+            "mel:sun_crystal_full",
             "naturesaura:token_euphoria",
             "naturesaura:gold_leaf",
         ],
@@ -59,7 +59,7 @@ ServerEvents.recipes((event) => {
     botania.runic_altar(
         "botania:terra_plate",
         [
-            Item.of("mel:sun_crystal", "{Solar:100.0d}").strongNBT(),
+            "mel:sun_crystal_full",
             "minecraft:lapis_block",
             "botania:rune_fire",
             "botania:rune_earth",
@@ -73,7 +73,7 @@ ServerEvents.recipes((event) => {
 
     botania.terra_plate("botania:alfheim_portal", [
         "botania:rune_mana",
-        Item.of("mel:sun_crystal", "{Solar:100b}").strongNBT(),
+        "mel:sun_crystal_full",
         "naturesaura:calling_spirit",
         "botania:livingwood",
         "botania:terrasteel_ingot",

@@ -139,7 +139,7 @@
 				team_reward: true
 				type: "item"
 			}]
-			subtitle: "{\"translate\":\"mel.capsule.misty_forest_portal_subtitle\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/create ponder naturesaura:calling_spirit\"}}"
+			subtitle: "{\"translate\":\"mel.capsule.misty_forest_portal_subtitle\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/create ponder naturesaura:calling_spirit\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"message.mel.clickopen\"}}}"
 			tasks: [
 				{
 					consume_items: true

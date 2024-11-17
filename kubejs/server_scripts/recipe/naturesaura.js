@@ -48,8 +48,8 @@ ServerEvents.recipes((event) => {
     naturesaura.tree_ritual("mel:dream_lantern", [
         "minecraft:chain",
         "naturesaura:aura_trove",
-        Item.of("mel:sun_crystal", "{Solar:100.0d}").strongNBT(),
-        Item.of("mel:sun_crystal", "{Solar:100.0d}").strongNBT(),
+        "mel:sun_crystal_full",
+        "mel:sun_crystal_full",
         "mel:infused_wood",
         "mel:infused_wood",
         "mel:infused_wood",
@@ -57,7 +57,7 @@ ServerEvents.recipes((event) => {
     ]);
 
     naturesaura.tree_ritual("botania:runic_altar", [
-        Item.of("mel:sun_crystal", "{Solar:100.0d}").strongNBT(),
+        "mel:sun_crystal_full",
         "botania:mana_diamond",
         "botania:livingrock",
         "botania:livingrock",
@@ -68,7 +68,7 @@ ServerEvents.recipes((event) => {
     ]);
 
     naturesaura.tree_ritual("naturesaura:conversion_catalyst", [
-        Item.of("mel:sun_crystal", "{Solar:100.0d}").strongNBT(),
+        "mel:sun_crystal_full",
         "naturesaura:gold_brick",
         "naturesaura:gold_leaf",
         "naturesaura:token_euphoria",

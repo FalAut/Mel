@@ -2,11 +2,8 @@ Platform.setModName("mel", "Mel");
 
 StartupEvents.modifyCreativeTab("kubejs:tab", (event) => {
     event.setDisplayName("Mel");
-    event.remove("mel:sun_crystal");
     event.remove("mel:unstable_ingot");
     event.add([
-        Item.of("mel:sun_crystal", "{Solar:0}"),
-        Item.of("mel:sun_crystal", "{Solar:100.0d}"),
         Item.of("mel:unstable_ingot", "{Stable:100.0d}"),
         Item.of("mel:division_sigil").enchant("mel:activate", 1),
         Item.of("mel:addition_sigil").enchant("mel:activate", 1),

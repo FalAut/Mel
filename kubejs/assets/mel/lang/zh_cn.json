@@ -8,7 +8,8 @@
     "item.mel.gift_box": "礼物盒",
     "item.mel.wrapped_gift": "打包好的礼物",
     "item.mel.whos_gift": "§6§l谁人的礼物",
-    "item.mel.sun_crystal": "太阳晶体",
+    "item.mel.sun_crystal": "太阳晶体（未充满）",
+    "item.mel.sun_crystal_full": "太阳晶体（已充满）",
     "item.mel.dream_lantern": "梦之灯",
     "item.mel.dream_wings": "梦之翼",
     "item.mel.maze_eye": "迷宫之眼",
@@ -73,6 +74,8 @@
     "fluid.mel.molten_lumium": "熔融流明",
     "fluid.mel.molten_signalum": "熔融信素",
 
+    "message.mel.clickme": "→【点我】← ",
+    "message.mel.clickopen": "点我打开",
     "message.mel.activation_ritual.title": "\n\n\n\n\n- 分割徽章激活仪式 -\n",
     "message.mel.activation_ritual.multiblock": "%s 仪式摆放是否正确",
     "message.mel.activation_ritual.midnight": "%s 当前时间是否为午夜",
@@ -160,7 +163,6 @@
 
     "mel.welcome.special_thanks.title": "特别感谢",
     "mel.welcome.special_thanks.tyumen": "§6秋明§r - 为本包提供了宣传和支持",
-    "mel.welcome.special_thanks.open_url": "点击打开",
     "mel.welcome.special_thanks.tyumens": "秋明的 ",
     "mel.welcome.special_thanks.bilibili": "B站主页",
     "mel.welcome.special_thanks.huya": "虎牙直播间",
@@ -171,15 +173,19 @@
     "mel.welcome.projecte.desc2": "注意：所有物品的EMC被设置为1，只是EMC不会显示在物品提示上",
     "mel.welcome.projecte.desc3": "注意：转换桌不记录NBT，因此一些特殊的物品（例如 瓶装阳光）无法正常转化",
 
-    "mel.capsule.misty_forest_portal_subtitle": "→【点我】← 查看如何激活迷雾森林传送门",
+    "mel.capsule.misty_forest_portal_subtitle": "§6→【点我】← 查看如何激活迷雾森林传送门",
 
-    "mel.chapter1-1.oak_sapling.subtitle": "→【点我】← 查看如何获得橡木树苗",
+    "mel.chapter1-1.white_concrete.subtitle": "§6可在「欢迎」章节获得无限混凝土元件",
+    "mel.chapter1-1.oak_sapling.subtitle": "§6→【点我】← 查看如何获得橡木树苗",
     "mel.chapter1-1.oak_sapling.desc1": "橡木树苗可以种在白色混凝土上",
     "mel.chapter1-1.oak_sapling.desc2": "可前往「胶囊」章节获取胶囊来快速放置这个结构",
 
-    "mel.chapter1-2.find_maze.title": "发现迷宫",
-    "mel.chapter1-2.enter_misty_forest.title": "进入迷雾森林",
-    "mel.chapter1-2.enter_misty_forest.subtitle": "在“胶囊”章节可以获取传送门的胶囊",
+    "mel.chapter1-2.find_maze.title": "§6发现迷宫",
+    "mel.chapter1-2.enter_misty_forest.title": "§6进入迷雾森林",
+    "mel.chapter1-2.enter_misty_forest.subtitle": "§6→【点我】← 查看迷雾森林传送门的胶囊",
+    "mel.chapter1-2.terra_plate.subtitle": "§6→【点我】← 查看泰拉凝聚祭坛的胶囊",
+    "mel.chapter1-2.mana_to_source.subtitle": "§6如图所示，可用魔力转化魔源，但只能使用魔力发射器",
+    "mel.chapter1-2.elven_portal_conversion.subtitle": "§6在激活的精灵门核心半径5格范围内放置活石，活石会被转化为微光石",
 
     "mel.chapter2-1.wither_skeleton_skull.subtitle": "源质钢斧可以提高头颅的掉率"
 }

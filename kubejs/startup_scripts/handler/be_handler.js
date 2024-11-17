@@ -4,8 +4,8 @@ global.AncientAuraGenerator = (/**@type {Internal.BlockEntityJS} */ be) => {
     if (!$PatchouliAPI.getMultiblock("mel:ancient_aura_generator").validate(level, blockPos, "none")) return;
     const chunkAuraCap = level.getChunkAt(blockPos).getCapability($NaturesAuraAPI.CAP_AURA_CHUNK).resolve().get();
 
-    let coords = getCoordsToPut(level, blockPos);
-    if (coords != null) {
+    let coords = getCoordsToPut(level, blockPos, 3, (state) => state.block instanceof $LeavesBlock);
+    if (coords) {
         level.destroyBlock(coords, false);
 
         if (level.getBlock(blockPos.below()) == "naturesaura:generator_limit_remover") {
