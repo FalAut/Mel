@@ -1,4 +1,6 @@
 ServerEvents.recipes((event) => {
+    const { thermal } = event.recipes;
+
     ingotChiller("thermal:enderium_ingot", "thermal:ender");
     ingotChiller("thermal:lumium_ingot", "mel:molten_lumium");
     ingotChiller("thermal:signalum_ingot", "mel:molten_signalum");
@@ -25,21 +27,6 @@ ServerEvents.recipes((event) => {
         });
     }
 
-    event.custom({
-        type: "thermal:pulverizer",
-        ingredient: {
-            value: [
-                {
-                    item: "mel:colorless_gem",
-                },
-            ],
-            count: 1,
-        },
-        result: [
-            {
-                item: "forbidden_arcanus:mundabitur_dust",
-                count: 1,
-            },
-        ],
-    });
+    thermal.pulverizer("forbidden_arcanus:mundabitur_dust", "mel:colorless_gem");
+    thermal.refinery("thermal:rubber", Fluid.of("thermal:latex", 100));
 });

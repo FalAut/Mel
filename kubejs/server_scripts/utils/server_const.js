@@ -1,4 +1,5 @@
 // priority: 99
+
 const FOG_AURA_COST = 1000;
 
 const $PatchouliAPI = Java.loadClass("vazkii.patchouli.api.PatchouliAPI").get();
@@ -10,3 +11,4 @@ const $StructurePlaceSettings = Java.loadClass(
 );
 const $ResourceKey = Java.loadClass("net.minecraft.resources.ResourceKey");
 const DAMAGE_TYPE = $ResourceKey.createRegistryKey("damage_type");
+const $ForgeHooks = Java.loadClass("net.minecraftforge.common.ForgeHooks");

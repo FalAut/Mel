@@ -34,6 +34,9 @@ ItemEvents.tooltip((event) => {
         Text.translate("tooltip.mel.ancient_aura_generator_core_1").gold(),
         Text.translate("tooltip.mel.ancient_aura_generator_core_2").gold(),
         Text.translate("tooltip.mel.ancient_aura_generator_core_3").gold(),
+        Text.translate("tooltip.mel.ancient_aura_generator_core_4").gold(),
+        Text.translate("tooltip.mel.ancient_aura_generator_core_5").gold(),
+        Text.translate("tooltip.mel.ancient_aura_generator_core_6").gold(),
     ]);
 
     event.add("mel:dream_lantern", [

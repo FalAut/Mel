@@ -154,7 +154,13 @@
 		}
 		{
 			dependencies: ["48D0CC04CEA4742B"]
+			description: [
+				"{mel.chapter1-1.gold_leaf.desc1}"
+				""
+				"{mel.chapter1-1.gold_leaf.desc2}"
+			]
 			id: "0C05E172FDFFC328"
+			subtitle: "{mel.chapter1-1.gold_leaf.subtitle}"
 			tasks: [{
 				id: "4586848248AD686A"
 				item: "naturesaura:gold_leaf"
@@ -700,6 +706,7 @@
 		{
 			dependencies: ["0F9F0DF0B936E745"]
 			id: "46753187677AC325"
+			subtitle: "{tooltip.mel.composter}"
 			tasks: [
 				{
 					id: "09BCFBB37AC2D4EA"

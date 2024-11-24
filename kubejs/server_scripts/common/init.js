@@ -1,3 +1,5 @@
+// priority: 9
+
 ServerEvents.loaded((event) => {
     const { server } = event;
 
@@ -12,3 +14,25 @@ ServerEvents.loaded((event) => {
         server.persistentData.putBoolean("first_load", true);
     }
 });
+
+ServerEvents.loaded((event) => {
+    let fuelItems = {};
+
+    Ingredient.all.stacks.forEach((itemStack) => {
+        const burnTime = $ForgeHooks.getBurnTime(itemStack, "minecraft:smelting");
+
+        if (burnTime > 0) {
+            fuelItems[itemStack.id] = burnTime;
+        }
+    });
+
+    JsonIO.write("kubejs/fuel_items.json", fuelItems);
+});
+
+// ItemEvents.rightClicked("stick", (event) => {
+//     let allItems = Ingredient.all.stacks.toArray();
+//     let randomIndex = Utils.random.nextInt(allItems.length);
+//     let randomItem = allItems[randomIndex];
+
+//     event.player.give(randomItem);
+// });

@@ -193,4 +193,27 @@ ServerEvents.recipes((event) => {
         reagent: [{ item: "ars_nouveau:wilden_tribute" }],
         sourceCost: 10000,
     });
+
+    event.custom({
+        type: "ars_nouveau:enchanting_apparatus",
+        output: {
+            item: "mel:source_fluidlink",
+        },
+        pedestalItems: [
+            {
+                item: "thermal:electrum_block",
+            },
+            {
+                item: "thermal:electrum_block",
+            },
+            {
+                item: "ars_nouveau:source_gem_block",
+            },
+            {
+                item: "ars_nouveau:source_gem_block",
+            },
+        ],
+        reagent: [{ item: "ars_nouveau:manipulation_essence" }],
+        sourceCost: 10000,
+    });
 });

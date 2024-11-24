@@ -59,6 +59,9 @@
     "block.mel.fired_crucible": "坩埚",
     "block.mel.aura_grinder": "灵气研磨器",
     "block.mel.engraving_table": "刻印台",
+    "block.mel.colossal_furnace_controller": "巨型熔炉",
+    "block.mbd2.colossal_furnace_controller": "巨型熔炉",
+    "block.mbd2.colossal_furnace_proxy": "巨型熔炉",
 
     "mbd2.oak_crucible": "橡木坩埚",
     "mbd2.fired_crucible": "坩埚",
@@ -83,6 +86,10 @@
     "message.mel.activation_ritual.brightness": "%s 祭坛周围亮度是否够低",
     "message.mel.activation_ritual.prepared": "\n一切都已准备完毕。\n",
     "message.mel.activation_ritual.sacrifice": "在祭坛上献祭一个愿意献祭自己的生物。",
+    "message.mel.cant_enter_nether": "你需要狂怒印记才能进入下界",
+    "message.mel.enter_maze": "一股神秘的力量将你拖进了迷宫",
+    "message.mel.end_maze": "你到达了迷宫的出口，右键神秘方块即可逃离迷宫",
+    "message.mel.exit_maze": "恭喜你逃出了迷宫",
 
     "death.attack.mistDamage": "%1$s 迷失了",
 
@@ -103,27 +110,25 @@
     "tooltip.mel.fired_crucible_2": "当坩埚下方有热源的时候就会开始产生熔岩",
     "tooltip.mel.fired_crucible_3": "可用热源：火，火把，熔岩, 岩浆块",
     "tooltip.mel.fired_crucible_4": "满1000 mB时可以用桶取出",
-    "tooltip.mel.fired_crucible_5": "空手+Shift右键可取出物品",
+    "tooltip.mel.fired_crucible_5": "空手 + Shift右键可取出物品",
     "tooltip.mel.oak_crucible_1": "将§2树叶§r右键放进去，也可以丢进去",
     "tooltip.mel.oak_crucible_2": "满1000 mB时可以用桶取出",
-    "tooltip.mel.oak_crucible_3": "空手+Shift右键可取出物品",
-    "tooltip.mel.gensousitu_bucket_1": "可与一些方块交互产生矿物，具体查看思索与JEI",
+    "tooltip.mel.oak_crucible_3": "空手 + Shift右键可取出物品",
+    "tooltip.mel.gensousitu_bucket_1": "可与一些方块交互产生矿物，具体查看思索与 JEI",
     "tooltip.mel.gensousitu_bucket_2": "拥有和无限水源一样的特性",
     "tooltip.mel.whos_gift": "右键打开",
     "tooltip.mel.composter": "每层堆肥都可以提供一个骨粉",
     "tooltip.mel.ancient_aura_generator_core_1": "需要多方块结构",
-    "tooltip.mel.ancient_aura_generator_core_2": "在以核心半径3格范围内放置树叶",
+    "tooltip.mel.ancient_aura_generator_core_2": "在以核心半径 3 格范围内放置树叶",
     "tooltip.mel.ancient_aura_generator_core_3": "树叶会被核心吸收，从而转化为灵气",
+    "tooltip.mel.ancient_aura_generator_core_4": "每个树叶可转化 10000 灵气",
+    "tooltip.mel.ancient_aura_generator_core_5": "当附近的灵气值超过某个值，灵气制造将会停止",
+    "tooltip.mel.ancient_aura_generator_core_6": "在核心下方放置制造催化剂可打破这个限制，并可产生原先 2 倍的灵气",
     "tooltip.mel.dream_lantern_1": "带上可免受迷雾森林中迷雾的伤害",
-    "tooltip.mel.dream_lantern_2": "（每秒消耗梦之灯1000灵气）",
+    "tooltip.mel.dream_lantern_2": "（每秒消耗梦之灯 1000 灵气）",
     "tooltip.mel.dream_lantern_3": "并使你在迷雾森林中看得更清楚",
     "tooltip.mel.dream_lantern_4": "向上看并右键可返回出生点",
-
-    "machine_tooltip.mel.bar.aura": "灵气",
-    "machine_tooltip.mel.progress.engraving_table": "每次刻印消耗1000灵气",
-    "machine_tooltip.mel.progress.aura_grinder": "每次研磨消耗1000灵气",
-
-    "machine_error.mel.aura": "灵气不足",
+    "tooltip.mel.colossal_furnace_upgrade": "§a每个熔炉可提升 1% 的处理速度，并增加 1 个并行处理能力",
 
     "biome.mel.black_and_white": "黑与白",
     "biome.mel.misty_forest": "迷雾森林",
@@ -170,8 +175,8 @@
     "mel.welcome.projecte.title": "【可选】简单模式",
     "mel.welcome.projecte.subtitle": "你可以自行选择是否需要转化桌",
     "mel.welcome.projecte.desc1": "等价交换模组不存在任务进程中，若不需要可删除此模组，没有影响",
-    "mel.welcome.projecte.desc2": "注意：所有物品的EMC被设置为1，只是EMC不会显示在物品提示上",
-    "mel.welcome.projecte.desc3": "注意：转换桌不记录NBT，因此一些特殊的物品（例如 瓶装阳光）无法正常转化",
+    "mel.welcome.projecte.desc2": "注意：所有物品的 EMC 被设置为1，只是 EMC 不会显示在物品提示上",
+    "mel.welcome.projecte.desc3": "注意：转换桌不记录 NBT，因此一些特殊的物品（例如：瓶装阳光）无法正常转化",
 
     "mel.capsule.misty_forest_portal_subtitle": "§6→【点我】← 查看如何激活迷雾森林传送门",
 
@@ -179,13 +184,16 @@
     "mel.chapter1-1.oak_sapling.subtitle": "§6→【点我】← 查看如何获得橡木树苗",
     "mel.chapter1-1.oak_sapling.desc1": "橡木树苗可以种在白色混凝土上",
     "mel.chapter1-1.oak_sapling.desc2": "可前往「胶囊」章节获取胶囊来快速放置这个结构",
+    "mel.chapter1-1.gold_leaf.subtitle": "§6由黄金树叶掉落",
+    "mel.chapter1-1.gold_leaf.desc1": "用闪耀纤维右键树叶",
+    "mel.chapter1-1.gold_leaf.desc2": "等待一段时间后，树叶将变为黄金树叶",
 
     "mel.chapter1-2.find_maze.title": "§6发现迷宫",
     "mel.chapter1-2.enter_misty_forest.title": "§6进入迷雾森林",
     "mel.chapter1-2.enter_misty_forest.subtitle": "§6→【点我】← 查看迷雾森林传送门的胶囊",
+    "mel.chapter1-2.terra_plate.title": "§c泰拉凝聚板需要一个新的结构才能工作",
     "mel.chapter1-2.terra_plate.subtitle": "§6→【点我】← 查看泰拉凝聚祭坛的胶囊",
     "mel.chapter1-2.mana_to_source.subtitle": "§6如图所示，可用魔力转化魔源，但只能使用魔力发射器",
     "mel.chapter1-2.elven_portal_conversion.subtitle": "§6在激活的精灵门核心半径5格范围内放置活石，活石会被转化为微光石",
-
-    "mel.chapter2-1.wither_skeleton_skull.subtitle": "源质钢斧可以提高头颅的掉率"
+    "mel.chapter1-2.wilden_summon.subtitle": "§6激活仪式之前，务必向仪式火盆投入荒野之角、荒野尖刺、荒野膜翼才能召唤出Boss"
 }

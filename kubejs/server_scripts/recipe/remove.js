@@ -85,7 +85,7 @@ ServerEvents.recipes((event) => {
         "thermal:machine_press",
         "naturesaura:tree_ritual/token_anger",
         "naturesaura:offering/token_rage",
-        "",
+        "thermal:device_tree_extractor",
         "",
         "",
         "",

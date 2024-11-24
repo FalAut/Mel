@@ -205,6 +205,31 @@ ServerEvents.recipes((event) => {
     alchemyMana("minecraft:ender_pearl", "minecraft:amethyst_shard");
     alchemyMana("minecraft:quartz", "minecraft:lapis_lazuli");
 
+    /**
+     * @param {OutputItem_} output
+     * @param {InputItem_} input
+     * @param {number} mana
+     */
+    function conjurationMana(output, input, mana) {
+        event.custom({
+            type: "botania:mana_infusion",
+            catalyst: {
+                type: "block",
+                block: "botania:conjuration_catalyst",
+            },
+            input: {
+                item: input,
+            },
+            mana: mana ? mana : 2000,
+            output: {
+                item: output,
+                count: 2,
+            },
+        });
+    }
+
+    conjurationMana("string", "string");
+
     event.custom({
         type: "botania:mana_infusion",
         input: {

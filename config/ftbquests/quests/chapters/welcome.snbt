@@ -81,7 +81,7 @@
 			can_repeat: true
 			description: [
 				"{mel.welcome.special_thanks.tyumen}"
-				"{\"translate\":\"mel.welcome.special_thanks.tyumens\",\"extra\":[{\"translate\":\"mel.welcome.special_thanks.bilibili\",\"color\":\"green\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://space.bilibili.com/32796946\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"mel.welcome.special_thanks.open_url\"}}},{\"text\":\" | \",\"color\":\"white\"},{\"translate\":\"mel.welcome.special_thanks.huya\",\"color\":\"green\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://www.huya.com/raini\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"mel.welcome.special_thanks.open_url\"}}}]}"
+				"{\"translate\":\"mel.welcome.special_thanks.tyumens\",\"extra\":[{\"translate\":\"mel.welcome.special_thanks.bilibili\",\"color\":\"green\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://space.bilibili.com/32796946\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"message.mel.clickopen\"}}},{\"text\":\" | \",\"color\":\"white\"},{\"translate\":\"mel.welcome.special_thanks.huya\",\"color\":\"green\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://www.huya.com/raini\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"message.mel.clickopen\"}}}]}"
 			]
 			icon: "minecraft:poppy"
 			id: "46991BFC9FC2D6C6"

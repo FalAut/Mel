@@ -55,6 +55,10 @@ ServerEvents.recipes((event) => {
         .shapeless("botania:spark", ["mel:dream_lantern", "#botania:petals", "#botania:petals", "gold_nugget"])
         .keepIngredient("mel:dream_lantern");
 
+    kubejs
+        .shapeless("botania:light_relay", ["mel:dream_lantern", "#botania:petals", "#botania:petals", "botania:spark"])
+        .keepIngredient("mel:dream_lantern");
+
     kubejs.shapeless(
         Item.of(
             "ae2:meteorite_compass",
@@ -315,5 +319,12 @@ ServerEvents.recipes((event) => {
 
     kubejs.shaped("thermal:press_gear_die", [" A ", "A A", " A "], {
         A: "thermal:iron_plate",
+    });
+
+    kubejs.shaped("thermal:device_tree_extractor", ["AAA", "ABC", "ADA"], {
+        A: "thermal:iron_plate",
+        B: "mel:oak_crucible",
+        C: "naturesaura:color_changer",
+        D: "minecraft:comparator",
     });
 });

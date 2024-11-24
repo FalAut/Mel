@@ -174,12 +174,18 @@
 		{
 			dependencies: ["62399F5DF57F5561"]
 			id: "6BFDFA38118C2AA7"
-			subtitle: "{\"translate\":\"mel.chapter1-2.terra_plate.subtitle\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"7451057B70EC9510\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"message.mel.clickopen\"}}}"
+			rewards: [{
+				id: "66F2844982AD5D2D"
+				item: "botania:spark_upgrade_dominant"
+				type: "item"
+			}]
+			subtitle: "{\"translate\":\"mel.chapter1-2.terra_plate.subtitle\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"4842CC82C1CF0559\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"message.mel.clickopen\"}}}"
 			tasks: [{
 				id: "04C9C16269524713"
 				item: "botania:terra_plate"
 				type: "item"
 			}]
+			title: "{mel.chapter1-2.terra_plate.title}"
 			x: 5.5d
 			y: 0.5d
 		}
@@ -397,7 +403,6 @@
 				"368690E9474BB079"
 				"50B0CC93E4CFE5D6"
 			]
-			description: ["{image:mel:textures/image/mana_to_ae.png width:167 height:106 align:center}"]
 			id: "6641707922E5AB63"
 			shape: "gear"
 			size: 2.0d
@@ -555,6 +560,7 @@
 				"3899D7896D69E280"
 			]
 			id: "705E3C69A699CF59"
+			subtitle: "{mel.chapter1-2.wilden_summon.subtitle}"
 			tasks: [{
 				id: "3C8CA090C96EBFD1"
 				item: "ars_nouveau:ritual_wilden_summon"
@@ -773,23 +779,23 @@
 			id: "08725E7EAD500EED"
 			tasks: [
 				{
-					id: "768B92168F33060C"
-					item: "thermal:tin_ore"
+					id: "2BFAECF5788DC3E8"
+					item: "thermal:raw_tin"
 					type: "item"
 				}
 				{
-					id: "7884D331D076B4F7"
-					item: "thermal:lead_ore"
+					id: "1EB5ED395EC66CDE"
+					item: "thermal:raw_lead"
 					type: "item"
 				}
 				{
-					id: "51E66D1F698035DC"
-					item: "thermal:silver_ore"
+					id: "1910230F6ED17B5B"
+					item: "thermal:raw_silver"
 					type: "item"
 				}
 				{
-					id: "78D3D43D4BBDEFB6"
-					item: "thermal:nickel_ore"
+					id: "56DAD10A81584F52"
+					item: "thermal:raw_nickel"
 					type: "item"
 				}
 			]
