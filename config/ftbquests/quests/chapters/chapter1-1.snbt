@@ -736,6 +736,50 @@
 			x: 2.5d
 			y: -4.5d
 		}
+		{
+			dependencies: ["21C48122170841B7"]
+			description: [
+				"{tooltip.mel.colossal_furnace_1}"
+				""
+				"{tooltip.mel.colossal_furnace_2}"
+				""
+				"{tooltip.mel.colossal_furnace_3}"
+				""
+				"{tooltip.mel.colossal_furnace_4}"
+				""
+				"{tooltip.mel.colossal_furnace_5}"
+				""
+				"{tooltip.mel.colossal_furnace_6}"
+			]
+			icon: "mel:colossal_furnace_core"
+			id: "44CF0DA410C3700D"
+			tasks: [
+				{
+					id: "38C47A682F8B46DA"
+					item: "mel:colossal_furnace_core"
+					type: "item"
+				}
+				{
+					count: 26L
+					id: "1AA3D045AFC72EF3"
+					item: { Count: 26, id: "mel:colossal_furnace_proxy" }
+					type: "item"
+				}
+			]
+			x: 3.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["0FA113CABE84D85E"]
+			id: "110892C49B521C2E"
+			tasks: [{
+				id: "76A738D6C3A32834"
+				item: "mel:cobble_gen_tier1"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 2.0d
+		}
 	]
 	title: "{mel.chapter1-1.title}"
 }

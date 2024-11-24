@@ -1,0 +1,6 @@
+{
+    "parent": "mel:block/cobble_gen_base",
+    "textures": {
+        "material": "block/cobblestone"
+    }
+}

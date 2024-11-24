@@ -327,4 +327,46 @@ ServerEvents.recipes((event) => {
         C: "naturesaura:color_changer",
         D: "minecraft:comparator",
     });
+
+    kubejs.shaped("mel:colossal_furnace_core", ["AAA", "ABA", "AAA"], {
+        A: "furnace",
+        B: "cobblestone",
+    });
+
+    kubejs.shaped("mel:colossal_furnace_proxy", ["AAA", "ABA", "AAA"], {
+        A: "cobblestone",
+        B: "furnace",
+    });
+
+    kubejs.shaped("mel:cobble_gen_tier1", ["AAA", "BDC", "AAA"], {
+        A: "#logs",
+        B: "water_bucket",
+        C: "lava_bucket",
+        D: "glass",
+    });
+
+    kubejs.shaped("mel:cobble_gen_tier2", ["AAA", "ABA", "AAA"], {
+        A: "cobblestone",
+        B: "mel:cobble_gen_tier1",
+    });
+
+    kubejs.shaped("mel:cobble_gen_tier3", ["AAA", "ABA", "AAA"], {
+        A: "iron_block",
+        B: "mel:cobble_gen_tier2",
+    });
+
+    kubejs.shaped("mel:cobble_gen_tier4", ["AAA", "ABA", "AAA"], {
+        A: "gold_block",
+        B: "mel:cobble_gen_tier3",
+    });
+
+    kubejs.shaped("mel:cobble_gen_tier5", ["AAA", "ABA", "AAA"], {
+        A: "diamond_block",
+        B: "mel:cobble_gen_tier4",
+    });
+
+    kubejs.shaped("mel:cobble_gen_tier6", ["AAA", "ABA", "AAA"], {
+        A: "netherite_block",
+        B: "mel:cobble_gen_tier5",
+    });
 });
