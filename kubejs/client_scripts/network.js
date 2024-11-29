@@ -8,3 +8,9 @@ NetworkEvents.dataReceived("has_dream_lantern", (event) => {
         player.persistentData.putBoolean("has_dream_lantern", false);
     }
 });
+
+ClientEvents.tick((event) => {
+    if (global.CraftingKey.consumeClick()) {
+        event.player.sendData("server", { portable_crafting: true });
+    }
+});

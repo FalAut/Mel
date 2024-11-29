@@ -6,6 +6,7 @@ StartupEvents.registry("item", (event) => {
     event.create("mel:gift_box");
     event.create("mel:wrapped_gift").glow(true);
     event.create("mel:whos_gift").glow(true);
+    event.create("mel:portable_crafting_table").unstackable().tag("curios:curio");
     event
         .create("mel:sun_crystal")
         .unstackable()

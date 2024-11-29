@@ -1,59 +1,58 @@
+// 坩埚
 BlockEvents.rightClicked((event) => {
-    const { hand, block, item, player } = event;
-    if (block != "mel:oak_crucible" || hand != "MAIN_HAND") return;
+    handleCrucibleInteraction(event, "mel:oak_crucible", "leaves", "water");
+    handleCrucibleInteraction(event, "mel:fired_crucible", "mel:fired_crucible_fuel", "lava");
+});
 
-    const itemCap = block.entity.getCapability(ForgeCapabilities.ITEM_HANDLER).resolve().get();
-    const fluidCap = block.entity.getCapability(ForgeCapabilities.FLUID_HANDLER).resolve().get();
+// 堆肥桶
+BlockEvents.rightClicked("composter", (event) => {
+    const { block, hand } = event;
+    if (hand != "MAIN_HAND") return;
 
-    if (item.hasTag("leaves")) {
-        if (itemCap.getStackInSlot(0).count < 64) {
-            itemCap.insertItem(item.withCount(1), false);
-            item.count--;
-        }
-        player.swing();
-        event.cancel();
-    }
+    const compostLevel = block.blockState.getValue(BlockProperties.LEVEL_COMPOSTER);
 
-    if (item.isEmpty() && player.isCrouching()) {
-        player.give(itemCap.getStackInSlot(0).withCount(1));
-        itemCap.extractItem(0, 1, false);
-        player.swing();
-    }
-
-    if (item == "bucket" && fluidCap.getFluidInTank(0).amount >= 1000) {
-        fluidCap.drain(Fluid.water(), "execute");
-        player.give("water_bucket");
-        item.count--;
-        player.swing();
+    if (compostLevel == 8) {
+        block.popItemFromFace("7x bone_meal", "up");
     }
 });
 
 BlockEvents.rightClicked((event) => {
-    const { hand, block, item, player } = event;
-    if (block != "mel:fired_crucible" || hand != "MAIN_HAND") return;
+    const { hand, level, block, item, player, server } = event;
+    if (hand != "MAIN_HAND") return;
 
-    const itemCap = block.entity.getCapability(ForgeCapabilities.ITEM_HANDLER).resolve().get();
-    const fluidCap = block.entity.getCapability(ForgeCapabilities.FLUID_HANDLER).resolve().get();
+    let dreamTree = $PatchouliAPI.getMultiblock("mel:first_tree");
 
-    if (item == "gray_concrete") {
-        if (itemCap.getStackInSlot(0).count < 64) {
-            itemCap.insertItem(item.withCount(1), false);
-            item.count--;
+    if (dreamTree.validate(level, block.pos, "none")) {
+        dreamTree
+            .simulate(level, block.pos, "none", false)
+            .second.forEach((result) => level.destroyBlock(result.worldPosition, false));
+        block.popItemFromFace("oak_sapling", "up");
+        player.swing();
+    }
+
+    if (item == "mel:source_flower") {
+        if (!block.hasTag("minecraft:dirt")) {
+            player.inventoryMenu.broadcastFullState();
+            event.cancel();
         }
-        player.swing();
-        event.cancel();
     }
 
-    if (item.isEmpty() && player.isCrouching()) {
-        player.give(itemCap.getStackInSlot(0).withCount(1));
-        itemCap.extractItem(0, 1, false);
-        player.swing();
-    }
+    let curiosInventory = $CuriosApi.getCuriosInventory(player).resolve().get();
+    let foundThirdEye = curiosInventory.equippedCurios.allItems.some((item) => item == "botania:third_eye");
+    const structureTemplate = server.structureManager.get("mel:demons_dream").get();
+    let otherworld = server.getLevel("mel:otherworld");
 
-    if (item == "bucket" && fluidCap.getFluidInTank(0).amount >= 1000) {
-        fluidCap.drain(Fluid.lava(), "execute");
-        player.give("lava_bucket");
-        item.count--;
-        player.swing();
+    if (level.dimension == "minecraft:the_nether" && block.hasTag("minecraft:beds") && foundThirdEye) {
+        structureTemplate.placeInWorld(
+            otherworld,
+            block.pos,
+            block.pos,
+            new $StructurePlaceSettings(),
+            level.random,
+            2
+        );
+        player.teleportTo("mel:otherworld", block.pos.x + 2, block.pos.y + 2, block.pos.z + 2, 0, 0);
+        player.potionEffects.add("darkness", 100);
+        player.potionEffects.add("nausea", 200);
     }
 });

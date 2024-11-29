@@ -31,6 +31,7 @@
     "item.mel.multiplication_sigil": "",
     "item.mel.division_sigil": "分割徽章",
     "item.mel.pseudo_inversion_sigil": "伪逆徽章",
+    "item.mel.portable_crafting_table": "便携式工作台",
 
     "block.mel.infused_wood": "灌注之木",
     "block.mel.misty_forest_portal": "迷雾森林传送门",
@@ -145,9 +146,13 @@
     "tooltip.mel.cobble_gen_2": "工作间隔：%s 秒",
     "tooltip.mel.cobble_gen_3": "内部最大缓存数：%s",
     "tooltip.mel.cobble_gen_4": "可自动输出圆石到上方容器",
+    "tooltip.mel.portable_crafting_table_1": "手持右键打开工作台",
+    "tooltip.mel.portable_crafting_table_2": "放在身上时也可按 [ %s ]键 打开",
 
     "biome.mel.black_and_white": "黑与白",
     "biome.mel.misty_forest": "迷雾森林",
+
+    "key.mel.portable_crafting": "打开便携式工作台",
 
     "comment.lychee.canseesky": "§7- 检查此位置是否可以看见天空",
 
@@ -200,6 +205,7 @@
     "mel.chapter1-1.oak_sapling.subtitle": "§6→【点我】← 查看如何获得橡木树苗",
     "mel.chapter1-1.oak_sapling.desc1": "橡木树苗可以种在白色混凝土上",
     "mel.chapter1-1.oak_sapling.desc2": "可前往「胶囊」章节获取胶囊来快速放置这个结构",
+    "mel.chapter1-1.oak_sapling.desc3": "你可以通过按潜行键（Shift）来催生植物生长",
     "mel.chapter1-1.gold_leaf.subtitle": "§6由黄金树叶掉落",
     "mel.chapter1-1.gold_leaf.desc1": "用闪耀纤维右键树叶",
     "mel.chapter1-1.gold_leaf.desc2": "等待一段时间后，树叶将变为黄金树叶",

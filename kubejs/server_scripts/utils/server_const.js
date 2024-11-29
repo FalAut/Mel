@@ -14,3 +14,6 @@ const DAMAGE_TYPE = $ResourceKey.createRegistryKey("damage_type");
 const $ForgeHooks = Java.loadClass("net.minecraftforge.common.ForgeHooks");
 const $IMultiController = Java.loadClass("com.lowdragmc.mbd2.api.machine.IMultiController");
 const $MultiblockState = Java.loadClass("com.lowdragmc.mbd2.api.pattern.MultiblockState");
+const $Optional = Java.loadClass("java.util.Optional");
+const $SimpleMenuProvider = Java.loadClass("net.minecraft.world.SimpleMenuProvider");
+const $CraftingMenu = Java.loadClass("net.minecraft.world.inventory.CraftingMenu");

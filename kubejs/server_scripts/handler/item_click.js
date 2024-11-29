@@ -29,4 +29,9 @@ ItemEvents.rightClicked((event) => {
             serverPlayer.teleportTo("overworld", x, y, z, 0, 0);
         }
     }
+
+    if (item == "mel:portable_crafting_table") {
+        openCraftingMenu(player);
+        player.swing();
+    }
 });

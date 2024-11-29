@@ -51,8 +51,15 @@
 				"{mel.chapter1-1.oak_sapling.desc1}"
 				""
 				"{mel.chapter1-1.oak_sapling.desc2}"
+				""
+				"{mel.chapter1-1.oak_sapling.desc3}"
 			]
 			id: "0EF181ADCC2BD78C"
+			rewards: [{
+				id: "2ED8B0837DCDD676"
+				item: "mel:portable_crafting_table"
+				type: "item"
+			}]
 			subtitle: "{\"translate\":\"mel.chapter1-1.oak_sapling.subtitle\",\"color\":\"gold\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/create ponder minecraft:oak_sapling\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"message.mel.clickopen\"}}}"
 			tasks: [{
 				id: "2E52F34D24E72BB9"

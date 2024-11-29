@@ -73,4 +73,12 @@ ItemEvents.tooltip((event) => {
             Text.translate("tooltip.mel.cobble_gen_4").green(),
         ]);
     });
+
+    event.add("mel:portable_crafting_table", [
+        Text.translate("tooltip.mel.portable_crafting_table_1").gold(),
+        Text.translate(
+            "tooltip.mel.portable_crafting_table_2",
+            Text.keybind("key.mel.portable_crafting").green()
+        ).gold(),
+    ]);
 });

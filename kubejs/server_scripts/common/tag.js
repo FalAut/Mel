@@ -5,6 +5,8 @@ ServerEvents.tags("item", (event) => {
     Ingredient.all.itemIds.forEach((itemId) => {
         event.add("mel:all_item", itemId);
     });
+
+    event.add("mel:fired_crucible_fuel", ["gray_concrete"]);
 });
 
 ServerEvents.tags("block", (event) => {

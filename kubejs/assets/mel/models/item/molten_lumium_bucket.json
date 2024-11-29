@@ -1,6 +1,5 @@
 {
-    "parent": "minecraft:item/generated",
-    "textures": {
-        "layer0": "mel:item/molten_lumium_bucket"
-    }
+    "parent": "forge:item/bucket_drip",
+    "loader": "forge:fluid_container",
+    "fluid": "mel:molten_lumium"
 }

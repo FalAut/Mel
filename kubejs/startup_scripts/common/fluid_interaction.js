@@ -1,7 +1,3 @@
-/**
- * @author Westernat
- */
-
 StartupEvents.postInit((event) => {
     let $FluidInteractionRegistry = Java.loadClass("net.minecraftforge.fluids.FluidInteractionRegistry");
     let II = Java.loadClass("net.minecraftforge.fluids.FluidInteractionRegistry$InteractionInformation").__javaObject__;
