@@ -48,12 +48,13 @@ ItemEvents.tooltip((event) => {
 
     event.add("mel:colossal_furnace_core", [
         Text.translate("tooltip.mel.colossal_furnace_1").gold(),
-        Text.translate("tooltip.mel.colossal_furnace_2").gold(),
+        Text.translate("tooltip.mel.colossal_furnace_2"),
         Text.translate("tooltip.mel.colossal_furnace_3").gold(),
         Text.translate("tooltip.mel.colossal_furnace_4").gold(),
         Text.translate("tooltip.mel.colossal_furnace_5").gold(),
         Text.translate("tooltip.mel.colossal_furnace_6").gold(),
-        Text.translate("tooltip.mel.colossal_furnace_upgrade"),
+        Text.translate("tooltip.mel.colossal_furnace_7").green(),
+        Text.translate("tooltip.mel.colossal_furnace_8").red(),
     ]);
 
     const cobbleGenData = [

@@ -193,6 +193,12 @@
 				"4648D64F506FF6B4"
 			]
 			id: "560E6468D1517943"
+			rewards: [{
+				count: 2
+				id: "2745671074066F9A"
+				item: "minecraft:hopper"
+				type: "item"
+			}]
 			tasks: [{
 				id: "1E4C2537F576182A"
 				item: "naturesaura:nature_altar"

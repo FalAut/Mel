@@ -1,5 +1,5 @@
 ServerEvents.tags("item", (event) => {
-    event.add("curios:charm", "mel:dream_lantern");
+    event.add("curios:dream_lantern", "mel:dream_lantern");
     event.add("botania:special_floating_flowers", "mel:flowing_source_flower");
 
     Ingredient.all.itemIds.forEach((itemId) => {

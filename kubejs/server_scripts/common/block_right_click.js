@@ -56,3 +56,14 @@ BlockEvents.rightClicked((event) => {
         player.potionEffects.add("nausea", 200);
     }
 });
+
+BlockEvents.rightClicked("mel:colossal_furnace_core", (event) => {
+    const { block, player, item, level } = event;
+    if (item != "mel:colossal_furnace_proxy") return;
+
+    let controller = $IMultiController.ofController(level, block.pos).orElse(null);
+
+    if (controller != null && item.count >= 26) {
+        controller.getPattern().autoBuild(player, new $MultiblockState(level, block.pos));
+    }
+});

@@ -32,6 +32,7 @@
     "item.mel.division_sigil": "分割徽章",
     "item.mel.pseudo_inversion_sigil": "伪逆徽章",
     "item.mel.portable_crafting_table": "便携式工作台",
+    "item.mel.tyumen_ingot": "秋明锭",
 
     "block.mel.infused_wood": "灌注之木",
     "block.mel.misty_forest_portal": "迷雾森林传送门",
@@ -141,7 +142,9 @@
     "tooltip.mel.colossal_furnace_4": "底部中心位置（核心的位置）可以固定输出产物",
     "tooltip.mel.colossal_furnace_5": "所有面都可用管道/漏斗来输入/输出物品",
     "tooltip.mel.colossal_furnace_6": "通过在升级槽放置熔炉可提升效率",
-    "tooltip.mel.colossal_furnace_upgrade": "§a每个熔炉可提升 1% 的处理速度，并增加 1 个并行处理能力",
+    "tooltip.mel.colossal_furnace_7": "每个熔炉可提升 1% 的处理速度，并增加 1 个输入处理量",
+    "tooltip.mel.colossal_furnace_8": "需要更换一次烧炼的物品（即新的配方）才能使升级生效。",
+    "tooltip.mel.colossal_furnace_upgrade": "§a每个熔炉可提升 1% 的处理速度，并增加 1 个输入处理量\n§c需要更换一次烧炼的物品（即新的配方）才能使升级生效",
     "tooltip.mel.cobble_gen_1": "每次制造的圆石数：%s",
     "tooltip.mel.cobble_gen_2": "工作间隔：%s 秒",
     "tooltip.mel.cobble_gen_3": "内部最大缓存数：%s",
@@ -151,6 +154,10 @@
 
     "biome.mel.black_and_white": "黑与白",
     "biome.mel.misty_forest": "迷雾森林",
+
+    "curios.identifier.portable_crafting_table": "便携式工作台",
+    "curios.identifier.dream_lantern": "梦之灯",
+    "curios.identifier.dream_wings": "梦之翼",
 
     "key.mel.portable_crafting": "打开便携式工作台",
 

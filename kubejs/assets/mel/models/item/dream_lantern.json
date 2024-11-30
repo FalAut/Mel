@@ -2,7 +2,7 @@
     "credit": "Made with Blockbench",
     "parent": "block/block",
     "textures": {
-        "lantern": "mel:item/dream_lantern_3d"
+        "lantern": "mel:item/dream_lantern"
     },
     "elements": [
         {

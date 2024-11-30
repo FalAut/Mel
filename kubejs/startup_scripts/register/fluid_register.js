@@ -5,12 +5,6 @@ StartupEvents.registry("fluid", (event) => {
     event.create("mel:liquid_mana").thinTexture(0x87ceeb);
     event.create("mel:liquid_source").thinTexture(0x800080);
     event.create("mel:molten_ender").thinTexture(0x0f594d);
-    event
-        .create("mel:molten_lumium")
-        .stillTexture("mel:block/fluid/molten_lumium_still")
-        .flowingTexture("mel:block/fluid/molten_lumium_flowing");
-    event
-        .create("mel:molten_signalum")
-        .stillTexture("mel:block/fluid/molten_signalum_still")
-        .flowingTexture("mel:block/fluid/molten_signalum_flowing");
+    event.create("mel:molten_lumium");
+    event.create("mel:molten_signalum");
 });

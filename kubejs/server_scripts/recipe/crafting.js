@@ -46,7 +46,7 @@ ServerEvents.recipes((event) => {
     ]);
     kubejs.shapeless("mel:flowing_source_flower", ["#botania:floating_flowers", "mel:source_flower"]);
     kubejs.shapeless("9x botania:mana_string", "mel:mana_string_block");
-
+    kubejs.shapeless("mel:oak_mortar", ["stick", "bowl"]);
     kubejs
         .shapeless("mel:token_base", ["mel:infused_wood", "#axes", "#forge:shears"])
         .damageIngredient(["#axes", "#forge:shears"]);

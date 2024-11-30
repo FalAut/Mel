@@ -34,19 +34,6 @@ MBDMachineEvents.onBeforeRecipeModify("mel:colossal_furnace_core", (event) => {
     info.setRecipe(copyRecipe);
 });
 
-MBDMachineEvents.onRightClick("mel:colossal_furnace_core", (event) => {
-    const { machine, player, heldItem } = event.event;
-    if (heldItem != "mel:colossal_furnace_proxy") return;
-
-    const level = machine.level;
-    let controller = $IMultiController.ofController(level, machine.pos).orElse(null);
-
-    if (controller != null && heldItem.count >= 26) {
-        controller.getPattern().autoBuild(player, new $MultiblockState(level, machine.pos));
-        heldItem.shrink(26);
-    }
-});
-
 let cobbleGens = [
     "mel:cobble_gen_tier1",
     "mel:cobble_gen_tier2",
