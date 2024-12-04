@@ -5,7 +5,8 @@ ForgeEvents.onEvent("net.minecraftforge.event.entity.EntityTravelToDimensionEven
     let /**@type {Internal.Player} */ player = entity;
 
     let foundToken = player.inventory.allItems.some((item) => item == "naturesaura:token_rage");
-    if (foundToken) {
+
+    if (!foundToken) {
         player.tell(Text.translate("message.mel.cant_enter_nether").red().bold());
         event.setCanceled(true);
     }

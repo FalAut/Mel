@@ -4,7 +4,7 @@ ServerEvents.recipes((event) => {
     botania.petal_apothecary("naturesaura:aura_bloom", Array(4).fill("naturesaura:gold_powder"));
     botania.petal_apothecary("botania:pure_daisy", Array(4).fill("#botania:petals/white"), "naturesaura:gold_powder");
     botania.petal_apothecary("mel:source_flower", Array(4).fill("ars_nouveau:source_gem"), "naturesaura:gold_powder");
-    botania.petal_apothecary("botania:mutated_seeds", Array(4).fill("botania:black_lotus"), "ars_nouveau:bastion_pod");
+    botania.petal_apothecary("botania:mutated_seeds", Array(4).fill("botania:black_lotus"), "botania:grass_seeds");
 
     botania.runic_altar("2x botania:rune_air", [
         "botania:mana_diamond",
@@ -99,20 +99,6 @@ ServerEvents.recipes((event) => {
             "botania:shimmerrock",
             "botania:shimmerrock",
             "botania:shimmerrock",
-            "botania:pixie_dust",
-        ],
-        25000
-    );
-
-    botania.terra_plate(
-        "ars_nouveau:imbuement_chamber",
-        [
-            "botania:dragonstone",
-            "botania:elementium_ingot",
-            "ars_nouveau:archwood_planks",
-            "ars_nouveau:archwood_planks",
-            "ars_nouveau:archwood_planks",
-            "ars_nouveau:archwood_planks",
             "botania:pixie_dust",
         ],
         25000

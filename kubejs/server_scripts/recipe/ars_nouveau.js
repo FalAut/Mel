@@ -59,33 +59,6 @@ ServerEvents.recipes((event) => {
         input: {
             item: "ars_nouveau:source_gem",
         },
-        output: "ars_nouveau:conjuration_essence",
-        pedestalItems: [
-            {
-                item: {
-                    item: "naturesaura:sky_ingot",
-                },
-            },
-            {
-                item: {
-                    item: "ars_nouveau:frostaya_pod",
-                },
-            },
-            {
-                item: {
-                    item: "botania:rune_water",
-                },
-            },
-        ],
-        source: 1000,
-    });
-
-    event.custom({
-        type: "ars_nouveau:imbuement",
-        count: 1,
-        input: {
-            item: "ars_nouveau:source_gem",
-        },
         output: "ars_nouveau:abjuration_essence",
         pedestalItems: [
             {

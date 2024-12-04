@@ -9,8 +9,16 @@ NetworkEvents.dataReceived("has_dream_lantern", (event) => {
     }
 });
 
+NetworkEvents.dataReceived("display_item_activation", (event) => {
+    const { data } = event;
+
+    if (data.displayItem) {
+        Client.gameRenderer.displayItemActivation(data.displayItem);
+    }
+});
+
 ClientEvents.tick((event) => {
     if (global.CraftingKey.consumeClick()) {
-        event.player.sendData("server", { portable_crafting: true });
+        event.player.sendData("portable_crafting", { portable_crafting: true });
     }
 });

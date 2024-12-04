@@ -24,6 +24,7 @@ StartupEvents.registry("item", (event) => {
 
     event
         .create("mel:unstable_ingot")
+        .unstackable()
         .rarity("epic")
         .barWidth((i) => {
             if (i.nbt && i.nbt.contains("Stable") && i.nbt.getInt("Stable") != 0) {

@@ -23,9 +23,11 @@ BlockEvents.rightClicked((event) => {
     let dreamTree = $PatchouliAPI.getMultiblock("mel:first_tree");
 
     if (dreamTree.validate(level, block.pos, "none")) {
-        dreamTree
-            .simulate(level, block.pos, "none", false)
-            .second.forEach((result) => level.destroyBlock(result.worldPosition, false));
+        dreamTree.simulate(level, block.pos, "none", false).second.forEach((result) => {
+            if (result.stateMatcher == $PatchouliAPI.anyMatcher()) return;
+
+            level.destroyBlock(result.worldPosition, false);
+        });
         block.popItemFromFace("oak_sapling", "up");
         player.swing();
     }
@@ -43,6 +45,7 @@ BlockEvents.rightClicked((event) => {
     let otherworld = server.getLevel("mel:otherworld");
 
     if (level.dimension == "minecraft:the_nether" && block.hasTag("minecraft:beds") && foundThirdEye) {
+        player.swing();
         structureTemplate.placeInWorld(
             otherworld,
             block.pos,

@@ -741,11 +741,18 @@
 				"39730AC4D863B6EB"
 			]
 			id: "5257F26F98A9FD0D"
-			tasks: [{
-				id: "56FBFEE56B1D33CB"
-				item: "minecraft:poppy"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "56FBFEE56B1D33CB"
+					item: "minecraft:poppy"
+					type: "item"
+				}
+				{
+					id: "7DBC455DFACC67E5"
+					item: "minecraft:wheat_seeds"
+					type: "item"
+				}
+			]
 			x: 2.5d
 			y: -4.5d
 		}

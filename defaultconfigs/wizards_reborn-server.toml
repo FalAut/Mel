@@ -1,6 +1,0 @@
-#Enable Arcanemicon Offering
-arcanemiconOffering = false
-#Ticks with game for Arcanemicon Offering.
-#Range: > 0
-arcanemiconOfferingTicks = 144000
-

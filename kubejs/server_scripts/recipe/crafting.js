@@ -47,6 +47,7 @@ ServerEvents.recipes((event) => {
     kubejs.shapeless("mel:flowing_source_flower", ["#botania:floating_flowers", "mel:source_flower"]);
     kubejs.shapeless("9x botania:mana_string", "mel:mana_string_block");
     kubejs.shapeless("mel:oak_mortar", ["stick", "bowl"]);
+    kubejs.shapeless("mel:portable_crafting_table", ["stick", "crafting_table"]);
     kubejs
         .shapeless("mel:token_base", ["mel:infused_wood", "#axes", "#forge:shears"])
         .damageIngredient(["#axes", "#forge:shears"]);
@@ -115,11 +116,6 @@ ServerEvents.recipes((event) => {
         A: "#planks",
     });
 
-    kubejs.shaped("mel:oak_mortar", ["BAB", " B "], {
-        A: "stick",
-        B: "oak_planks",
-    });
-
     kubejs.shaped("mel:aura_grinder", ["ABA", "CDC", "ACA"], {
         A: "naturesaura:gold_powder",
         B: "oak_sapling",
@@ -152,11 +148,6 @@ ServerEvents.recipes((event) => {
 
     kubejs.shaped("4x botania:livingwood_log", ["AA", "AA"], {
         A: "botania:livingwood",
-    });
-
-    kubejs.shaped("botania:mana_pool", ["ABA", "AAA"], {
-        A: "botania:livingrock",
-        B: "naturesaura:token_joy",
     });
 
     kubejs.shaped("botania:mana_spreader", ["AAA", "BC ", "AAA"], {

@@ -17,7 +17,10 @@ PlayerEvents.tick((event) => {
 
     player.inventory.allItems.forEach((item) => {
         if (item == "mel:unstable_ingot") {
-            if (!item.nbt) return;
+            if (!item.nbt) {
+                item.setNbt({ Stable: 100 });
+            }
+
             let stable = item.nbt.getInt("Stable");
             item.nbt.putInt("Stable", stable - 10);
 

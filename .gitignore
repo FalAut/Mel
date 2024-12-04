@@ -35,6 +35,8 @@
 !config/ProjectE/processing.toml
 !config/jade
 !config/jade/plugins.json
+!config/wizards_reborn-common.toml
+!config/malum-common.toml
 
 ## Defaultconfigs
 !defaultconfigs/
@@ -42,8 +44,6 @@
 !defaultconfigs/ftbchunks/client-config.snbt
 !defaultconfigs/ftbquests
 !defaultconfigs/ftbquests/client-config.snbt
-!defaultconfigs/wizards_reborn-server.toml
-!defaultconfigs/immersiveengineering-server.toml
 !defaultconfigs/fluxnetworks-server.toml
 
 ## KubeJS

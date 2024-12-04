@@ -12,6 +12,12 @@
         },
         {
             "predicate": {
+                "stable": 0.01
+            },
+            "model": "mel:item/unstable_ingot_4"
+        },
+        {
+            "predicate": {
                 "stable": 0.2
             },
             "model": "mel:item/unstable_ingot_4"

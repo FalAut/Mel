@@ -395,7 +395,6 @@
 			icon: "botania:terra_plate"
 			id: "4842CC82C1CF0559"
 			rewards: [{
-				auto: "enabled"
 				id: "03A4F0E1B35541F1"
 				item: {
 					Count: 1
@@ -542,7 +541,6 @@
 			icon: "botania:natura_pylon"
 			id: "05A9162469429213"
 			rewards: [{
-				auto: "enabled"
 				id: "2B52E9A96D37008E"
 				item: {
 					Count: 1

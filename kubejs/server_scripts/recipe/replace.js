@@ -12,4 +12,6 @@ ServerEvents.recipes((event) => {
     event.replaceInput({ id: "thermal:machine_smelter" }, "thermal:invar_gear", "thermal:redstone_servo");
     event.replaceInput({ id: "modularrouters:blank_module" }, "paper", "iron_ingot");
     event.replaceInput({ id: "thermal:chiller_ingot_cast" }, "minecraft:nether_brick", "#forge:ingots");
+    event.replaceInput({ id: "naturesaura:altar/prismarine" }, "quartz", "botania:quartz_mana");
+    event.replaceInput({ id: "naturesaura:color_changer" }, "naturesaura:token_euphoria", "naturesaura:calling_spirit");
 });

@@ -72,7 +72,7 @@ EntityEvents.death((event) => {
         sigil.count--;
         let activateSigil = Item.of("mel:division_sigil").enchant("mel:activate", 1);
         player.give(activateSigil);
-        Client.gameRenderer.displayItemActivation(activateSigil);
         level.broadcastEntityEvent(entity, 35);
+        player.sendData("display_item_activation", { displayItem: activateSigil.id });
     }
 });

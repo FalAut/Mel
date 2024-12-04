@@ -224,5 +224,6 @@
     "mel.chapter1-2.terra_plate.subtitle": "§6→【点我】← 查看泰拉凝聚祭坛的胶囊",
     "mel.chapter1-2.mana_to_source.subtitle": "§6如图所示，可用魔力转化魔源，但只能使用魔力发射器",
     "mel.chapter1-2.elven_portal_conversion.subtitle": "§6在激活的精灵门核心半径5格范围内放置活石，活石会被转化为微光石",
-    "mel.chapter1-2.wilden_summon.subtitle": "§6激活仪式之前，务必向仪式火盆投入荒野之角、荒野尖刺、荒野膜翼才能召唤出Boss"
+    "mel.chapter1-2.wilden_summon.subtitle": "§6激活仪式之前，务必向仪式火盆投入荒野之角、荒野尖刺、荒野膜翼才能召唤出Boss",
+    "mel.chapter1-2.wilden_summon.desc1": "§c友情提示：这个Boss会爆炸并摧毁方块，请勿在基地中召唤！"
 }

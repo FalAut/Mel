@@ -3,13 +3,13 @@ StartupEvents.postInit((event) => {
         "mel:first_tree",
         $PatchouliAPI.makeMultiblock(
             [
-                ["     ", "  A  ", " AAA ", "  A  ", "     "],
-                ["     ", " AAA ", " ABA ", " AAA ", "     "],
+                ["_____", "__A__", "_AAA_", "__A__", "_____"],
+                ["_____", "_AAA_", "_ABA_", "_AAA_", "_____"],
                 ["AAAAA", "AAAAA", "AABAA", "AAAAA", "AAAAA"],
                 ["AAAAA", "AAAAA", "AABAA", "AAAAA", "AAAAA"],
-                ["     ", "     ", "  B  ", "     ", "     "],
-                ["     ", "     ", "  B  ", "     ", "     "],
-                ["     ", "     ", "  0  ", "     ", "     "],
+                ["_____", "_____", "__B__", "_____", "_____"],
+                ["_____", "_____", "__B__", "_____", "_____"],
+                ["_____", "_____", "__0__", "_____", "_____"],
             ],
             new $Character("0"),
             Blocks.WHITE_CONCRETE,

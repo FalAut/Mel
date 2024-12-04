@@ -1,8 +1,4 @@
 ForgeEvents.onEvent("net.minecraftforge.event.entity.EntityLeaveLevelEvent", (event) => {
-    global.test(event);
-});
-
-global.test = (/**@type {Internal.EntityLeaveLevelEvent} */ event) => {
     const { entity, level } = event;
 
     if (level.clientSide || !entity.item || entity.y > level.minBuildHeight) return;
@@ -25,4 +21,4 @@ global.test = (/**@type {Internal.EntityLeaveLevelEvent} */ event) => {
         resultEntity.item.count = resultCount * 2;
         resultEntity.spawn();
     }
-};
+});
