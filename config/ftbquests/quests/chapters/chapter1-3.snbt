@@ -292,18 +292,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["6FB7473B4F1C4184"]
-			id: "296D3FA393F7E6DC"
-			tasks: [{
-				id: "2503F1A2B5F1C001"
-				item: "fluxnetworks:flux_dust"
-				type: "item"
-			}]
-			x: 5.5d
-			y: -3.0d
-		}
-		{
-			dependencies: ["296D3FA393F7E6DC"]
 			description: ["{image:mel:textures/image/mana_to_fluid.png width:212 height:170 align:center}"]
 			id: "72BC37D8287894FB"
 			min_width: 300
@@ -350,17 +338,6 @@
 			}]
 			x: 5.7d
 			y: 0.0d
-		}
-		{
-			dependencies: ["4BC4F7F11BD34028"]
-			id: "6FB7473B4F1C4184"
-			tasks: [{
-				id: "4EB370DB5812EF76"
-				item: "thermal:machine_pulverizer"
-				type: "item"
-			}]
-			x: 4.5d
-			y: -2.0d
 		}
 		{
 			description: ["{image:mel:textures/image/source_to_fluid.png width:160 height:163 align:center}"]
@@ -424,6 +401,45 @@
 			}]
 			x: 9.7d
 			y: 0.0d
+		}
+		{
+			dependencies: ["20FEC8DA43340AD4"]
+			id: "4BD0A50CA5194D45"
+			tasks: [{
+				id: "5550FFC44ABEAA15"
+				item: "mel:void_ore_miner_controller"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["4BD0A50CA5194D45"]
+			id: "08725E7EAD500EED"
+			tasks: [
+				{
+					id: "0B5A4FCF3E6C0701"
+					item: "thermal:tin_ore"
+					type: "item"
+				}
+				{
+					id: "49F2F6787D8D1BA6"
+					item: "thermal:lead_ore"
+					type: "item"
+				}
+				{
+					id: "67C6974B14D4BBEE"
+					item: "thermal:silver_ore"
+					type: "item"
+				}
+				{
+					id: "764A0BA4834CABEE"
+					item: "thermal:nickel_ore"
+					type: "item"
+				}
+			]
+			x: 1.5d
+			y: -3.0d
 		}
 	]
 	title: "{mel.chapter1-3.title}"

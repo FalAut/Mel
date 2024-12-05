@@ -360,4 +360,17 @@ ServerEvents.recipes((event) => {
         A: "netherite_block",
         B: "mel:cobble_gen_tier5",
     });
+
+    kubejs.shaped("mel:modular_runic_altar_core", ["ABA", "ACA", "ADA"], {
+        A: "ars_nouveau:manipulation_essence",
+        B: "botania:rune_mana",
+        C: "botania:mana_diamond_block",
+        D: "botania:runic_altar",
+    });
+
+    kubejs.shaped("mel:void_ore_miner_controller", ["AAA", "ABA", "CCC"], {
+        A: "glass",
+        B: "ae2:controller",
+        C: "mekanism:block_steel",
+    });
 });

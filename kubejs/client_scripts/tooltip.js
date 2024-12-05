@@ -82,4 +82,15 @@ ItemEvents.tooltip((event) => {
             Text.keybind("key.mel.portable_crafting").green()
         ).gold(),
     ]);
+
+    event.add("mel:modular_runic_altar_core", [
+        Text.translate("tooltip.mel.modular_runic_altar_core_1").gold(),
+        Text.translate("tooltip.mel.modular_runic_altar_core_2").gold(),
+        Text.translate("tooltip.mel.modular_runic_altar_core_3").gold(),
+    ]);
+
+    event.add(
+        ["thermal:tin_ore", "thermal:lead_ore", "thermal:silver_ore", "thermal:nickel_ore"],
+        Text.translate("tooltip.mel.misty_forest_ore").gold()
+    );
 });

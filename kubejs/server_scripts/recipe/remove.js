@@ -1,3 +1,5 @@
+// priority: 9
+
 ServerEvents.recipes((event) => {
     event.remove({ output: "projecte:philosophers_stone" });
 

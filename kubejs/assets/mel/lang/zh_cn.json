@@ -53,6 +53,7 @@
     "block.mel.item_input": "物品输入口",
     "block.mel.item_output": "物品输出口",
     "block.mel.energy_input": "能量输入口",
+    "block.mel.mana_input": "魔力输入口",
     "block.mel.assembly_room_controller": "装配室控制器",
     "block.mel.fluid_input": "流体输入口",
     "block.mel.fluid_output": "流体输出口",
@@ -69,6 +70,8 @@
     "block.mel.cobble_gen_tier4": "4级圆石制造机",
     "block.mel.cobble_gen_tier5": "5级圆石制造机",
     "block.mel.cobble_gen_tier6": "6级圆石制造机",
+    "block.mel.modular_runic_altar_core": "模块化符文祭坛核心",
+    "block.mel.void_ore_miner_controller": "虚空矿物采掘机控制器",
 
     "mbd2.oak_crucible": "橡木坩埚",
     "mbd2.fired_crucible": "坩埚",
@@ -77,6 +80,8 @@
     "mbd2.assembly_room": "装配室",
     "mbd2.matter_mixer": "物质混合机",
     "mbd2.cobblegen": "圆石制造机",
+    "mbd2.modular_runic_altar": "模块化符文祭坛",
+    "mbd2.void_ore_miner": "虚空矿物采掘",
 
     "fluid.mel.gensousitu": "幻想质",
     "fluid.mel.liquid_mana": "液态魔力",
@@ -151,6 +156,10 @@
     "tooltip.mel.cobble_gen_4": "可自动输出圆石到上方容器",
     "tooltip.mel.portable_crafting_table_1": "手持右键打开工作台",
     "tooltip.mel.portable_crafting_table_2": "放在身上时也可按 [ %s ]键 打开",
+    "tooltip.mel.modular_runic_altar_core_1": "拥有§c物品输出§r和§b魔力输入§r的特性",
+    "tooltip.mel.modular_runic_altar_core_2": "支持使用§e火花§r来§b输入魔力",
+    "tooltip.mel.modular_runic_altar_core_3": "模块化符文祭坛中的任意§a活石砖§r都可替换为§b物品输入口§r",
+    "tooltip.mel.misty_forest_ore": "使用§a虚空矿物采掘机§r在§f迷雾森林§r中开采获得",
 
     "biome.mel.black_and_white": "黑与白",
     "biome.mel.misty_forest": "迷雾森林",

@@ -1,33 +1,51 @@
 ServerEvents.recipes((event) => {
-    const { botania } = event.recipes;
+    const { botania, mbd2 } = event.recipes;
 
     botania.petal_apothecary("naturesaura:aura_bloom", Array(4).fill("naturesaura:gold_powder"));
     botania.petal_apothecary("botania:pure_daisy", Array(4).fill("#botania:petals/white"), "naturesaura:gold_powder");
     botania.petal_apothecary("mel:source_flower", Array(4).fill("ars_nouveau:source_gem"), "naturesaura:gold_powder");
     botania.petal_apothecary("botania:mutated_seeds", Array(4).fill("botania:black_lotus"), "botania:grass_seeds");
 
-    botania.runic_altar("2x botania:rune_air", [
+    /**
+     * 符文祭坛
+     * @param {OutputItem_} output
+     * @param {InputItem_} input
+     * @param {number} mana
+     */
+    function runicAltar(output, input, mana) {
+        botania.runic_altar(output, input);
+
+        mbd2.modular_runic_altar()
+            .outputItems(output)
+            .inputItems(input)
+            .inputMana(mana ? mana : 5200);
+    }
+
+    runicAltar("2x botania:rune_air", [
         "botania:mana_diamond",
         "botania:manasteel_ingot",
         "botania:mana_powder",
         "naturesaura:sky_ingot",
         Item.of("naturesaura:aura_bottle", '{stored_type:"mel:mist"}').strongNBT(),
     ]);
-    botania.runic_altar("2x botania:rune_water", [
+
+    runicAltar("2x botania:rune_water", [
         "botania:mana_diamond",
         "botania:manasteel_ingot",
         "botania:mana_powder",
         "ars_nouveau:frostaya_pod",
         "ars_nouveau:blue_archwood_log",
     ]);
-    botania.runic_altar("2x botania:rune_earth", [
+
+    runicAltar("2x botania:rune_earth", [
         "botania:mana_diamond",
         "botania:manasteel_ingot",
         "botania:mana_powder",
         "ars_nouveau:mendosteen_pod",
         "ars_nouveau:green_archwood_log",
     ]);
-    botania.runic_altar("2x botania:rune_mana", [
+
+    runicAltar("2x botania:rune_mana", [
         "botania:mana_diamond",
         "botania:manasteel_ingot",
         "botania:mana_powder",
@@ -35,7 +53,7 @@ ServerEvents.recipes((event) => {
         "ars_nouveau:purple_archwood_log",
     ]);
 
-    botania.runic_altar("2x botania:rune_fire", [
+    runicAltar("2x botania:rune_fire", [
         "botania:mana_diamond",
         "botania:manasteel_ingot",
         "botania:mana_powder",
@@ -43,7 +61,7 @@ ServerEvents.recipes((event) => {
         "ars_nouveau:red_archwood_log",
     ]);
 
-    botania.runic_altar(
+    runicAltar(
         "botania:alchemy_catalyst",
         [
             "botania:mana_diamond",
@@ -56,7 +74,7 @@ ServerEvents.recipes((event) => {
         25000
     );
 
-    botania.runic_altar(
+    runicAltar(
         "botania:terra_plate",
         [
             "mel:sun_crystal_full",
