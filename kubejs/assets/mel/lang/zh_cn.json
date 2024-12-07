@@ -72,6 +72,7 @@
     "block.mel.cobble_gen_tier6": "6级圆石制造机",
     "block.mel.modular_runic_altar_core": "模块化符文祭坛核心",
     "block.mel.void_ore_miner_controller": "虚空矿物采掘机控制器",
+    "block.mel.terrestrial_agglomeration_crystal": "泰拉凝聚水晶",
 
     "mbd2.oak_crucible": "橡木坩埚",
     "mbd2.fired_crucible": "坩埚",
@@ -82,6 +83,7 @@
     "mbd2.cobblegen": "圆石制造机",
     "mbd2.modular_runic_altar": "模块化符文祭坛",
     "mbd2.void_ore_miner": "虚空矿物采掘",
+    "mbd2.modular_terrestrial_agglomeration": "模块化泰拉凝聚",
 
     "fluid.mel.gensousitu": "幻想质",
     "fluid.mel.liquid_mana": "液态魔力",
@@ -157,9 +159,12 @@
     "tooltip.mel.portable_crafting_table_1": "手持右键打开工作台",
     "tooltip.mel.portable_crafting_table_2": "放在身上时也可按 [ %s ]键 打开",
     "tooltip.mel.modular_runic_altar_core_1": "拥有§c物品输出§r和§b魔力输入§r的特性",
-    "tooltip.mel.modular_runic_altar_core_2": "支持使用§e火花§r来§b输入魔力",
+    "tooltip.mel.modular_runic_altar_core_2": "支持使用§e火花§r来§b输入魔力（在连接新火花时需要手动重置）",
     "tooltip.mel.modular_runic_altar_core_3": "模块化符文祭坛中的任意§a活石砖§r都可替换为§b物品输入口§r",
-    "tooltip.mel.misty_forest_ore": "使用§a虚空矿物采掘机§r在§f迷雾森林§r中开采获得",
+    "tooltip.mel.misty_forest_ore": "使用§b虚空矿物采掘机§r在§a主世界§r中开采获得",
+    "tooltip.mel.terrestrial_agglomeration_crystal_1": "放置在泰拉凝聚祭坛的上方（与微光平行，详情见JEI）来成型模块化",
+    "tooltip.mel.terrestrial_agglomeration_crystal_2": "在模块化中作为§b魔力输入§r的部分，支持§e火花§r（在连接新火花时需要手动重置）",
+    "tooltip.mel.terrestrial_agglomeration_crystal_3": "模块化中的任意§e框纹活木板§r可替换为§a物品输入口§r或§c物品输出口§r",
 
     "biome.mel.black_and_white": "黑与白",
     "biome.mel.misty_forest": "迷雾森林",

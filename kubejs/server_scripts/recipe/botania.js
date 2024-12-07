@@ -13,7 +13,7 @@ ServerEvents.recipes((event) => {
      * @param {number} mana
      */
     function runicAltar(output, input, mana) {
-        botania.runic_altar(output, input);
+        botania.runic_altar(output, input, mana ? mana : 5200);
 
         mbd2.modular_runic_altar()
             .outputItems(output)
@@ -89,7 +89,29 @@ ServerEvents.recipes((event) => {
         50000
     );
 
-    botania.terra_plate("botania:alfheim_portal", [
+    /**
+     * 泰拉凝聚
+     * @param {OutputItem_} output
+     * @param {InputItem_} input
+     * @param {number} mana
+     */
+    function terriaAgglomeration(output, input, mana) {
+        mana = mana ? mana : 500000;
+
+        botania.terra_plate(output, input, mana);
+
+        let duration = mana / 2000;
+        let inputMana = mana / duration;
+
+        mbd2.modular_terrestrial_agglomeration()
+            .outputItems(output)
+            .inputItems(input)
+            .duration(duration)
+            .perTick(true)
+            .inputMana(inputMana);
+    }
+
+    terriaAgglomeration("botania:alfheim_portal", [
         "botania:rune_mana",
         "mel:sun_crystal_full",
         "naturesaura:calling_spirit",
@@ -97,7 +119,7 @@ ServerEvents.recipes((event) => {
         "botania:terrasteel_ingot",
     ]);
 
-    botania.terra_plate("botania:terrasteel_ingot", [
+    terriaAgglomeration("botania:terrasteel_ingot", [
         "naturesaura:infused_iron",
         "botania:mana_pearl",
         "botania:mana_diamond",
@@ -108,7 +130,7 @@ ServerEvents.recipes((event) => {
         "botania:mana_string",
     ]);
 
-    botania.terra_plate(
+    terriaAgglomeration(
         "3x ars_nouveau:arcane_pedestal",
         [
             "botania:dragonstone",
@@ -122,7 +144,7 @@ ServerEvents.recipes((event) => {
         25000
     );
 
-    botania.terra_plate(
+    terriaAgglomeration(
         "ars_nouveau:imbuement_chamber",
         [
             "botania:dragonstone",
@@ -136,7 +158,7 @@ ServerEvents.recipes((event) => {
         25000
     );
 
-    botania.terra_plate(
+    terriaAgglomeration(
         "ae2:mysterious_cube",
         [
             "botania:elementium_ingot",
@@ -148,7 +170,7 @@ ServerEvents.recipes((event) => {
         50000
     );
 
-    botania.terra_plate(
+    terriaAgglomeration(
         "ars_nouveau:enchanting_apparatus",
         [
             "ars_nouveau:sourcestone",
@@ -163,7 +185,7 @@ ServerEvents.recipes((event) => {
         50000
     );
 
-    botania.terra_plate(
+    terriaAgglomeration(
         "ars_nouveau:arcane_core",
         [
             "ars_nouveau:sourcestone",

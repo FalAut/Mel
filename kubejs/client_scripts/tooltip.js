@@ -93,4 +93,10 @@ ItemEvents.tooltip((event) => {
         ["thermal:tin_ore", "thermal:lead_ore", "thermal:silver_ore", "thermal:nickel_ore"],
         Text.translate("tooltip.mel.misty_forest_ore").gold()
     );
+
+    event.add("mel:terrestrial_agglomeration_crystal", [
+        Text.translate("tooltip.mel.terrestrial_agglomeration_crystal_1").gold(),
+        Text.translate("tooltip.mel.terrestrial_agglomeration_crystal_2").gold(),
+        Text.translate("tooltip.mel.terrestrial_agglomeration_crystal_3").gold(),
+    ]);
 });

@@ -351,45 +351,6 @@
 			y: -2.0d
 		}
 		{
-			dependencies: ["5993C21DE70CE752"]
-			id: "4F55E5965BB452BC"
-			tasks: [
-				{
-					id: "3A2489C4E20EAB8C"
-					item: "thermal:tin_ingot"
-					type: "item"
-				}
-				{
-					id: "796BD767F6D62537"
-					item: "thermal:nickel_ingot"
-					type: "item"
-				}
-				{
-					id: "6F17D5CF1CD99684"
-					item: "thermal:lead_ingot"
-					type: "item"
-				}
-				{
-					id: "76ACDC8C70D19CA4"
-					item: "thermal:silver_ingot"
-					type: "item"
-				}
-			]
-			x: 5.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["4F55E5965BB452BC"]
-			id: "4A445EF2728FD56B"
-			tasks: [{
-				id: "24BECF7BC205F497"
-				item: "thermal:upgrade_augment_1"
-				type: "item"
-			}]
-			x: 6.0d
-			y: 2.5d
-		}
-		{
 			dependencies: ["4A2B7E68773E4ADB"]
 			id: "0C74AC4CB2A839A0"
 			shape: "gear"
@@ -410,7 +371,7 @@
 				item: "mel:void_ore_miner_controller"
 				type: "item"
 			}]
-			x: 1.5d
+			x: 2.0d
 			y: -2.0d
 		}
 		{
@@ -437,9 +398,132 @@
 					item: "thermal:nickel_ore"
 					type: "item"
 				}
+				{
+					id: "255C7C02B5227830"
+					item: "powah:uraninite_ore_poor"
+					type: "item"
+				}
+				{
+					id: "6B936098E7090577"
+					item: "powah:uraninite_ore"
+					type: "item"
+				}
+				{
+					id: "6F93E80093066C86"
+					item: "powah:uraninite_ore_dense"
+					type: "item"
+				}
 			]
-			x: 1.5d
+			x: 3.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["20FEC8DA43340AD4"]
+			id: "5A041A553C8F8B20"
+			tasks: [{
+				id: "1231468FB00F8CD1"
+				item: "mekanismgenerators:solar_generator"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5A041A553C8F8B20"]
+			id: "1A61484DF3E21B25"
+			tasks: [{
+				id: "45807465685861B9"
+				item: "mekanismgenerators:advanced_solar_generator"
+				type: "item"
+			}]
+			x: 1.0d
 			y: -3.0d
+		}
+		{
+			dependencies: ["5993C21DE70CE752"]
+			id: "522E39DE17A8C274"
+			tasks: [
+				{
+					id: "4641AE5BA65C2CB2"
+					item: "thermal:tin_ingot"
+					type: "item"
+				}
+				{
+					id: "0F58F65F688FD14B"
+					item: "thermal:lead_ingot"
+					type: "item"
+				}
+				{
+					id: "17A48749FEB4881B"
+					item: "thermal:silver_ingot"
+					type: "item"
+				}
+				{
+					id: "5C99EC8468D9F72F"
+					item: "thermal:nickel_ingot"
+					type: "item"
+				}
+			]
+			x: 5.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["522E39DE17A8C274"]
+			id: "5458329452A9E056"
+			tasks: [{
+				id: "0D4D28FBAE6716EA"
+				item: "thermal:upgrade_augment_1"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["5993C21DE70CE752"]
+			id: "5A16B4CE72DD3B68"
+			tasks: [{
+				id: "5A75A81EC954A10D"
+				item: "powah:dielectric_paste"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5A16B4CE72DD3B68"]
+			id: "1D6466564BBB5EFD"
+			tasks: [{
+				id: "651B05EFA1AE8D57"
+				item: "powah:energizing_rod_starter"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"1D6466564BBB5EFD"
+				"15A53D51200205AF"
+			]
+			id: "28E33E84A5A91FF4"
+			tasks: [{
+				id: "364912307E7B73D7"
+				item: "powah:reactor_starter"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["5A16B4CE72DD3B68"]
+			id: "15A53D51200205AF"
+			tasks: [{
+				id: "1F101E623B2C2E9E"
+				item: "powah:uraninite"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 3.0d
 		}
 	]
 	title: "{mel.chapter1-3.title}"

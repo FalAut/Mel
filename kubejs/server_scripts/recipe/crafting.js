@@ -373,4 +373,22 @@ ServerEvents.recipes((event) => {
         B: "ae2:controller",
         C: "mekanism:block_steel",
     });
+
+    kubejs.shaped("3x mekanismgenerators:solar_panel", ["AAA", "BCB", "DDD"], {
+        A: "ae2:quartz_vibrant_glass",
+        B: "ae2:sky_dust",
+        C: "mel:sun_crystal_full",
+        D: "ae2:printed_silicon",
+    });
+
+    kubejs.shaped("mekanismgenerators:solar_generator", ["AAA", " B ", "BCB"], {
+        A: "mekanismgenerators:solar_panel",
+        B: "mekanism:ingot_steel",
+        C: "ae2:energy_cell",
+    });
+
+    kubejs.shaped("mekanismgenerators:advanced_solar_generator", ["ABA", "ABA", "BBB"], {
+        A: "mekanismgenerators:solar_generator",
+        B: "mekanism:ingot_steel",
+    });
 });

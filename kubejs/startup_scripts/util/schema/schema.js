@@ -86,21 +86,30 @@ StartupEvents.recipeSchemaRegistry((event) => {
         new $RecipeSchema(components.get("outputItem")().key("result"), components.get("inputItem")().key("ingredient"))
     );
 
-    event.register(
-        "thermal:refinery",
-        new $RecipeSchema(
-            components.get("outputFluidOrItemArray")().key("result"),
-            components.get("inputFluidOrItem")().key("ingredient"),
-            components.get("intNumber")().key("energy").defaultOptional(),
-            components.get("floatNumber")().key("experience").defaultOptional()
-        )
-    );
+    // event.register(
+    //     "thermal:refinery",
+    //     new $RecipeSchema(
+    //         components.get("outputFluidOrItemArray")().key("result"),
+    //         components.get("inputFluidOrItem")().key("ingredient"),
+    //         components.get("intNumber")().key("energy").defaultOptional(),
+    //         components.get("floatNumber")().key("experience").defaultOptional()
+    //     )
+    // );
 
-    event.register(
-        "thermal:pulverizer",
-        new $RecipeSchema(
-            components.get("outputFluidOrItemArray")().key("result"),
-            components.get("inputFluidOrItemArray")().key("ingredient")
-        )
-    );
+    // event.register(
+    //     "thermal:pulverizer",
+    //     new $RecipeSchema(
+    //         components.get("outputFluidOrItemArray")().key("result"),
+    //         components.get("inputFluidOrItemArray")().key("ingredient")
+    //     )
+    // );
+
+    // event.register(
+    //     "thermal:smelter",
+    //     new $RecipeSchema(
+    //         components.get("outputFluidOrItemArray")().key("result"),
+    //         components.get("inputItemArray")().key("ingredient")["alt(java.lang.String)"]("ingredients"),
+    //         components.get("intNumber")().key("energy").defaultOptional()
+    //     )
+    // );
 });

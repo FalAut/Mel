@@ -1,32 +1,16 @@
 ServerEvents.recipes((event) => {
     const { thermal } = event.recipes;
 
-    ingotChiller("thermal:enderium_ingot", "thermal:ender");
-    ingotChiller("thermal:lumium_ingot", "mel:molten_lumium");
-    ingotChiller("thermal:signalum_ingot", "mel:molten_signalum");
-
-    function ingotChiller(output, input, energy) {
-        event.custom({
-            type: "thermal:chiller",
-            ingredients: [
-                {
-                    fluid: input,
-                    amount: 1000,
-                },
-                {
-                    item: "thermal:chiller_ingot_cast",
-                },
-            ],
-            result: [
-                {
-                    item: output,
-                    count: 1,
-                },
-            ],
-            energy: energy ? energy : 80000,
-        });
-    }
+    thermal.chiller("thermal:enderium_ingot", ["thermal:ender", "thermal:chiller_ingot_cast"]);
+    thermal.chiller("thermal:lumium_ingot", ["mel:molten_lumium", "thermal:chiller_ingot_cast"]);
+    thermal.chiller("thermal:signalum_ingot", ["mel:molten_signalum", "thermal:chiller_ingot_cast"]);
 
     thermal.pulverizer("forbidden_arcanus:mundabitur_dust", "mel:colorless_gem");
     thermal.refinery("thermal:rubber", Fluid.of("thermal:latex", 100));
+
+    thermal.smelter("16x powah:dielectric_paste", [
+        "thermal:cured_rubber",
+        "minecraft:clay_ball",
+        "fluxnetworks:flux_dust",
+    ]);
 });
