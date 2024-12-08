@@ -86,4 +86,5 @@ ServerEvents.recipes((event) => {
     naturesaura.altar("botania:vivid_seeds", "botania:grass_seeds");
 
     naturesaura.offering("mel:whos_gift", "mel:wrapped_gift");
+    naturesaura.offering("mel:dream_wings", "naturesaura:pet_reviver");
 });

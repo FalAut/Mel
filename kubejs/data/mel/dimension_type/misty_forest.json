@@ -5,7 +5,7 @@
     "effects": "minecraft:the_nether",
     "has_ceiling": true,
     "has_raids": false,
-    "has_skylight": false,
+    "has_skylight": true,
     "height": 256,
     "fixed_time": 6000,
     "infiniburn": "#minecraft:infiniburn_overworld",

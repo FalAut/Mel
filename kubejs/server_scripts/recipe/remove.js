@@ -1,7 +1,7 @@
 // priority: 9
 
 ServerEvents.recipes((event) => {
-    event.remove({ output: "projecte:philosophers_stone" });
+    event.remove({ mod: "projecte" });
 
     let recipesToRemoveID = [
         "naturesaura:gold_fiber",
@@ -118,14 +118,13 @@ ServerEvents.recipes((event) => {
         "thermal:smelting/nickel_ingot_from_raw_blasting",
         "thermal:smelting/nickel_ingot_from_dust_blasting",
         "mekanismgenerators:solar_panel",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
+        "pneumaticcraft:explosion_crafting/compressed_iron_ingot",
+        "pneumaticcraft:pressure_chamber/compressed_iron_ingot",
+        "pneumaticcraft:thermo_plant/plastic_from_biodiesel",
+        "pneumaticcraft:pressure_chamber/compressed_iron_block",
+        "pneumaticcraft:reinforced_stone",
+        "pneumaticcraft:pressure_chamber/compressed_stone",
+        "naturesaura:pet_reviver",
         "",
         "",
         "",

@@ -484,7 +484,7 @@
 				}
 				type: "item"
 			}]
-			x: 6.5d
+			x: 7.0d
 			y: 3.5d
 		}
 		{
@@ -799,6 +799,17 @@
 			}]
 			x: 5.0d
 			y: 2.0d
+		}
+		{
+			dependencies: ["6C95247ADE07020A"]
+			id: "63CBC18A3CC40D45"
+			tasks: [{
+				id: "28564951DA61E839"
+				item: "mel:dream_wings"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 3.5d
 		}
 	]
 	title: "{mel.chapter1-1.title}"

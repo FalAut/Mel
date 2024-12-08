@@ -73,6 +73,7 @@ ServerEvents.recipes((event) => {
     );
 
     kubejs.shapeless("mel:futura_block", "ae2:controller").keepIngredient("ae2:controller");
+    kubejs.shapeless("2x botania:blacker_lotus", "botania:blacker_lotus");
 
     kubejs.shaped("bucket", ["A A", " A "], {
         A: "white_concrete",
@@ -390,5 +391,49 @@ ServerEvents.recipes((event) => {
     kubejs.shaped("mekanismgenerators:advanced_solar_generator", ["ABA", "ABA", "BBB"], {
         A: "mekanismgenerators:solar_generator",
         B: "mekanism:ingot_steel",
+    });
+
+    kubejs.shaped("mel:reinforced_stone_frame", ["AAA", " B ", "B B"], {
+        A: "pneumaticcraft:reinforced_stone",
+        B: "pneumaticcraft:ingot_iron_compressed",
+    });
+
+    kubejs.shaped("mel:mana_input", ["ABA", "CDE", "AFA"], {
+        A: "mekanism:block_steel",
+        B: "ae2:cell_component_1k",
+        C: "ae2:engineering_processor",
+        D: "botania:mana_pool",
+        E: "ae2:logic_processor",
+        F: "ae2:printed_silicon",
+    });
+
+    kubejs.shaped("mel:pressure_input", ["ABA", "CDE", "AFA"], {
+        A: "pneumaticcraft:pressure_chamber_wall",
+        B: "pneumaticcraft:pressure_gauge",
+        C: "ae2:engineering_processor",
+        D: "pneumaticcraft:pressure_tube",
+        E: "ae2:logic_processor",
+        F: "ae2:printed_silicon",
+    });
+
+    kubejs.shaped("mel:oil_drilling_rig_controller", ["ABA", "CDE", "AFA"], {
+        A: "pneumaticcraft:pressure_chamber_wall",
+        B: "ae2:calculation_processor",
+        C: "ae2:engineering_processor",
+        D: "pneumaticcraft:small_tank",
+        E: "ae2:logic_processor",
+        F: "ae2:printed_silicon",
+    });
+
+    kubejs.shaped("8x pneumaticcraft:reinforced_stone", ["AAA", "ABA", "AAA"], {
+        A: "pneumaticcraft:compressed_stone",
+        B: "pneumaticcraft:compressed_iron_block",
+    });
+
+    kubejs.shaped("naturesaura:pet_reviver", ["A A", "BCB", " D "], {
+        A: "naturesaura:gold_leaf",
+        B: "naturesaura:sky_ingot",
+        C: "naturesaura:token_joy",
+        D: "minecraft:gold_block",
     });
 });

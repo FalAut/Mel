@@ -4,6 +4,7 @@ StartupEvents.modifyCreativeTab("kubejs:tab", (event) => {
     event.setDisplayName("Mel");
     event.remove("mel:unstable_ingot");
     event.add([
+        Item.of("mel:dream_lantern", "{aura:2560000}"),
         Item.of("mel:unstable_ingot", "{Stable:100.0d}"),
         Item.of("mel:division_sigil").enchant("mel:activate", 1),
         Item.of("mel:addition_sigil").enchant("mel:activate", 1),

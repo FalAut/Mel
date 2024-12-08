@@ -1,0 +1,9 @@
+{
+    "parent": "mel:block/frame",
+    "render_type": "minecraft:cutout",
+    "textures": {
+        "bottom": "mel:block/reinforced_stone_frame",
+        "side": "mel:block/reinforced_stone_frame",
+        "top": "mel:block/reinforced_stone_frame"
+    }
+}

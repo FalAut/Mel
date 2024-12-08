@@ -189,4 +189,30 @@ ServerEvents.recipes((event) => {
         reagent: [{ item: "ars_nouveau:manipulation_essence" }],
         sourceCost: 10000,
     });
+
+    event.custom({
+        type: "ars_nouveau:enchanting_apparatus",
+        output: {
+            item: "mel:terrestrial_agglomeration_crystal",
+        },
+        pedestalItems: [
+            {
+                item: "botania:rune_mana",
+            },
+            {
+                item: "botania:rune_water",
+            },
+            {
+                item: "botania:rune_fire",
+            },
+            {
+                item: "botania:rune_earth",
+            },
+            {
+                item: "botania:rune_air",
+            },
+        ],
+        reagent: [{ item: "botania:livingrock" }],
+        sourceCost: 10000,
+    });
 });

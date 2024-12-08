@@ -39,8 +39,8 @@
 				item: "thermal:machine_frame"
 				type: "item"
 			}]
-			x: 3.5d
-			y: -0.5d
+			x: 4.5d
+			y: -1.0d
 		}
 		{
 			dependencies: [
@@ -53,7 +53,7 @@
 				item: "thermal:machine_smelter"
 				type: "item"
 			}]
-			x: 4.5d
+			x: 5.5d
 			y: 1.0d
 		}
 		{
@@ -112,7 +112,7 @@
 				}
 				type: "item"
 			}]
-			x: 4.5d
+			x: 5.5d
 			y: -1.0d
 		}
 		{
@@ -123,8 +123,8 @@
 				item: "thermal:press_gear_die"
 				type: "item"
 			}]
-			x: 3.5d
-			y: 0.5d
+			x: 4.5d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -133,12 +133,14 @@
 				"25652CCA98D82B4A"
 			]
 			id: "610A725A0DF114D0"
+			shape: "square"
+			size: 1.5d
 			tasks: [{
 				id: "0DE72ECF063E6C81"
 				item: "mel:assembly_room_controller"
 				type: "item"
 			}]
-			x: 2.5d
+			x: 3.0d
 			y: 0.0d
 		}
 		{
@@ -152,7 +154,7 @@
 				item: "thermal:iron_gear"
 				type: "item"
 			}]
-			x: 4.5d
+			x: 5.5d
 			y: 0.0d
 		}
 		{
@@ -170,8 +172,8 @@
 					type: "item"
 				}
 			]
-			x: 3.5d
-			y: 1.5d
+			x: 4.5d
+			y: 1.0d
 		}
 		{
 			dependencies: [
@@ -212,7 +214,7 @@
 					type: "item"
 				}
 			]
-			x: 7.0d
+			x: 9.0d
 			y: 0.0d
 		}
 		{
@@ -249,7 +251,7 @@
 				}
 				type: "item"
 			}]
-			x: 6.5d
+			x: 8.5d
 			y: 1.0d
 		}
 		{
@@ -268,7 +270,7 @@
 				}
 				type: "item"
 			}]
-			x: 8.0d
+			x: 10.0d
 			y: -1.0d
 		}
 		{
@@ -288,7 +290,7 @@
 				}
 				type: "item"
 			}]
-			x: 8.2d
+			x: 10.5d
 			y: 0.0d
 		}
 		{
@@ -304,7 +306,7 @@
 				}
 				type: "item"
 			}]
-			x: 6.0d
+			x: 7.5d
 			y: -2.0d
 		}
 		{
@@ -325,18 +327,20 @@
 					type: "item"
 				}
 			]
-			x: 6.5d
+			x: 8.5d
 			y: -1.0d
 		}
 		{
 			dependencies: ["4BC4F7F11BD34028"]
 			id: "2C16FE50E04573D0"
+			shape: "square"
+			size: 1.5d
 			tasks: [{
 				id: "0CDB9036F41E36B5"
 				item: "mel:matter_mixer_controller"
 				type: "item"
 			}]
-			x: 5.7d
+			x: 7.25d
 			y: 0.0d
 		}
 		{
@@ -347,7 +351,7 @@
 				item: "mel:source_fluidlink"
 				type: "item"
 			}]
-			x: 7.0d
+			x: 8.5d
 			y: -2.0d
 		}
 		{
@@ -360,19 +364,21 @@
 				item: "mel:unstable_singularity"
 				type: "item"
 			}]
-			x: 9.7d
+			x: 12.2d
 			y: 0.0d
 		}
 		{
 			dependencies: ["20FEC8DA43340AD4"]
 			id: "4BD0A50CA5194D45"
+			shape: "square"
+			size: 1.5d
 			tasks: [{
 				id: "5550FFC44ABEAA15"
 				item: "mel:void_ore_miner_controller"
 				type: "item"
 			}]
-			x: 2.0d
-			y: -2.0d
+			x: 2.5d
+			y: -2.5d
 		}
 		{
 			dependencies: ["4BD0A50CA5194D45"]
@@ -414,8 +420,8 @@
 					type: "item"
 				}
 			]
-			x: 3.0d
-			y: -2.5d
+			x: 3.5d
+			y: -3.5d
 		}
 		{
 			dependencies: ["20FEC8DA43340AD4"]
@@ -425,7 +431,7 @@
 				item: "mekanismgenerators:solar_generator"
 				type: "item"
 			}]
-			x: 1.0d
+			x: 0.5d
 			y: -2.0d
 		}
 		{
@@ -436,7 +442,7 @@
 				item: "mekanismgenerators:advanced_solar_generator"
 				type: "item"
 			}]
-			x: 1.0d
+			x: 0.5d
 			y: -3.0d
 		}
 		{
@@ -464,7 +470,7 @@
 					type: "item"
 				}
 			]
-			x: 5.5d
+			x: 6.5d
 			y: 1.5d
 		}
 		{
@@ -475,7 +481,7 @@
 				item: "thermal:upgrade_augment_1"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 7.0d
 			y: 2.5d
 		}
 		{
@@ -486,7 +492,7 @@
 				item: "powah:dielectric_paste"
 				type: "item"
 			}]
-			x: 4.5d
+			x: 5.5d
 			y: 2.0d
 		}
 		{
@@ -497,7 +503,7 @@
 				item: "powah:energizing_rod_starter"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 5.0d
 			y: 3.0d
 		}
 		{
@@ -511,7 +517,7 @@
 				item: "powah:reactor_starter"
 				type: "item"
 			}]
-			x: 4.5d
+			x: 5.5d
 			y: 4.0d
 		}
 		{
@@ -522,7 +528,7 @@
 				item: "powah:uraninite"
 				type: "item"
 			}]
-			x: 5.0d
+			x: 6.0d
 			y: 3.0d
 		}
 	]

@@ -14,4 +14,19 @@ ServerEvents.recipes((event) => {
     event.replaceInput({ id: "thermal:chiller_ingot_cast" }, "minecraft:nether_brick", "#forge:ingots");
     event.replaceInput({ id: "naturesaura:altar/prismarine" }, "quartz", "botania:quartz_mana");
     event.replaceInput({ id: "naturesaura:color_changer" }, "naturesaura:token_euphoria", "naturesaura:calling_spirit");
+    event.replaceInput(
+        { id: "pneumaticcraft:air_compressor" },
+        "pneumaticcraft:reinforced_bricks",
+        "pneumaticcraft:reinforced_stone"
+    );
+    event.replaceInput(
+        { id: "pneumaticcraft:pressure_chamber_glass" },
+        "pneumaticcraft:reinforced_bricks",
+        "pneumaticcraft:reinforced_stone"
+    );
+    event.replaceInput(
+        { id: "pneumaticcraft:pressure_chamber_wall" },
+        "pneumaticcraft:reinforced_bricks",
+        "pneumaticcraft:reinforced_stone"
+    );
 });

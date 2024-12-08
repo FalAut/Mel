@@ -90,7 +90,15 @@ ItemEvents.tooltip((event) => {
     ]);
 
     event.add(
-        ["thermal:tin_ore", "thermal:lead_ore", "thermal:silver_ore", "thermal:nickel_ore"],
+        [
+            "thermal:tin_ore",
+            "thermal:lead_ore",
+            "thermal:silver_ore",
+            "thermal:nickel_ore",
+            "powah:uraninite_ore_poor",
+            "powah:uraninite_ore",
+            "powah:uraninite_ore_dense",
+        ],
         Text.translate("tooltip.mel.misty_forest_ore").gold()
     );
 

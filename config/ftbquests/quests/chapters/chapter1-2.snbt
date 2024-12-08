@@ -369,17 +369,6 @@
 				type: "item"
 			}]
 			x: -3.5d
-			y: 0.0d
-		}
-		{
-			dependencies: ["198B6F92CB7F3082"]
-			id: "63CBC18A3CC40D45"
-			tasks: [{
-				id: "28564951DA61E839"
-				item: "mel:dream_wings"
-				type: "item"
-			}]
-			x: -3.5d
 			y: -1.0d
 		}
 		{
@@ -785,6 +774,17 @@
 			}]
 			x: 11.5d
 			y: -0.5d
+		}
+		{
+			dependencies: ["198B6F92CB7F3082"]
+			id: "361F553475AC6C8F"
+			tasks: [{
+				id: "6488FA964B9F6198"
+				item: "botania:blacker_lotus"
+				type: "item"
+			}]
+			x: -3.5d
+			y: 0.0d
 		}
 	]
 	title: "{mel.chapter1-2.title}"

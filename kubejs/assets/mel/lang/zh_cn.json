@@ -73,6 +73,10 @@
     "block.mel.modular_runic_altar_core": "模块化符文祭坛核心",
     "block.mel.void_ore_miner_controller": "虚空矿物采掘机控制器",
     "block.mel.terrestrial_agglomeration_crystal": "泰拉凝聚水晶",
+    "block.mel.reinforced_stone_frame": "强化石框架",
+    "block.mel.oil_drilling_rig_controller": "石油钻机控制器",
+    "block.mel.pressure_input": "压力输入口",
+    "block.mel.modular_offering_table_controller": "模块化祭祀控制器",
 
     "mbd2.oak_crucible": "橡木坩埚",
     "mbd2.fired_crucible": "坩埚",
@@ -84,6 +88,8 @@
     "mbd2.modular_runic_altar": "模块化符文祭坛",
     "mbd2.void_ore_miner": "虚空矿物采掘",
     "mbd2.modular_terrestrial_agglomeration": "模块化泰拉凝聚",
+    "mbd2.oil_drilling": "石油钻取",
+    "mbd2.modular_offering": "模块化祭祀",
 
     "fluid.mel.gensousitu": "幻想质",
     "fluid.mel.liquid_mana": "液态魔力",
@@ -103,8 +109,15 @@
     "message.mel.activation_ritual.sacrifice": "在祭坛上献祭一个愿意献祭自己的生物。",
     "message.mel.cant_enter_nether": "你需要狂怒印记才能进入下界",
     "message.mel.enter_maze": "一股神秘的力量将你拖进了迷宫",
-    "message.mel.end_maze": "你到达了迷宫的出口，右键神秘方块即可逃离迷宫",
-    "message.mel.exit_maze": "恭喜你逃出了迷宫",
+    "message.mel.maze_beginning_1": "这里是迷宫的起点",
+    "message.mel.maze_beginning_2": "终点在起点的对角处",
+    "message.mel.maze_beginning_3": "如果你不想走迷宫了，用梦之灯向上看并右键来返回出生点",
+    "message.mel.maze_beginning_4": "祝你好运;)",
+    "message.mel.end_room_1": "恭喜你到达了迷宫的终点！",
+    "message.mel.end_room_2": "右键我的头，我会把你拉上去",
+    "message.mel.end_room_3": "并且为你的耐心与坚持给予丰厚的奖励",
+    "message.mel.locating_maze": "正在定位中...",
+    "message.mel.locating_success": "成功找到迷宫！请观察迷宫罗盘上的指针",
 
     "death.attack.mistDamage": "%1$s 迷失了",
 
