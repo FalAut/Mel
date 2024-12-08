@@ -34,6 +34,32 @@ MBDMachineEvents.onBeforeRecipeModify("mel:colossal_furnace_core", (event) => {
     info.setRecipe(copyRecipe);
 });
 
+MBDMachineEvents.onTick("mel:memory_source_drawing_crystal_core", (event) => {
+    const { machine } = event.event;
+    const { level, pos } = machine;
+    if (!$IMultiController.ofController(level, pos).orElse(null).isFormed()) return;
+    machine.triggerGeckolibAnim("formed");
+
+    const { x, y, z } = pos;
+    let aabb = AABB.of(x - 2, y + 6 - 2, z - 2, x + 2, y + 6 + 2, z + 2);
+    let entities = level.getEntitiesWithin(aabb);
+
+    for (let entity of entities) {
+        if (entity.type == "minecraft:wither" || entity.type == "botania:pink_wither") {
+            entity.setNoAi(true);
+            level.getPlayers().forEach((player) => entity.stopSeenByPlayer(player));
+
+            if (entity.getHealth() >= 150) {
+                entity.attack(entity.damageSources().generic(), 5);
+                entity.setInvulnerableTicks(0);
+            } else {
+                entity.setInvulnerableTicks(100);
+                entity.heal(1);
+            }
+        }
+    }
+});
+
 let cobbleGens = [
     "mel:cobble_gen_tier1",
     "mel:cobble_gen_tier2",

@@ -26,4 +26,12 @@ ServerEvents.tags("block", (event) => {
     event.add("minecraft:mineable/axe", ["mel:infused_wood"]);
     event.add("minecraft:needs_iron_tool", ["mel:reinforced_stone_frame", "mel:futura_block", "mel:source_fluidlink"]);
     event.add("minecraft:mineable/pickaxe", ["mel:reinforced_stone_frame", "mel:futura_block", "mel:source_fluidlink"]);
+
+    event.add("minecraft:wither_immune", [
+        "mel:memory_source_drawing_crystal_core",
+        "botania:bifrost_perm",
+        "botania:light_relay",
+        "forbidden_arcanus:dark_nether_star_block",
+        "ae2:quartz_vibrant_glass",
+    ]);
 });

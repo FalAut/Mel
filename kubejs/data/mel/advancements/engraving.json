@@ -1,0 +1,28 @@
+{
+    "parent": "mel:gold_fiber",
+    "display": {
+        "icon": {
+            "item": "mel:engraving_table"
+        },
+        "title": {
+            "translate": "advancement.mel.engraving.title"
+        },
+        "description": {
+            "translate": "advancement.mel.engraving.desc"
+        },
+        "hidden": false
+    },
+    "criteria": {
+        "engraving": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["mel:engraving_table", "mel:token_base"]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [["engraving"]]
+}

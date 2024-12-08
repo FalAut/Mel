@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/cube_all",
+    "textures": {
+        "all": "mel:block/memory_source_drawing_crystal_core_base"
+    }
+}

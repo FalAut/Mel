@@ -35,7 +35,7 @@ PlayerEvents.tick((event) => {
         let foundDreamLamp = player.inventory.allItems.some((item) => processDreamLantern(item, player));
 
         if (!foundDreamLamp) {
-            let curiosInventory = $CuriosApi.getCuriosInventory(player).resolve().get();
+            let curiosInventory = $CuriosApi.getCuriosInventory(player).orElse(null);
             foundDreamLamp = curiosInventory.equippedCurios.allItems.some((item) => processDreamLantern(item, player));
         }
 
@@ -43,5 +43,14 @@ PlayerEvents.tick((event) => {
             player.sendData("has_dream_lantern", { hasDreamLantern: false });
             player.attack(getDamageSource(level, "mel:mist"), 10);
         }
+    }
+});
+
+EntityEvents.death("player", (event) => {
+    const { source } = event;
+    const /**@type {Internal.ServerPlayer} */ player = event.player;
+
+    if (source.getType() == "mistDamage" && !player.isAdvancementDone("mel:mist_die")) {
+        player.unlockAdvancement("mel:mist_die");
     }
 });

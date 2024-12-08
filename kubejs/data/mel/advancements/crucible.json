@@ -1,0 +1,28 @@
+{
+    "parent": "mel:oak_sapling",
+    "display": {
+        "icon": {
+            "item": "mel:fired_crucible"
+        },
+        "title": {
+            "translate": "advancement.mel.crucible.title"
+        },
+        "description": {
+            "translate": "advancement.mel.crucible.desc"
+        },
+        "hidden": false
+    },
+    "criteria": {
+        "crucible": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["mel:fired_crucible", "mel:oak_crucible"]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [["crucible"]]
+}

@@ -33,6 +33,8 @@
     "item.mel.pseudo_inversion_sigil": "伪逆徽章",
     "item.mel.portable_crafting_table": "便携式工作台",
     "item.mel.tyumen_ingot": "秋明锭",
+    "item.mel.ether_memory_source_bucket": "以太忆源桶",
+    "item.mel.pink_memory_source_bucket": "粉红忆源桶",
 
     "block.mel.infused_wood": "灌注之木",
     "block.mel.misty_forest_portal": "迷雾森林传送门",
@@ -77,6 +79,9 @@
     "block.mel.oil_drilling_rig_controller": "石油钻机控制器",
     "block.mel.pressure_input": "压力输入口",
     "block.mel.modular_offering_table_controller": "模块化祭祀控制器",
+    "block.mel.memory_source_drawing_crystal_core": "忆源汲取水晶核心",
+    "block.mel.ether_memory_source": "以太忆源",
+    "block.mel.pink_memory_source": "粉红忆源",
 
     "mbd2.oak_crucible": "橡木坩埚",
     "mbd2.fired_crucible": "坩埚",
@@ -90,6 +95,7 @@
     "mbd2.modular_terrestrial_agglomeration": "模块化泰拉凝聚",
     "mbd2.oil_drilling": "石油钻取",
     "mbd2.modular_offering": "模块化祭祀",
+    "mbd2.memory_source_drawing": "忆源汲取",
 
     "fluid.mel.gensousitu": "幻想质",
     "fluid.mel.liquid_mana": "液态魔力",
@@ -97,6 +103,8 @@
     "fluid.mel.molten_ender": "熔融末影珍珠",
     "fluid.mel.molten_lumium": "熔融流明",
     "fluid.mel.molten_signalum": "熔融信素",
+    "fluid.mel.ether_memory_source": "以太忆源",
+    "fluid.mel.pink_memory_source": "粉红忆源",
 
     "message.mel.clickme": "→【点我】← ",
     "message.mel.clickopen": "点我打开",
@@ -127,7 +135,7 @@
     "tooltip.mel.pseudo_inversion_sigil": "我有我自己的规则。",
     "tooltip.mel.meteorite_compass1": "右键定位最近的迷宫",
     "tooltip.mel.meteorite_compass2": "罗盘上的指针会指向迷宫存在的方向",
-    "tooltip.mel.meteorite_compass3": "若罗盘快速旋转，则代表当前区块存在迷宫（迷宫生成在地下）",
+    "tooltip.mel.meteorite_compass3": "若罗盘快速旋转，则代表当前区块存在迷宫（迷宫生成在地下Y20处）",
     "tooltip.mel.dream_latern": "右键返回重生点",
     "tooltip.mel.black_lotus": "将神秘花扔入虚空转化而来",
     "tooltip.mel.dream_wings": "戴上可获得创造式飞行",
@@ -205,13 +213,36 @@
     "mel.time.hours": "%s 小时",
     "mel.time.days": "%s 天",
 
+    "advancement.mel.root.title": "白纸黑字",
+    "advancement.mel.root.desc": "获得白色混凝土或灰色混凝土",
+    "advancement.mel.oak_sapling.title": "要致富，先撸树",
+    "advancement.mel.oak_sapling.desc": "获得橡木树苗",
+    "advancement.mel.wooden_shears.title": "我出剪刀你出布",
+    "advancement.mel.wooden_shears.desc": "获得木剪刀",
+    "advancement.mel.fire_starter.title": "钻木取火",
+    "advancement.mel.fire_starter.desc": "获得引火器",
+    "advancement.mel.oak_mortar.title": "原始人，启动！",
+    "advancement.mel.oak_mortar.desc": "获得橡木研钵",
+    "advancement.mel.crucible.title": "无中生有",
+    "advancement.mel.crucible.desc": "获得坩埚或橡木坩埚",
+    "advancement.mel.gold_fiber.title": "晒足180天，闪耀纤维美味鲜",
+    "advancement.mel.gold_fiber.desc": "获得闪耀纤维",
+    "advancement.mel.engraving.title": "画板与画布",
+    "advancement.mel.engraving.desc": "获得刻印台或印记模板",
+    "advancement.mel.ancient_aura_generator.title": "咀叶花 - 自然灵气版",
+    "advancement.mel.ancient_aura_generator.desc": "获得远古灵气制造核心",
+    "advancement.mel.mist_die.title": "你这家伙，竟敢无视灯？！",
+    "advancement.mel.mist_die.desc": "在迷雾森林中因迷雾伤害而死亡",
+    "advancement.mel.enter_misty_forest.title": "白色的梦！这是迷雾森林！！！！！",
+    "advancement.mel.enter_misty_forest.desc": "进入迷雾森林",
+
     "mel.welcome.title": "欢迎",
     "mel.capsule.title": "胶囊",
 
     "mel.chapter1.title": "I.聚合",
     "mel.chapter1-1.title": "白纸黑字",
     "mel.chapter1-2.title": "迷雾森林",
-    "mel.chapter1-3.title": "不稳定奇点",
+    "mel.chapter1-3.title": "物质聚合",
 
     "mel.chapter2.title": "II.分割",
     "mel.chapter2-1.title": "异界定址",
@@ -252,5 +283,13 @@
     "mel.chapter1-2.mana_to_source.subtitle": "§6如图所示，可用魔力转化魔源，但只能使用魔力发射器",
     "mel.chapter1-2.elven_portal_conversion.subtitle": "§6在激活的精灵门核心半径5格范围内放置活石，活石会被转化为微光石",
     "mel.chapter1-2.wilden_summon.subtitle": "§6激活仪式之前，务必向仪式火盆投入荒野之角、荒野尖刺、荒野膜翼才能召唤出Boss",
-    "mel.chapter1-2.wilden_summon.desc1": "§c友情提示：这个Boss会爆炸并摧毁方块，请勿在基地中召唤！"
+    "mel.chapter1-2.wilden_summon.desc1": "§c友情提示：这个Boss会爆炸并摧毁方块，请勿在基地中召唤！",
+
+    "mel.chapter1-3.assembly_room.subtitle": "§6→【点我】← 查看装配室的胶囊",
+    "mel.chapter1-3.matter_mixer.subtitle": "§6→【点我】← 查看物质混合机的胶囊",
+    "mel.chapter1-3.void_ore_minner.subtitle": "§6→【点我】← 查看虚空矿物采掘机的胶囊",
+
+    "mel.chapter2-1.enter_nether": "进入下界",
+    "mel.chapter2-1.oil_drilling_rig_subtitle": "§6→【点我】←查看石油钻机的胶囊",
+    "mel.chapter2-1.memory_source_drawing_crystal": "§6→【点我】←查看忆源汲取水晶的胶囊"
 }

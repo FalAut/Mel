@@ -7,4 +7,6 @@ StartupEvents.registry("fluid", (event) => {
     event.create("mel:molten_ender").thinTexture(0x0f594d);
     event.create("mel:molten_lumium");
     event.create("mel:molten_signalum");
+    event.create("mel:ether_memory_source");
+    event.create("mel:pink_memory_source");
 });

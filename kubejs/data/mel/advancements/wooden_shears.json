@@ -1,0 +1,28 @@
+{
+    "parent": "mel:oak_sapling",
+    "display": {
+        "icon": {
+            "item": "mel:wooden_shears"
+        },
+        "title": {
+            "translate": "advancement.mel.wooden_shears.title"
+        },
+        "description": {
+            "translate": "advancement.mel.wooden_shears.desc"
+        },
+        "hidden": false
+    },
+    "criteria": {
+        "wooden_shears": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["mel:wooden_shears"]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [["wooden_shears"]]
+}

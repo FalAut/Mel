@@ -27,6 +27,7 @@
 				id: "56028B0593E0E1C1"
 				type: "dimension"
 			}]
+			title: "{mel.chapter2-1.enter_nether}"
 			x: 1.5d
 			y: 0.0d
 		}
@@ -37,8 +38,8 @@
 				item: "naturesaura:token_terror"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 0.5d
+			x: 1.5d
+			y: 6.0d
 		}
 		{
 			dependencies: ["5D69ACDC565C4370"]
@@ -61,8 +62,8 @@
 				item: "botania:third_eye"
 				type: "item"
 			}]
-			x: 13.5d
-			y: 0.5d
+			x: 0.0d
+			y: 6.0d
 		}
 		{
 			id: "65F0A7C685287E99"
@@ -92,19 +93,21 @@
 					type: "checkmark"
 				}
 			]
-			x: 6.5d
+			x: 6.0d
 			y: 1.0d
 		}
 		{
 			dependencies: ["68DC6BB583EB7A8B"]
 			id: "1FBBB00ACE37C787"
+			shape: "rsquare"
+			size: 1.2d
 			tasks: [{
 				id: "0C16200B4473D9FB"
 				item: "pneumaticcraft:plastic"
 				type: "item"
 			}]
-			x: 7.5d
-			y: 0.5d
+			x: 9.0d
+			y: 0.25d
 		}
 		{
 			dependencies: ["5A600B8B740341C6"]
@@ -146,7 +149,7 @@
 				type: "item"
 			}]
 			x: 7.0d
-			y: -2.0d
+			y: 1.5d
 		}
 		{
 			icon: "pneumaticcraft:refinery"
@@ -164,7 +167,7 @@
 				}
 			]
 			x: 6.0d
-			y: -2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -185,16 +188,28 @@
 					type: "checkmark"
 				}
 			]
-			x: 6.5d
-			y: -0.5d
+			x: 7.0d
+			y: 0.5d
 		}
 		{
 			id: "3BEC41815256249C"
-			tasks: [{
-				id: "39E89A6EA346ECBB"
-				item: "pneumaticcraft:pressure_chamber_wall"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "39E89A6EA346ECBB"
+					item: "pneumaticcraft:pressure_chamber_wall"
+					type: "item"
+				}
+				{
+					id: "69B350AC2C8A873B"
+					item: "pneumaticcraft:pressure_chamber_interface"
+					type: "item"
+				}
+				{
+					id: "46DEB143B931478B"
+					item: "pneumaticcraft:pressure_chamber_valve"
+					type: "item"
+				}
+			]
 			x: 3.5d
 			y: 1.0d
 		}
@@ -226,8 +241,8 @@
 				item: "pneumaticcraft:etching_tank"
 				type: "item"
 			}]
-			x: 9.0d
-			y: 0.5d
+			x: 8.0d
+			y: 2.5d
 		}
 		{
 			dependencies: [
@@ -242,8 +257,8 @@
 				item: "pneumaticcraft:unassembled_pcb"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 2.0d
+			x: 9.0d
+			y: 4.0d
 		}
 		{
 			id: "536027730BA39495"
@@ -252,8 +267,8 @@
 				item: "pneumaticcraft:printed_circuit_board"
 				type: "item"
 			}]
-			x: 11.0d
-			y: 2.0d
+			x: 9.0d
+			y: 5.0d
 		}
 		{
 			id: "6B8F00BFA89CC394"
@@ -279,8 +294,8 @@
 					type: "item"
 				}
 			]
-			x: 11.0d
-			y: 1.0d
+			x: 8.0d
+			y: 5.0d
 		}
 		{
 			id: "1D310031B2F583DC"
@@ -289,24 +304,26 @@
 				item: "pneumaticcraft:amadron_tablet"
 				type: "item"
 			}]
-			x: 11.0d
-			y: -1.0d
+			x: 8.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
 				"58D74210D6ADBA24"
 				"3BEC41815256249C"
+				"317E1E879C1AFCD4"
 			]
 			id: "24F9D51C3F8F2DC7"
 			shape: "square"
 			size: 1.5d
+			subtitle: "{\"translate\":\"mel.chapter2-1.oil_drilling_rig_subtitle\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"593C70FFFA2BF97A\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"message.mel.clickopen\"}}}"
 			tasks: [{
 				id: "577A4CC572270E6B"
 				item: "mel:oil_drilling_rig_controller"
 				type: "item"
 			}]
-			x: 5.25d
-			y: 0.75d
+			x: 4.75d
+			y: 1.0d
 		}
 		{
 			dependencies: [
@@ -319,8 +336,8 @@
 				item: "pneumaticcraft:plastic_bucket"
 				type: "item"
 			}]
-			x: 7.5d
-			y: -0.5d
+			x: 8.0d
+			y: 1.0d
 		}
 		{
 			id: "3838275C1457FBF7"
@@ -329,8 +346,8 @@
 				item: "pneumaticcraft:assembly_program_laser"
 				type: "item"
 			}]
-			x: 11.0d
-			y: 0.0d
+			x: 7.0d
+			y: 6.0d
 		}
 		{
 			id: "691B4A75DD85775F"
@@ -340,17 +357,197 @@
 				type: "item"
 			}]
 			x: 9.0d
-			y: 3.5d
+			y: 2.5d
 		}
 		{
+			dependencies: [
+				"63DFB277C19B9055"
+				"4D880057A9FB5E8D"
+			]
+			icon: "pneumaticcraft:etching_acid_bucket"
 			id: "5AEE147CC808BE52"
-			tasks: [{
-				id: "5603E93D35F81E8E"
-				item: "pneumaticcraft:etching_acid_bucket"
+			tasks: [
+				{
+					id: "5603E93D35F81E8E"
+					item: "pneumaticcraft:etching_acid_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "1B5BE5793874B884"
+					type: "checkmark"
+				}
+			]
+			x: 10.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["317E1E879C1AFCD4"]
+			id: "1D5A679176EAFEC3"
+			rewards: [{
+				count: 16
+				id: "30BC299490E247D2"
+				item: "pneumaticcraft:pressure_tube"
 				type: "item"
 			}]
-			x: 9.0d
-			y: 2.5d
+			tasks: [{
+				id: "58A1D3DF0B5F43F9"
+				item: "pneumaticcraft:air_compressor"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1D5A679176EAFEC3"]
+			id: "0293D32D3E71D7DA"
+			rewards: [{
+				count: 16
+				id: "059B4A7399845ED3"
+				item: "pneumaticcraft:advanced_pressure_tube"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4F64F1E078D89764"
+				item: "pneumaticcraft:advanced_air_compressor"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 3.0d
+		}
+		{
+			id: "678C5EF90340A046"
+			tasks: [{
+				id: "57E4E1EEDC2306D7"
+				item: "pneumaticcraft:heat_frame"
+				type: "item"
+			}]
+			x: 8.5d
+			y: -1.0d
+		}
+		{
+			id: "2F4BAAEA09761E05"
+			tasks: [{
+				id: "7CCBA2C273098805"
+				item: "pneumaticcraft:vortex_tube"
+				type: "item"
+			}]
+			x: 9.5d
+			y: -1.0d
+		}
+		{
+			id: "317E1E879C1AFCD4"
+			tasks: [
+				{
+					id: "12EF0F4A66416668"
+					item: "pneumaticcraft:transistor"
+					type: "item"
+				}
+				{
+					id: "2F47EB6D1FBAFE1F"
+					item: "pneumaticcraft:capacitor"
+					type: "item"
+				}
+			]
+			x: 3.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5D69ACDC565C4370"]
+			id: "2883751D6928971E"
+			tasks: [{
+				id: "455ADAAE549C6B03"
+				item: "minecraft:wither_skeleton_skull"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["2883751D6928971E"]
+			id: "0C7112DF125C73F2"
+			tasks: [{
+				id: "218F9BE44FACEBBC"
+				item: "minecraft:nether_star"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["2883751D6928971E"]
+			id: "23F1DE84E356D56E"
+			tasks: [{
+				id: "48488A38B891227C"
+				item: "mel:division_sigil"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 2.0d
+		}
+		{
+			id: "77140A526C5DFD64"
+			shape: "square"
+			size: 1.5d
+			subtitle: "{\"translate\":\"mel.chapter2-1.memory_source_drawing_crystal_subtitle\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"5A3F137CB30E2EF8\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"message.mel.clickopen\"}}}"
+			tasks: [{
+				id: "29C638193DD3A59D"
+				item: "mel:memory_source_drawing_crystal_core"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["77140A526C5DFD64"]
+			icon: "mel:ether_memory_source_bucket"
+			id: "63DFB277C19B9055"
+			tasks: [
+				{
+					id: "49A09D396FDE6C9B"
+					item: "mel:ether_memory_source_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "246723AE79F56794"
+					type: "checkmark"
+				}
+			]
+			x: 10.7d
+			y: 1.2d
+		}
+		{
+			dependencies: [
+				"77140A526C5DFD64"
+				"24D38824ADA5B6BE"
+			]
+			icon: "mel:pink_memory_source_bucket"
+			id: "4D880057A9FB5E8D"
+			tasks: [
+				{
+					id: "64B688DA22016D0C"
+					item: "mel:pink_memory_source_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "3754A390F502FF48"
+					type: "checkmark"
+				}
+			]
+			x: 11.3d
+			y: 2.3d
+		}
+		{
+			id: "24D38824ADA5B6BE"
+			tasks: [{
+				id: "356AFC343B724EE9"
+				item: "botania:pinkinator"
+				type: "item"
+			}]
+			x: 12.5d
+			y: 2.0d
 		}
 	]
 	title: "{mel.chapter2-1.title}"

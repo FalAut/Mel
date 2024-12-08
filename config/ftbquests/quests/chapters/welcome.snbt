@@ -3,6 +3,7 @@
 	default_quest_shape: ""
 	filename: "welcome"
 	group: ""
+	icon: "minecraft:poppy"
 	id: "3B53D31B7F26A320"
 	order_index: 0
 	quest_links: [ ]

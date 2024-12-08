@@ -1,9 +1,9 @@
 {
     "format_version": "1.8.0",
     "animations": {
-        "working": {
+        "formed": {
             "loop": true,
-            "animation_length": 5,
+            "animation_length": 10,
             "bones": {
                 "core": {
                     "position": [0, 0, 0]
@@ -11,13 +11,7 @@
                 "ring": {
                     "rotation": {
                         "0.0": [0, 0, 0],
-                        "5.0": [0, 360, 0]
-                    }
-                },
-                "ring2": {
-                    "rotation": {
-                        "0.0": [0, 0, 0],
-                        "5.0": [0, 360, 0]
+                        "10.0": [0, 360, 0]
                     }
                 }
             }

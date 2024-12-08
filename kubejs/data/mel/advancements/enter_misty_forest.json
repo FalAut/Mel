@@ -1,0 +1,25 @@
+{
+    "parent": "mel:root",
+    "display": {
+        "icon": {
+            "item": "naturesaura:aura_bloom"
+        },
+        "title": {
+            "translate": "advancement.mel.enter_misty_forest.title"
+        },
+        "description": {
+            "translate": "advancement.mel.enter_misty_forest.desc"
+        },
+        "hidden": false
+    },
+
+    "criteria": {
+        "enter_misty_forest": {
+            "conditions": {
+                "to": "mel:misty_forest"
+            },
+            "trigger": "minecraft:changed_dimension"
+        }
+    },
+    "requirements": [["enter_misty_forest"]]
+}

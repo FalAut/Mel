@@ -3,6 +3,16 @@
 	default_quest_shape: ""
 	filename: "capsule"
 	group: ""
+	icon: {
+		Count: 1
+		id: "capsule:capsule"
+		tag: {
+			color: 16777215
+			overpowered: 1
+			size: 1
+			state: 0
+		}
+	}
 	id: "463C76A9534C4952"
 	order_index: 1
 	quest_links: [ ]
@@ -1074,6 +1084,49 @@
 				}
 			]
 			x: 0.5d
+			y: 5.0d
+		}
+		{
+			icon: "mel:memory_source_drawing_crystal_core"
+			id: "5A3F137CB30E2EF8"
+			tasks: [
+				{
+					id: "5C5E86A34FCDD0C8"
+					item: "mel:memory_source_drawing_crystal_core"
+					type: "item"
+				}
+				{
+					count: 32L
+					id: "0113C5BFA15CE692"
+					item: { Count: 32, id: "forbidden_arcanus:dark_nether_star_block" }
+					type: "item"
+				}
+				{
+					count: 64L
+					id: "3EE707DE91A5D721"
+					item: { Count: 64, id: "ae2:quartz_vibrant_glass" }
+					type: "item"
+				}
+				{
+					count: 58L
+					id: "63341FE4B0C04CDC"
+					item: { Count: 58, id: "ae2:quartz_vibrant_glass" }
+					type: "item"
+				}
+				{
+					count: 59L
+					id: "1757A5B36E5ABF3F"
+					item: { Count: 59, id: "botania:bifrost_perm" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "335DAD95D2CB30AA"
+					item: { Count: 2, id: "botania:light_relay" }
+					type: "item"
+				}
+			]
+			x: 1.5d
 			y: 5.0d
 		}
 	]

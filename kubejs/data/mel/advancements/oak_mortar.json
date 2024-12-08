@@ -1,0 +1,28 @@
+{
+    "parent": "mel:oak_sapling",
+    "display": {
+        "icon": {
+            "item": "mel:oak_mortar"
+        },
+        "title": {
+            "translate": "advancement.mel.oak_mortar.title"
+        },
+        "description": {
+            "translate": "advancement.mel.oak_mortar.desc"
+        },
+        "hidden": false
+    },
+    "criteria": {
+        "oak_mortar": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["mel:oak_mortar", "mel:fire_starter", "mel:wooden_shears"]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [["oak_mortar"]]
+}

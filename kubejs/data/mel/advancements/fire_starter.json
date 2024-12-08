@@ -1,0 +1,28 @@
+{
+    "parent": "mel:oak_sapling",
+    "display": {
+        "icon": {
+            "item": "mel:fire_starter"
+        },
+        "title": {
+            "translate": "advancement.mel.fire_starter.title"
+        },
+        "description": {
+            "translate": "advancement.mel.fire_starter.desc"
+        },
+        "hidden": false
+    },
+    "criteria": {
+        "fire_starter": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["mel:fire_starter"]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [["fire_starter"]]
+}

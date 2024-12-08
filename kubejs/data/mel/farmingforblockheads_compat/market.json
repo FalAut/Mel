@@ -62,6 +62,15 @@
         },
         {
             "output": "thermal:rubberwood_sapling"
+        },
+        {
+            "output": "ars_nouveau:drygmy_se"
+        },
+        {
+            "output": "ars_nouveau:starbuncle_se"
+        },
+        {
+            "output": "ars_nouveau:whirlisprig_se"
         }
     ]
 }

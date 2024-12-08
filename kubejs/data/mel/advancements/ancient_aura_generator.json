@@ -1,0 +1,28 @@
+{
+    "parent": "mel:gold_fiber",
+    "display": {
+        "icon": {
+            "item": "mel:ancient_aura_generator_core"
+        },
+        "title": {
+            "translate": "advancement.mel.ancient_aura_generator.title"
+        },
+        "description": {
+            "translate": "advancement.mel.ancient_aura_generator.desc"
+        },
+        "hidden": false
+    },
+    "criteria": {
+        "ancient_aura_generator": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["mel:ancient_aura_generator_core"]
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [["ancient_aura_generator"]]
+}

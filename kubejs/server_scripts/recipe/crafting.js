@@ -19,6 +19,8 @@ ServerEvents.recipes((event) => {
         });
     }
 
+    fourShaped("forbidden_arcanus:dark_nether_star_block", "forbidden_arcanus:dark_nether_star");
+
     function fullShaped(/**@type  {OutputItem_} */ output, /**@type  {InputItem_} */ input) {
         kubejs.shaped(output, ["AAA", "AAA", "AAA"], {
             A: input,
