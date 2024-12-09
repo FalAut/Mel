@@ -27,19 +27,23 @@
 				id: "56028B0593E0E1C1"
 				type: "dimension"
 			}]
-			title: "{mel.chapter2-1.enter_nether}"
+			title: "{mel.chapter2-1.enter_nether.subtitle}"
 			x: 1.5d
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"6B8F00BFA89CC394"
+				"3838275C1457FBF7"
+			]
 			id: "1252BBA8CDBBDE22"
 			tasks: [{
 				id: "093C66AAEEB28D59"
 				item: "naturesaura:token_terror"
 				type: "item"
 			}]
-			x: 1.5d
-			y: 6.0d
+			x: 6.2d
+			y: 5.5d
 		}
 		{
 			dependencies: ["5D69ACDC565C4370"]
@@ -62,8 +66,8 @@
 				item: "botania:third_eye"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: 4.7d
+			y: 5.5d
 		}
 		{
 			id: "65F0A7C685287E99"
@@ -261,6 +265,7 @@
 			y: 4.0d
 		}
 		{
+			dependencies: ["389426113D3733E0"]
 			id: "536027730BA39495"
 			tasks: [{
 				id: "0B186DFC927CA475"
@@ -271,7 +276,11 @@
 			y: 5.0d
 		}
 		{
+			dependencies: ["536027730BA39495"]
+			icon: "pneumaticcraft:assembly_laser"
 			id: "6B8F00BFA89CC394"
+			shape: "rsquare"
+			size: 1.2d
 			tasks: [
 				{
 					id: "188176EA2C43CD4A"
@@ -294,17 +303,18 @@
 					type: "item"
 				}
 			]
-			x: 8.0d
+			x: 7.5d
 			y: 5.0d
 		}
 		{
+			dependencies: ["536027730BA39495"]
 			id: "1D310031B2F583DC"
 			tasks: [{
 				id: "00D4CE8ECD527729"
 				item: "pneumaticcraft:amadron_tablet"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 8.5d
 			y: 6.0d
 		}
 		{
@@ -316,7 +326,7 @@
 			id: "24F9D51C3F8F2DC7"
 			shape: "square"
 			size: 1.5d
-			subtitle: "{\"translate\":\"mel.chapter2-1.oil_drilling_rig_subtitle\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"593C70FFFA2BF97A\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"message.mel.clickopen\"}}}"
+			subtitle: "{\"translate\":\"mel.chapter2-1.oil_drilling_rig.subtitle\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"593C70FFFA2BF97A\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"message.mel.clickopen\"}}}"
 			tasks: [{
 				id: "577A4CC572270E6B"
 				item: "mel:oil_drilling_rig_controller"
@@ -330,23 +340,32 @@
 				"0FEC2B098199EC64"
 				"7A05BB6A1C7BA60B"
 			]
+			icon: "pneumaticcraft:plastic_bucket"
 			id: "68DC6BB583EB7A8B"
-			tasks: [{
-				id: "357983295C6E29A1"
-				item: "pneumaticcraft:plastic_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "357983295C6E29A1"
+					item: "pneumaticcraft:plastic_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "1771B7EAFE3A8F54"
+					type: "checkmark"
+				}
+			]
 			x: 8.0d
 			y: 1.0d
 		}
 		{
+			dependencies: ["1D310031B2F583DC"]
 			id: "3838275C1457FBF7"
 			tasks: [{
 				id: "0F0B3938DF5569AD"
 				item: "pneumaticcraft:assembly_program_laser"
 				type: "item"
 			}]
-			x: 7.0d
+			x: 7.5d
 			y: 6.0d
 		}
 		{
@@ -471,7 +490,7 @@
 				item: "minecraft:nether_star"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 1.0d
 			y: 2.0d
 		}
 		{
@@ -482,14 +501,14 @@
 				item: "mel:division_sigil"
 				type: "item"
 			}]
-			x: 1.0d
+			x: 2.0d
 			y: 2.0d
 		}
 		{
 			id: "77140A526C5DFD64"
 			shape: "square"
 			size: 1.5d
-			subtitle: "{\"translate\":\"mel.chapter2-1.memory_source_drawing_crystal_subtitle\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"5A3F137CB30E2EF8\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"message.mel.clickopen\"}}}"
+			subtitle: "{\"translate\":\"mel.chapter2-1.memory_source_drawing_crystal.subtitle\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"5A3F137CB30E2EF8\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"message.mel.clickopen\"}}}"
 			tasks: [{
 				id: "29C638193DD3A59D"
 				item: "mel:memory_source_drawing_crystal_core"
@@ -548,6 +567,28 @@
 			}]
 			x: 12.5d
 			y: 2.0d
+		}
+		{
+			dependencies: ["0C7112DF125C73F2"]
+			id: "642C3EA9683096F5"
+			tasks: [{
+				id: "6F6824B6F64AF546"
+				item: "minecraft:beacon"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0C7112DF125C73F2"]
+			id: "0779B7FDD676E3FD"
+			tasks: [{
+				id: "614DE823FD636CC4"
+				item: "mel:empty_nether_star"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 3.0d
 		}
 	]
 	title: "{mel.chapter2-1.title}"

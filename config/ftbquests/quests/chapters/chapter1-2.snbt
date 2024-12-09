@@ -778,6 +778,11 @@
 		{
 			dependencies: ["198B6F92CB7F3082"]
 			id: "361F553475AC6C8F"
+			rewards: [{
+				id: "2CB98E8E598DA236"
+				item: "botania:blacker_lotus"
+				type: "item"
+			}]
 			tasks: [{
 				id: "6488FA964B9F6198"
 				item: "botania:blacker_lotus"

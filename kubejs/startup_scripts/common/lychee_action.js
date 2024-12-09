@@ -1,6 +1,6 @@
 LycheeEvents.customAction("add_solar", (event) => {
     event.action.applyFunc = (recipe, ctx, times) => {
-        /**@type {Internal.Entity} */
+        /**@type {Internal.ItemEntity} */
         let itemEntity = ctx.getParam("this_entity");
         let count = itemEntity.item.count;
 
@@ -90,5 +90,31 @@ LycheeEvents.customAction("addition_sigil_activation", (event) => {
         lightningBoltEntity.setVisualOnly(true);
         lightningBoltEntity.moveTo(Vec3d.atCenterOf(block.pos));
         lightningBoltEntity.spawn();
+    };
+});
+
+LycheeEvents.customAction("beacon_action", (event) => {
+    event.action.applyFunc = (recipe, ctx, times) => {
+        /**@type {Internal.ItemEntity} */
+        let itemEntity = ctx.getParam("this_entity");
+
+        let random = Utils.getRandom();
+        let deltaMovement = new Vec3d(
+            random.nextGaussian() * 0.01 + 0.03,
+            random.nextGaussian() * 0.05 + 0.1,
+            random.nextGaussian() * 0.01 + 0.03
+        );
+
+        let oldCount = itemEntity.item.count;
+
+        itemEntity.setItem("minecraft:nether_star");
+        itemEntity.item.setCount(oldCount);
+        itemEntity.setDeltaMovement(deltaMovement);
+        itemEntity.setNoGravity(true);
+        itemEntity.setGlowing(true);
+
+        const { x, y, z } = itemEntity;
+
+        itemEntity.level.spawnParticles("end_rod", true, x, y, z, 0, 0, 0, 20, 0.1);
     };
 });

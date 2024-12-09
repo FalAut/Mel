@@ -3,6 +3,38 @@ ServerEvents.recipes((event) => {
         type: "ars_nouveau:imbuement",
         count: 1,
         input: {
+            item: "minecraft:nether_star",
+        },
+        output: "mel:memory_source_gem",
+        pedestalItems: [
+            {
+                item: {
+                    item: "botania:elementium_ingot",
+                },
+            },
+            {
+                item: {
+                    item: "botania:dragonstone",
+                },
+            },
+            {
+                item: {
+                    item: "ars_nouveau:source_gem",
+                },
+            },
+            {
+                item: {
+                    item: "botania:pixie_dust",
+                },
+            },
+        ],
+        source: 2000,
+    });
+
+    event.custom({
+        type: "ars_nouveau:imbuement",
+        count: 1,
+        input: {
             item: "botania:shimmerrock",
         },
         output: "ars_nouveau:source_gem",

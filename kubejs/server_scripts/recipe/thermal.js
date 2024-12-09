@@ -13,4 +13,23 @@ ServerEvents.recipes((event) => {
         "minecraft:clay_ball",
         "fluxnetworks:flux_dust",
     ]);
+
+    thermal.smelter("forbidden_arcanus:dark_nether_star", [
+        "minecraft:nether_star",
+        "forbidden_arcanus:processed_obsidian_block",
+        "forbidden_arcanus:dark_matter",
+    ]);
+
+    thermal.smelter("forbidden_arcanus:obsidian_with_iron", ["obsidian", "iron_block"]);
+    thermal.smelter("forbidden_arcanus:dark_matter", [
+        "ae2:matter_ball",
+        "botania:black_lotus",
+        "naturesaura:tainted_gold",
+    ]);
+
+    thermal.smelter("64x forbidden_arcanus:dark_matter", [
+        "ae2:matter_ball",
+        "botania:blacker_lotus",
+        "naturesaura:tainted_gold",
+    ]);
 });

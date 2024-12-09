@@ -37,7 +37,11 @@ MBDMachineEvents.onBeforeRecipeModify("mel:colossal_furnace_core", (event) => {
 MBDMachineEvents.onTick("mel:memory_source_drawing_crystal_core", (event) => {
     const { machine } = event.event;
     const { level, pos } = machine;
-    if (!$IMultiController.ofController(level, pos).orElse(null).isFormed()) return;
+
+    if (!$IMultiController.ofController(level, pos).orElse(null).isFormed() || machine.machineStateName != "working") {
+        return;
+    }
+
     machine.triggerGeckolibAnim("formed");
 
     const { x, y, z } = pos;

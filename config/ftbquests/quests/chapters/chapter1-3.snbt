@@ -135,7 +135,7 @@
 			id: "610A725A0DF114D0"
 			shape: "square"
 			size: 1.5d
-			subtitle: "{\"translate\":\"mel.chapter1-3.assembly_room_subtitle\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"16DC6C2BE109C5E8\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"message.mel.clickopen\"}}}"
+			subtitle: "{\"translate\":\"mel.chapter1-3.assembly_room.subtitle\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"16DC6C2BE109C5E8\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"message.mel.clickopen\"}}}"
 			tasks: [{
 				id: "0DE72ECF063E6C81"
 				item: "mel:assembly_room_controller"
@@ -336,7 +336,7 @@
 			id: "2C16FE50E04573D0"
 			shape: "square"
 			size: 1.5d
-			subtitle: "{\"translate\":\"mel.chapter1-3.matter_mixer_subtitle\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"298B029C5CFEADA3\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"message.mel.clickopen\"}}}"
+			subtitle: "{\"translate\":\"mel.chapter1-3.matter_mixer.subtitle\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"298B029C5CFEADA3\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"message.mel.clickopen\"}}}"
 			tasks: [{
 				id: "0CDB9036F41E36B5"
 				item: "mel:matter_mixer_controller"
@@ -374,7 +374,7 @@
 			id: "4BD0A50CA5194D45"
 			shape: "square"
 			size: 1.5d
-			subtitle: "{\"translate\":\"mel.chapter1-3.void_ore_minner_subtitle\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"4D2F655DD344ED44\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"message.mel.clickopen\"}}}"
+			subtitle: "{\"translate\":\"mel.chapter1-3.void_ore_minner.subtitle\",\"clickEvent\":{\"action\":\"change_page\",\"value\":\"4D2F655DD344ED44\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"message.mel.clickopen\"}}}"
 			tasks: [{
 				id: "5550FFC44ABEAA15"
 				item: "mel:void_ore_miner_controller"

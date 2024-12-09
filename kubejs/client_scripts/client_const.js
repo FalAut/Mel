@@ -1,4 +1,8 @@
 // priority: 99
+const $BeaconRenderer = Java.loadClass("net.minecraft.client.renderer.blockentity.BeaconRenderer");
+const DEG_TO_RAD = 0.01745329238474369;
+const NO_OVERLAY = 655360;
+const FULL_BRIGHT = 15728880;
 
 const $RenderSystem = Java.loadClass("com.mojang.blaze3d.systems.RenderSystem");
 const $HUDHandler = Java.loadClass("vazkii.botania.client.gui.HUDHandler");

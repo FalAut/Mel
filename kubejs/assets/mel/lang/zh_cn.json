@@ -35,6 +35,8 @@
     "item.mel.tyumen_ingot": "秋明锭",
     "item.mel.ether_memory_source_bucket": "以太忆源桶",
     "item.mel.pink_memory_source_bucket": "粉红忆源桶",
+    "item.mel.empty_nether_star": "空下界之星",
+    "item.mel.memory_source_gem": "忆源宝石",
 
     "block.mel.infused_wood": "灌注之木",
     "block.mel.misty_forest_portal": "迷雾森林传送门",
@@ -186,6 +188,7 @@
     "tooltip.mel.terrestrial_agglomeration_crystal_1": "放置在泰拉凝聚祭坛的上方（与微光平行，详情见JEI）来成型模块化",
     "tooltip.mel.terrestrial_agglomeration_crystal_2": "在模块化中作为§b魔力输入§r的部分，支持§e火花§r（在连接新火花时需要手动重置）",
     "tooltip.mel.terrestrial_agglomeration_crystal_3": "模块化中的任意§e框纹活木板§r可替换为§a物品输入口§r或§c物品输出口§r",
+    "tooltip.mel.memory_source_drawing_crystal_fuel": "§a每颗忆源宝石可提供 1 分钟的汲取时间",
 
     "biome.mel.black_and_white": "黑与白",
     "biome.mel.misty_forest": "迷雾森林",
@@ -200,6 +203,8 @@
 
     "desc.mel.source_flower.cost": "魔源: %s%%",
     "desc.mel.source_flower.time": "时间: %s秒",
+
+    "jei.mel.category.beacon_convert": "信标转化",
 
     "config.jade.plugin_mel.numerical_source": "魔源定量统计",
     "config.jade.plugin_mel.numerical_mana": "魔力定量统计",
@@ -233,7 +238,7 @@
     "advancement.mel.ancient_aura_generator.desc": "获得远古灵气制造核心",
     "advancement.mel.mist_die.title": "你这家伙，竟敢无视灯？！",
     "advancement.mel.mist_die.desc": "在迷雾森林中因迷雾伤害而死亡",
-    "advancement.mel.enter_misty_forest.title": "白色的梦！这是迷雾森林！！！！！",
+    "advancement.mel.enter_misty_forest.title": "白色的梦！这是迷雾森林！",
     "advancement.mel.enter_misty_forest.desc": "进入迷雾森林",
 
     "mel.welcome.title": "欢迎",
@@ -289,7 +294,7 @@
     "mel.chapter1-3.matter_mixer.subtitle": "§6→【点我】← 查看物质混合机的胶囊",
     "mel.chapter1-3.void_ore_minner.subtitle": "§6→【点我】← 查看虚空矿物采掘机的胶囊",
 
-    "mel.chapter2-1.enter_nether": "进入下界",
-    "mel.chapter2-1.oil_drilling_rig_subtitle": "§6→【点我】←查看石油钻机的胶囊",
-    "mel.chapter2-1.memory_source_drawing_crystal": "§6→【点我】←查看忆源汲取水晶的胶囊"
+    "mel.chapter2-1.enter_nether.subtitle": "进入下界",
+    "mel.chapter2-1.oil_drilling_rig.subtitle": "§6→【点我】←查看石油钻机的胶囊",
+    "mel.chapter2-1.memory_source_drawing_crystal.subtitle": "§6→【点我】←查看忆源汲取水晶的胶囊"
 }

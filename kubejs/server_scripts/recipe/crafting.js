@@ -76,6 +76,7 @@ ServerEvents.recipes((event) => {
 
     kubejs.shapeless("mel:futura_block", "ae2:controller").keepIngredient("ae2:controller");
     kubejs.shapeless("2x botania:blacker_lotus", "botania:blacker_lotus");
+    kubejs.shaped("4x forbidden_arcanus:dark_nether_star", "forbidden_arcanus:dark_nether_star_block");
 
     kubejs.shaped("bucket", ["A A", " A "], {
         A: "white_concrete",
@@ -437,5 +438,23 @@ ServerEvents.recipes((event) => {
         B: "naturesaura:sky_ingot",
         C: "naturesaura:token_joy",
         D: "minecraft:gold_block",
+    });
+
+    kubejs.shaped("mel:empty_nether_star", [" A ", "ABA", " A "], {
+        A: "pneumaticcraft:plastic",
+        B: "ae2:quartz_vibrant_glass",
+    });
+
+    kubejs.shaped("mel:memory_source_drawing_crystal_core", ["ABA", "BCB", "ABA"], {
+        A: "forbidden_arcanus:dark_nether_star_block",
+        B: "mel:memory_source_gem",
+        C: "mel:unstable_singularity",
+    });
+
+    kubejs.shaped("naturesaura:depth_ingot", ["ABA", "CDC", "ABA"], {
+        A: "minecraft:netherite_scrap",
+        B: "naturesaura:sky_ingot",
+        C: "naturesaura:tainted_gold",
+        D: "botania:terrasteel_nugget",
     });
 });

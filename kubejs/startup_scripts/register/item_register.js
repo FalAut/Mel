@@ -8,6 +8,8 @@ StartupEvents.registry("item", (event) => {
     event.create("mel:whos_gift").glow(true);
     event.create("mel:portable_crafting_table").unstackable().tag("curios:portable_crafting_table");
     event.create("mel:tyumen_ingot").glow(true).rarity("epic");
+    event.create("mel:empty_nether_star");
+    event.create("mel:memory_source_gem").rarity("epic");
     event
         .create("mel:sun_crystal")
         .rarity("rare")
