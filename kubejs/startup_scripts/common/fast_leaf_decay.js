@@ -1,5 +1,3 @@
-//
-
 global.plannedUpdates = [];
 global.scheduledUpdates = [];
 
