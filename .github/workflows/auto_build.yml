@@ -12,17 +12,18 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            # 1. Checkout repository with sufficient history
+            # 1. Checkout repository with full history to access tags
             - name: Checkout repository
               uses: actions/checkout@v4
               with:
-                  fetch-depth: 2 # 获取至少两个提交以比较更改
+                  fetch-depth: 0 # Fetch all history to include tags
 
-            # 2. Set up Git environment
+            # 2. Set up Git environment with specific user using PAT
             - name: Set up Git environment
               run: |
-                  git config --global user.name "github-actions[bot]"
-                  git config --global user.email "github-actions[bot]@users.noreply.github.com"
+                  git config --global user.name "Your Name"
+                  git config --global user.email "your-email@example.com"
+                  git remote set-url origin https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${{ github.repository }}
 
             # 3. Check if CHANGELOG.md was modified and extract latest version
             - name: Check CHANGELOG.md modification and set up environment
@@ -77,7 +78,14 @@ jobs:
               if: steps.setup.outputs.changelog_modified == 'true' && steps.changed_files.outputs.changed_files != ''
               run: |
                   mkdir -p updater/hashes/${{ env.VERSION }}
-                  find updater/hotfixes/${{ env.VERSION }} -type f -exec sha256sum {} \; > updater/hashes/${{ env.VERSION }}/hashes.txt
+                  find updater/hotfixes/${{ env.VERSION }} -type f | while read -r filepath; do
+                    # Remove 'updater/hotfixes/{VERSION}/' from filepath
+                    relative_path=${filepath#updater/hotfixes/${{ env.VERSION }}/}
+                    # Compute sha256 hash
+                    hash=$(sha256sum "$filepath" | awk '{print $1}')
+                    # Output in 'path|hash' format
+                    echo "${relative_path}|${hash}"
+                  done > updater/hashes/${{ env.VERSION }}/hashes.txt
 
             # 8. Extract current version's CHANGELOG and save to updater/versions/{VERSION}/changelog.txt
             - name: Extract CHANGELOG for current version
@@ -137,7 +145,14 @@ jobs:
                   git commit -m "Add hotfixes, hashes, versions for version $VERSION and update meta.json" || echo "No changes to commit"
                   git push
 
-            # 12. Create and package modpack
+            # 12. Create a git tag for the new version
+            - name: Create git tag
+              if: steps.setup.outputs.changelog_modified == 'true'
+              run: |
+                  git tag "v${{ env.VERSION }}"
+                  git push origin "v${{ env.VERSION }}"
+
+            # 13. Create and package modpack
             - name: Create and package modpack
               if: steps.setup.outputs.changelog_modified == 'true'
               run: |
@@ -145,11 +160,13 @@ jobs:
                   mv config defaultconfigs hotai kubejs ldlib overrides/ || echo "Some directories might not exist."
                   zip -r ${{ env.ZIP_NAME }} overrides manifest.json modlist.html
 
-            # 13. Create GitHub Release with changelog
+            # 14. Create GitHub Release with changelog
             - name: Create GitHub Release
               if: steps.setup.outputs.changelog_modified == 'true'
               uses: softprops/action-gh-release@v1
               with:
+                  tag_name: "v${{ env.VERSION }}"
+                  release_name: "Mel v${{ env.VERSION }}"
                   files: ${{ env.ZIP_NAME }}
                   body: |
                       $(cat updater/versions/${{ env.VERSION }}/changelog.txt)
