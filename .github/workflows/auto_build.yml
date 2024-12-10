@@ -135,7 +135,7 @@ jobs:
               if: steps.setup.outputs.changelog_modified == 'true'
               run: |
                   git add -f updater/hotfixes/ updater/hashes/ updater/versions/ updater/meta.json
-                  git commit -m "Update to version $VERSION" || echo "No changes to commit"
+                  git commit -m "为版本 $VERSION" 添加自动更新补丁"
                   git push
 
             # 11. Create a git tag for the new version
