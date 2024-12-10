@@ -8,6 +8,9 @@
 !.github/
 !.github/**
 
+!updater/
+!updater/**
+
 ## Config
 !config/
 !config/fml.toml
