@@ -1,1 +1,2 @@
-8914091f320b77a5be124bbf804379e0a11c7db0b37d48ad99605f06b4ef856a  updater/hotfixes/0.0.8/kubejs/client_scripts/network_client.js
+kubejs/client_scripts/network_client.js|f3580145d50d4e1d946905e3c58aeaa23469de9b4abad31c57ff6004e427d7c5
+.github/workflows/auto_build.yml|6c4918a571208d7450e3f900b79bced55d6b450631a5b41ccf94ff63486d51c8
