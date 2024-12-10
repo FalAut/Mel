@@ -1,177 +1,180 @@
 name: Create Modpack Release and Handle Updater Files
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - "CHANGELOG.md"
+    push:
+        branches:
+            - main
+        paths:
+            - "CHANGELOG.md"
 
 jobs:
-  create-release:
-    runs-on: ubuntu-latest
+    create-release:
+        runs-on: ubuntu-latest
 
-    steps:
-      # 1. Checkout repository with full history to access tags
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # Fetch all history to include tags
+        steps:
+            # 1. Checkout repository with full history to access tags
+            - name: Checkout repository
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0 # Fetch all history to include tags
 
-      # 2. Set up Git environment with specific user using PAT
-      - name: Set up Git environment
-        run: |
-          git config --global user.name "FalAut"
-          git config --global user.email "2907281799@qq.com"
-          git remote set-url origin https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${{ github.repository }}
+            # 2. Set up Git environment with specific user using PAT
+            - name: Set up Git environment
+              run: |
+                  git config --global user.name "FalAut"
+                  git config --global user.email "2907281799@qq.com"
+                  git remote set-url origin https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${{ github.repository }}
 
-      # 3. Check if CHANGELOG.md was modified and extract latest version
-      - name: Check CHANGELOG.md modification and set up environment
-        id: setup
-        run: |
-          if git diff --name-only HEAD^ HEAD | grep -q "CHANGELOG.md"; then
-            LATEST_VERSION=$(sed -n '/^##\s*v[0-9]/p' CHANGELOG.md | head -n1 | sed 's/^## v//')
-            echo "changelog_modified=true" >> $GITHUB_OUTPUT
-            echo "VERSION=$LATEST_VERSION" >> $GITHUB_OUTPUT
-            echo "ZIP_NAME=Mel-$LATEST_VERSION.zip" >> $GITHUB_OUTPUT
-          else
-            echo "changelog_modified=false" >> $GITHUB_OUTPUT
-          fi
+            # 3. Check if CHANGELOG.md was modified and extract latest version
+            - name: Check CHANGELOG.md modification and set up environment
+              id: setup
+              run: |
+                  if git diff --name-only HEAD^ HEAD | grep -q "CHANGELOG.md"; then
+                    LATEST_VERSION=$(sed -n '/^##\s*v[0-9]/p' CHANGELOG.md | head -n1 | sed 's/^## v//')
+                    echo "changelog_modified=true" >> $GITHUB_OUTPUT
+                    echo "VERSION=$LATEST_VERSION" >> $GITHUB_OUTPUT
+                    echo "ZIP_NAME=Mel-$LATEST_VERSION.zip" >> $GITHUB_OUTPUT
+                  else
+                    echo "changelog_modified=false" >> $GITHUB_OUTPUT
+                  fi
 
-      # 4. Set environment variables if CHANGELOG.md was modified
-      - name: Set environment variables
-        if: steps.setup.outputs.changelog_modified == 'true'
-        run: |
-          echo "VERSION=${{ steps.setup.outputs.VERSION }}" >> $GITHUB_ENV
-          echo "ZIP_NAME=${{ steps.setup.outputs.ZIP_NAME }}" >> $GITHUB_ENV
+            # 4. Set environment variables if CHANGELOG.md was modified
+            - name: Set environment variables
+              if: steps.setup.outputs.changelog_modified == 'true'
+              run: |
+                  echo "VERSION=${{ steps.setup.outputs.VERSION }}" >> $GITHUB_ENV
+                  echo "ZIP_NAME=${{ steps.setup.outputs.ZIP_NAME }}" >> $GITHUB_ENV
 
-      # 5. Find changed files in specified directories, excluding CHANGELOG.md and others
-      - name: Find changed files
-        if: steps.setup.outputs.changelog_modified == 'true'
-        id: changed_files
-        run: |
-          # Find all changed files in desired directories
-          CHANGED_FILES=$(git diff --name-only HEAD^ HEAD | grep -E "^(config|defaultconfigs|hotai|kubejs|ldlib)/")
+            # 5. Find changed files in specified directories, excluding CHANGELOG.md and others
+            - name: Find changed files
+              if: steps.setup.outputs.changelog_modified == 'true'
+              id: changed_files
+              run: |
+                  # Check if git diff works and get changed files
+                  CHANGED_FILES=$(git diff --name-only HEAD^ HEAD | grep -E "^(config|defaultconfigs|hotai|kubejs|ldlib)/")
 
-          # Check if there are any changed files
-          if [ -z "$CHANGED_FILES" ]; then
-            echo "No changed files to process."
-            echo "changed_files=" >> $GITHUB_OUTPUT
-          else
-            echo "changed_files<<EOF" >> $GITHUB_OUTPUT
-            echo "$CHANGED_FILES" >> $GITHUB_OUTPUT
-            echo "EOF" >> $GITHUB_OUTPUT
-          fi
+                  # Debugging: Output the files to check
+                  echo "Changed files: $CHANGED_FILES"
 
-      # 6. Create updater/hotfixes directory and copy changed files
-      - name: Copy changed files to updater/hotfixes
-        if: steps.setup.outputs.changelog_modified == 'true' && steps.changed_files.outputs.changed_files != ''
-        run: |
-          mkdir -p updater/hotfixes/${{ env.VERSION }}
-          while IFS= read -r file; do
-            mkdir -p "updater/hotfixes/${{ env.VERSION }}/$(dirname "$file")"
-            cp "$file" "updater/hotfixes/${{ env.VERSION }}/$file"
-          done <<< "${{ steps.changed_files.outputs.changed_files }}"
+                  # Check if any files are found
+                  if [ -z "$CHANGED_FILES" ]; then
+                    echo "No changed files to process."
+                    echo "changed_files=" >> $GITHUB_OUTPUT
+                  else
+                    echo "changed_files<<EOF" >> $GITHUB_OUTPUT
+                    echo "$CHANGED_FILES" >> $GITHUB_OUTPUT
+                    echo "EOF" >> $GITHUB_OUTPUT
+                  fi
 
-      # 7. Generate hashes and save to updater/hashes/{VERSION}/hashes.txt
-      - name: Generate hashes for changed files
-        if: steps.setup.outputs.changelog_modified == 'true' && steps.changed_files.outputs.changed_files != ''
-        run: |
-          mkdir -p updater/hashes/${{ env.VERSION }}
-          find updater/hotfixes/${{ env.VERSION }} -type f | while read -r filepath; do
-            # Remove 'updater/hotfixes/{VERSION}/' from filepath
-            relative_path=${filepath#updater/hotfixes/${{ env.VERSION }}/}
-            # Compute sha256 hash
-            hash=$(sha256sum "$filepath" | awk '{print $1}')
-            # Output in 'path|hash' format
-            echo "${relative_path}|${hash}"
-          done > updater/hashes/${{ env.VERSION }}/hashes.txt
+            # 6. Create updater/hotfixes directory and copy changed files
+            - name: Copy changed files to updater/hotfixes
+              if: steps.setup.outputs.changelog_modified == 'true' && steps.changed_files.outputs.changed_files != ''
+              run: |
+                  mkdir -p updater/hotfixes/${{ env.VERSION }}
+                  while IFS= read -r file; do
+                    mkdir -p "updater/hotfixes/${{ env.VERSION }}/$(dirname "$file")"
+                    cp "$file" "updater/hotfixes/${{ env.VERSION }}/$file"
+                  done <<< "${{ steps.changed_files.outputs.changed_files }}"
 
-      # 8. Extract current version's CHANGELOG and save to updater/versions/{VERSION}/changelog.txt
-      - name: Extract CHANGELOG for current version
-        if: steps.setup.outputs.changelog_modified == 'true'
-        run: |
-          mkdir -p updater/versions/${{ env.VERSION }}
-          sed -n "/^## v${{ env.VERSION }}/,/^## /p" CHANGELOG.md | sed '$d' > updater/versions/${{ env.VERSION }}/changelog.txt
+            # 7. Generate hashes and save to updater/hashes/{VERSION}/hashes.txt
+            - name: Generate hashes for changed files
+              if: steps.setup.outputs.changelog_modified == 'true' && steps.changed_files.outputs.changed_files != ''
+              run: |
+                  mkdir -p updater/hashes/${{ env.VERSION }}
+                  find updater/hotfixes/${{ env.VERSION }} -type f | while read -r filepath; do
+                    # Remove 'updater/hotfixes/{VERSION}/' from filepath
+                    relative_path=${filepath#updater/hotfixes/${{ env.VERSION }}/}
+                    # Compute sha256 hash
+                    hash=$(sha256sum "$filepath" | awk '{print $1}')
+                    # Output in 'path|hash' format
+                    echo "${relative_path}|${hash}"
+                  done > updater/hashes/${{ env.VERSION }}/hashes.txt
 
-      # 9. Update updater/meta.json with new version
-      - name: Update updater/meta.json with new version
-        if: steps.setup.outputs.changelog_modified == 'true'
-        run: |
-          VERSION="${{ env.VERSION }}"
-          RELEASE_TIMESTAMP=$(date +%s%3N)
-          DOWNLOAD_URL="https://github.com/${{ github.repository }}/releases/download/v${VERSION}/Mel-${VERSION}.zip"
+            # 8. Extract current version's CHANGELOG and save to updater/versions/{VERSION}/changelog.txt
+            - name: Extract CHANGELOG for current version
+              if: steps.setup.outputs.changelog_modified == 'true'
+              run: |
+                  mkdir -p updater/versions/${{ env.VERSION }}
+                  sed -n "/^## v${{ env.VERSION }}/,/^## /p" CHANGELOG.md | sed '$d' > updater/versions/${{ env.VERSION }}/changelog.txt
 
-          # Check if updater/meta.json exists, if not initialize it
-          if [ ! -f updater/meta.json ]; then
-            echo '{"schemaVersion":1,"hotfixesFormat":null,"versions":[]}' > updater/meta.json
-          fi
+            # 9. Update updater/meta.json with new version
+            - name: Update updater/meta.json with new version
+              if: steps.setup.outputs.changelog_modified == 'true'
+              run: |
+                  VERSION="${{ env.VERSION }}"
+                  RELEASE_TIMESTAMP=$(date +%s%3N)
+                  DOWNLOAD_URL="https://github.com/${{ github.repository }}/releases/download/v${VERSION}/Mel-${VERSION}.zip"
 
-          # Create new version entry
-          NEW_VERSION_ENTRY=$(jq -n \
-            --arg id "$VERSION" \
-            --argjson releasedAt "$RELEASE_TIMESTAMP" \
-            --arg download_url "$DOWNLOAD_URL" \
-            --arg updateType "major" \
-            '{
-              id: $id,
-              releasedAt: $releasedAt,
-              promotions: {
-                downloads: {
-                  generic: $download_url
-                }
-              },
-              updateType: $updateType
-            }')
+                  # Check if updater/meta.json exists, if not initialize it
+                  if [ ! -f updater/meta.json ]; then
+                    echo '{"schemaVersion":1,"hotfixesFormat":null,"versions":[]}' > updater/meta.json
+                  fi
 
-          # Add new version to updater/meta.json
-          jq --argjson newVersion "$NEW_VERSION_ENTRY" '.versions += [$newVersion]' updater/meta.json > updater/meta_updated.json
-          mv updater/meta_updated.json updater/meta.json
+                  # Create new version entry
+                  NEW_VERSION_ENTRY=$(jq -n \
+                    --arg id "$VERSION" \
+                    --argjson releasedAt "$RELEASE_TIMESTAMP" \
+                    --arg download_url "$DOWNLOAD_URL" \
+                    --arg updateType "major" \
+                    '{
+                      id: $id,
+                      releasedAt: $releasedAt,
+                      promotions: {
+                        downloads: {
+                          generic: $download_url
+                        }
+                      },
+                      updateType: $updateType
+                    }')
 
-          echo "Added version $VERSION to updater/meta.json"
+                  # Add new version to updater/meta.json
+                  jq --argjson newVersion "$NEW_VERSION_ENTRY" '.versions += [$newVersion]' updater/meta.json > updater/meta_updated.json
+                  mv updater/meta_updated.json updater/meta.json
 
-      # 10. Commit and push changes to updater/ directory and updater/meta.json
-      - name: Commit and push updater changes
-        if: steps.setup.outputs.changelog_modified == 'true'
-        run: |
-          git add -f updater/hotfixes/ updater/hashes/ updater/versions/ updater/meta.json
-          git commit -m "为版本 $VERSION 添加自动更新补丁"
-          git push
+                  echo "Added version $VERSION to updater/meta.json"
 
-      # 11. Create a git tag for the new version
-      - name: Create git tag
-        if: steps.setup.outputs.changelog_modified == 'true'
-        run: |
-          git tag "v${{ env.VERSION }}"
-          git push origin "v${{ env.VERSION }}"
+            # 10. Commit and push changes to updater/ directory and updater/meta.json
+            - name: Commit and push updater changes
+              if: steps.setup.outputs.changelog_modified == 'true'
+              run: |
+                  git add -f updater/hotfixes/ updater/hashes/ updater/versions/ updater/meta.json
+                  git commit -m "为版本 $VERSION 添加自动更新补丁"
+                  git push
 
-      # 12. Create and package modpack (overrides and required files only)
-      - name: Create and package modpack
-        if: steps.setup.outputs.changelog_modified == 'true'
-        run: |
-          mkdir -p overrides
-          # Copy only specified directories to overrides
-          cp -r config defaultconfigs hotai kubejs ldlib overrides/ || echo "Some directories might not exist."
-          # Create zip package, only including overrides, manifest.json, and modlist.html
-          zip -r ${{ env.ZIP_NAME }} overrides manifest.json modlist.html
+            # 11. Create a git tag for the new version
+            - name: Create git tag
+              if: steps.setup.outputs.changelog_modified == 'true'
+              run: |
+                  git tag "v${{ env.VERSION }}"
+                  git push origin "v${{ env.VERSION }}"
 
-      # 13. Read changelog for release body
-      - name: Read changelog
-        if: steps.setup.outputs.changelog_modified == 'true'
-        id: read_changelog
-        run: |
-          echo "changelog<<EOF" >> $GITHUB_OUTPUT
-          cat updater/versions/${{ env.VERSION }}/changelog.txt >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
+            # 12. Create and package modpack (overrides and required files only)
+            - name: Create and package modpack
+              if: steps.setup.outputs.changelog_modified == 'true'
+              run: |
+                  mkdir -p overrides
+                  # Copy only specified directories to overrides
+                  cp -r config defaultconfigs hotai kubejs ldlib overrides/ || echo "Some directories might not exist."
+                  # Create zip package, only including overrides, manifest.json, and modlist.html
+                  zip -r ${{ env.ZIP_NAME }} overrides manifest.json modlist.html
 
-      # 14. Create GitHub Release with changelog
-      - name: Create GitHub Release
-        if: steps.setup.outputs.changelog_modified == 'true'
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: "v${{ env.VERSION }}"
-          release_name: "Mel v${{ env.VERSION }}"
-          files: ${{ env.ZIP_NAME }}
-          body: "${{ steps.read_changelog.outputs.changelog }}"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            # 13. Read changelog for release body
+            - name: Read changelog
+              if: steps.setup.outputs.changelog_modified == 'true'
+              id: read_changelog
+              run: |
+                  echo "changelog<<EOF" >> $GITHUB_OUTPUT
+                  cat updater/versions/${{ env.VERSION }}/changelog.txt >> $GITHUB_OUTPUT
+                  echo "EOF" >> $GITHUB_OUTPUT
+
+            # 14. Create GitHub Release with changelog
+            - name: Create GitHub Release
+              if: steps.setup.outputs.changelog_modified == 'true'
+              uses: softprops/action-gh-release@v1
+              with:
+                  tag_name: "v${{ env.VERSION }}"
+                  release_name: "Mel v${{ env.VERSION }}"
+                  files: ${{ env.ZIP_NAME }}
+                  body: "${{ steps.read_changelog.outputs.changelog }}"
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
