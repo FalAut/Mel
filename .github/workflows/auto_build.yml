@@ -50,8 +50,11 @@ jobs:
               if: steps.setup.outputs.changelog_modified == 'true'
               id: changed_files
               run: |
-                  # Check if git diff works and get changed files
-                  CHANGED_FILES=$(git diff --name-only HEAD^ HEAD | grep -E "^(config|defaultconfigs|hotai|kubejs|ldlib)/")
+                  # Check git status to see if there are any changes
+                  git status
+
+                  # Try to find changed files, ignoring errors
+                  CHANGED_FILES=$(git diff --name-only HEAD^ HEAD | grep -E "^(config|defaultconfigs|hotai|kubejs|ldlib)/" || true)
 
                   # Debugging: Output the files to check
                   echo "Changed files: $CHANGED_FILES"
