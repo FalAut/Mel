@@ -266,7 +266,7 @@
     "mel.welcome.projecte.title": "【可选】简单模式",
     "mel.welcome.projecte.subtitle": "你可以自行选择是否需要转化桌",
     "mel.welcome.projecte.desc1": "等价交换模组不存在任务进程中，若不需要可删除此模组，没有影响",
-    "mel.welcome.projecte.desc2": "注意：所有物品的 EMC 被设置为1，只是 EMC 不会显示在物品提示上",
+    "mel.welcome.projecte.desc2": "注意：所有物品的 EMC 被设置为 1，只是 EMC 不会显示在物品提示上",
     "mel.welcome.projecte.desc3": "注意：转换桌不记录 NBT，因此一些特殊的物品（例如：瓶装阳光）无法正常转化",
 
     "mel.capsule.misty_forest_portal_subtitle": "§6→【点我】← 查看如何激活迷雾森林传送门",

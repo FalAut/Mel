@@ -505,6 +505,7 @@
 			y: 2.0d
 		}
 		{
+			dependencies: ["2BF2975073C94B18"]
 			id: "77140A526C5DFD64"
 			shape: "square"
 			size: 1.5d
@@ -589,6 +590,16 @@
 			}]
 			x: 0.5d
 			y: 3.0d
+		}
+		{
+			id: "2BF2975073C94B18"
+			tasks: [{
+				id: "74E2DA5EC5F5019A"
+				item: "mel:memory_source_gem"
+				type: "item"
+			}]
+			x: 12.0d
+			y: -0.5d
 		}
 	]
 	title: "{mel.chapter2-1.title}"

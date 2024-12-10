@@ -38,10 +38,7 @@ MBDMachineEvents.onTick("mel:memory_source_drawing_crystal_core", (event) => {
     const { machine } = event.event;
     const { level, pos } = machine;
 
-    if (!$IMultiController.ofController(level, pos).orElse(null).isFormed() || machine.machineStateName != "working") {
-        return;
-    }
-
+    if (!$IMultiController.ofController(level, pos).orElse(null).isFormed()) return;
     machine.triggerGeckolibAnim("formed");
 
     const { x, y, z } = pos;
@@ -53,12 +50,14 @@ MBDMachineEvents.onTick("mel:memory_source_drawing_crystal_core", (event) => {
             entity.setNoAi(true);
             level.getPlayers().forEach((player) => entity.stopSeenByPlayer(player));
 
-            if (entity.getHealth() >= 150) {
-                entity.attack(entity.damageSources().generic(), 5);
-                entity.setInvulnerableTicks(0);
-            } else {
-                entity.setInvulnerableTicks(100);
-                entity.heal(1);
+            if (machine.machineStateName == "working") {
+                if (entity.getHealth() >= 150) {
+                    entity.attack(entity.damageSources().generic(), 5);
+                    entity.setInvulnerableTicks(0);
+                } else {
+                    entity.setInvulnerableTicks(100);
+                    entity.heal(1);
+                }
             }
         }
     }

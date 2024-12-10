@@ -22,3 +22,10 @@ ClientEvents.tick((event) => {
         event.player.sendData("portable_crafting", { portable_crafting: true });
     }
 });
+
+ClientEvents.loggedIn((event) => {
+    let isFlatField = $ClientLevelData.__javaObject__.getDeclaredField("f_104832_");
+
+    isFlatField.setAccessible(true);
+    isFlatField.setBoolean(event.level.levelData, true);
+});
