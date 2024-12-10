@@ -44,17 +44,25 @@ jobs:
                   echo "VERSION=${{ steps.setup.outputs.VERSION }}" >> $GITHUB_ENV
                   echo "ZIP_NAME=${{ steps.setup.outputs.ZIP_NAME }}" >> $GITHUB_ENV
 
-            # 5. Find changed files
+            # 5. Find changed files excluding CHANGELOG.md
             - name: Find changed files
               if: steps.setup.outputs.changelog_modified == 'true'
               id: changed_files
               run: |
-                  CHANGED_FILES=$(git diff --name-only HEAD^ HEAD)
-                  echo "changed_files=$CHANGED_FILES" >> $GITHUB_OUTPUT
+                  # 获取所有更改的文件，并排除 CHANGELOG.md
+                  CHANGED_FILES=$(git diff --name-only HEAD^ HEAD | grep -v "^CHANGELOG.md$")
+
+                  # 检查是否有其他文件被更改
+                  if [ -z "$CHANGED_FILES" ]; then
+                    echo "No changed files to process."
+                    echo "changed_files=" >> $GITHUB_OUTPUT
+                  else
+                    echo "changed_files=$CHANGED_FILES" >> $GITHUB_OUTPUT
+                  fi
 
             # 6. Create updater/hotfixes directory and copy changed files
             - name: Copy changed files to updater/hotfixes
-              if: steps.setup.outputs.changelog_modified == 'true'
+              if: steps.setup.outputs.changelog_modified == 'true' && steps.changed_files.outputs.changed_files != ''
               run: |
                   mkdir -p updater/hotfixes/${{ env.VERSION }}
                   for file in ${{ steps.changed_files.outputs.changed_files }}; do
@@ -64,7 +72,7 @@ jobs:
 
             # 7. Generate hashes and save to updater/hashes/{VERSION}/hashes.txt
             - name: Generate hashes for changed files
-              if: steps.setup.outputs.changelog_modified == 'true'
+              if: steps.setup.outputs.changelog_modified == 'true' && steps.changed_files.outputs.changed_files != ''
               run: |
                   mkdir -p updater/hashes/${{ env.VERSION }}
                   find updater/hotfixes/${{ env.VERSION }} -type f -exec sha256sum {} \; > updater/hashes/${{ env.VERSION }}/hashes.txt
@@ -76,16 +84,10 @@ jobs:
                   mkdir -p updater/versions/${{ env.VERSION }}
                   sed -n "/^## v${{ env.VERSION }}/,/^## /p" CHANGELOG.md | sed '$d' > updater/versions/${{ env.VERSION }}/changelog.txt
 
-            # 9. Install jq with caching to speed up the process
+            # 9. Install jq
             - name: Install jq
               if: steps.setup.outputs.changelog_modified == 'true'
-              uses: actions/cache@v3
-              with:
-                  path: /usr/bin/jq
-                  key: ${{ runner.os }}-jq
-                  restore-keys: |
-                      ${{ runner.os }}-jq
-            - run: |
+              run: |
                   sudo apt-get update
                   sudo apt-get install -y jq
 
@@ -97,7 +99,12 @@ jobs:
                   RELEASE_TIMESTAMP=$(date +%s%3N)
                   DOWNLOAD_URL="https://github.com/${{ github.repository }}/releases/download/v${VERSION}/Mel-${VERSION}.zip"
 
-                  # Create new version entry
+                  # 检查 updater/meta.json 是否存在，如果不存在则初始化
+                  if [ ! -f updater/meta.json ]; then
+                    echo '{"schemaVersion":1,"hotfixesFormat":null,"versions":[]}' > updater/meta.json
+                  fi
+
+                  # 创建新的版本条目
                   NEW_VERSION_ENTRY=$(jq -n \
                     --arg id "$VERSION" \
                     --argjson releasedAt "$RELEASE_TIMESTAMP" \
@@ -114,7 +121,7 @@ jobs:
                       updateType: $updateType
                     }')
 
-                  # Add new version to updater/meta.json
+                  # 将新版本添加到 updater/meta.json
                   jq --argjson newVersion "$NEW_VERSION_ENTRY" '.versions += [$newVersion]' updater/meta.json > updater/meta_updated.json
                   mv updater/meta_updated.json updater/meta.json
 
@@ -125,7 +132,7 @@ jobs:
               if: steps.setup.outputs.changelog_modified == 'true'
               run: |
                   git add updater/hotfixes/ updater/hashes/ updater/versions/ updater/meta.json
-                  git commit -m "Add hotfixes, hashes, versions for version $VERSION and update meta.json"
+                  git commit -m "Add hotfixes, hashes, versions for version $VERSION and update meta.json" || echo "No changes to commit"
                   git push
 
             # 12. Create and package modpack
@@ -133,7 +140,7 @@ jobs:
               if: steps.setup.outputs.changelog_modified == 'true'
               run: |
                   mkdir -p overrides
-                  mv config defaultconfigs hotai kubejs ldlib overrides/
+                  mv config defaultconfigs hotai kubejs ldlib overrides/ || echo "Some directories might not exist."
                   zip -r ${{ env.ZIP_NAME }} overrides manifest.json modlist.html
 
             # 13. Create GitHub Release with changelog
