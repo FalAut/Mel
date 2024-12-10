@@ -11,6 +11,16 @@
         }
       },
       "updateType": "major"
+    },
+    {
+      "id": "0.1.2",
+      "releasedAt": 1733848877941,
+      "promotions": {
+        "downloads": {
+          "generic": "https://github.com/FalAut/Mel/releases/download/v0.1.2/Mel-0.1.2.zip"
+        }
+      },
+      "updateType": "major"
     }
   ]
 }
