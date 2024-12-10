@@ -21,8 +21,8 @@ jobs:
             # 2. Set up Git environment with specific user using PAT
             - name: Set up Git environment
               run: |
-                  git config --global user.name "test"
-                  git config --global user.email "release-bot@example.com"
+                  git config --global user.name "FalAut"
+                  git config --global user.email "2907281799@qq.com"
                   git remote set-url origin https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${{ github.repository }}
 
             # 3. Check if CHANGELOG.md was modified and extract latest version
@@ -45,15 +45,15 @@ jobs:
                   echo "VERSION=${{ steps.setup.outputs.VERSION }}" >> $GITHUB_ENV
                   echo "ZIP_NAME=${{ steps.setup.outputs.ZIP_NAME }}" >> $GITHUB_ENV
 
-            # 5. Find changed files excluding CHANGELOG.md
+            # 5. Find changed files in specified directories, excluding CHANGELOG.md and others
             - name: Find changed files
               if: steps.setup.outputs.changelog_modified == 'true'
               id: changed_files
               run: |
-                  # 获取所有更改的文件，并排除 CHANGELOG.md
-                  CHANGED_FILES=$(git diff --name-only HEAD^ HEAD | grep -v "^CHANGELOG.md$")
+                  # Find all changed files in desired directories
+                  CHANGED_FILES=$(git diff --name-only HEAD^ HEAD | grep -E "^(config|defaultconfigs|hotai|kubejs|ldlib)/")
 
-                  # 检查是否有其他文件被更改
+                  # Check if there are any changed files
                   if [ -z "$CHANGED_FILES" ]; then
                     echo "No changed files to process."
                     echo "changed_files=" >> $GITHUB_OUTPUT
@@ -102,12 +102,12 @@ jobs:
                   RELEASE_TIMESTAMP=$(date +%s%3N)
                   DOWNLOAD_URL="https://github.com/${{ github.repository }}/releases/download/v${VERSION}/Mel-${VERSION}.zip"
 
-                  # 检查 updater/meta.json 是否存在，如果不存在则初始化
+                  # Check if updater/meta.json exists, if not initialize it
                   if [ ! -f updater/meta.json ]; then
                     echo '{"schemaVersion":1,"hotfixesFormat":null,"versions":[]}' > updater/meta.json
                   fi
 
-                  # 创建新的版本条目
+                  # Create new version entry
                   NEW_VERSION_ENTRY=$(jq -n \
                     --arg id "$VERSION" \
                     --argjson releasedAt "$RELEASE_TIMESTAMP" \
@@ -124,7 +124,7 @@ jobs:
                       updateType: $updateType
                     }')
 
-                  # 将新版本添加到 updater/meta.json
+                  # Add new version to updater/meta.json
                   jq --argjson newVersion "$NEW_VERSION_ENTRY" '.versions += [$newVersion]' updater/meta.json > updater/meta_updated.json
                   mv updater/meta_updated.json updater/meta.json
 
@@ -150,10 +150,9 @@ jobs:
               if: steps.setup.outputs.changelog_modified == 'true'
               run: |
                   mkdir -p overrides
-                  # 复制指定的目录到 overrides
+                  # Copy only specified directories to overrides
                   cp -r config defaultconfigs hotai kubejs ldlib overrides/ || echo "Some directories might not exist."
-                  # 不包括 hashes.txt
-                  # 创建 zip 包，只包含 overrides、manifest.json 和 modlist.html
+                  # Create zip package, only including overrides, manifest.json, and modlist.html
                   zip -r ${{ env.ZIP_NAME }} overrides manifest.json modlist.html
 
             # 13. Read changelog for release body

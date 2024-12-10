@@ -23,7 +23,6 @@ ClientEvents.tick((event) => {
     }
 });
 
-// test
 // clear void
 ClientEvents.loggedIn((event) => {
     let isFlatField = $ClientLevelData.__javaObject__.getDeclaredField("f_104832_");

@@ -8,8 +8,8 @@
 !.github/
 !.github/**
 
-!updater/
-!updater/**
+# !updater/
+# !updater/**
 
 ## Config
 !config/
