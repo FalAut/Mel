@@ -1,5 +1,16 @@
 {
-    "schemaVersion": 1,
-    "hotfixesFormat": null,
-    "versions": []
+  "schemaVersion": 1,
+  "hotfixesFormat": null,
+  "versions": [
+    {
+      "id": "0.1.1",
+      "releasedAt": 1733848030666,
+      "promotions": {
+        "downloads": {
+          "generic": "https://github.com/FalAut/Mel/releases/download/v0.1.1/Mel-0.1.1.zip"
+        }
+      },
+      "updateType": "major"
+    }
+  ]
 }
