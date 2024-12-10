@@ -57,7 +57,9 @@ jobs:
                     echo "No changed files to process."
                     echo "changed_files=" >> $GITHUB_OUTPUT
                   else
-                    echo "changed_files=$CHANGED_FILES" >> $GITHUB_OUTPUT
+                    echo "changed_files<<EOF" >> $GITHUB_OUTPUT
+                    echo "$CHANGED_FILES" >> $GITHUB_OUTPUT
+                    echo "EOF" >> $GITHUB_OUTPUT
                   fi
 
             # 6. Create updater/hotfixes directory and copy changed files
@@ -65,10 +67,10 @@ jobs:
               if: steps.setup.outputs.changelog_modified == 'true' && steps.changed_files.outputs.changed_files != ''
               run: |
                   mkdir -p updater/hotfixes/${{ env.VERSION }}
-                  for file in ${{ steps.changed_files.outputs.changed_files }}; do
+                  while IFS= read -r file; do
                     mkdir -p "updater/hotfixes/${{ env.VERSION }}/$(dirname "$file")"
                     cp "$file" "updater/hotfixes/${{ env.VERSION }}/$file"
-                  done
+                  done <<< "${{ steps.changed_files.outputs.changed_files }}"
 
             # 7. Generate hashes and save to updater/hashes/{VERSION}/hashes.txt
             - name: Generate hashes for changed files
