@@ -30,6 +30,7 @@ ServerEvents.loaded((event) => {
 //     JsonIO.write("kubejs/fuel_items.json", fuelItems);
 // });
 
+//
 // ItemEvents.rightClicked("stick", (event) => {
 //     let allItems = Ingredient.all.stacks.toArray();
 //     let randomIndex = Utils.random.nextInt(allItems.length);

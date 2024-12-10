@@ -1,4 +1,5 @@
 // priority: 99
+
 const $BeaconRenderer = Java.loadClass("net.minecraft.client.renderer.blockentity.BeaconRenderer");
 const DEG_TO_RAD = 0.01745329238474369;
 const NO_OVERLAY = 655360;

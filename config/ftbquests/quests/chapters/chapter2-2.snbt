@@ -359,6 +359,15 @@
 			x: 11.5d
 			y: 0.0d
 		}
+		{
+			id: "5668B161CE2C71F1"
+			tasks: [{
+				id: "5A965042C76CB3C1"
+				type: "checkmark"
+			}]
+			x: 3.0d
+			y: 2.0d
+		}
 	]
 	title: "{mel.chapter2-2.title}"
 }

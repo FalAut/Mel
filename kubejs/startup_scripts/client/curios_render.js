@@ -4,6 +4,8 @@ const $OverlayTexture = Java.loadClass("net.minecraft.client.renderer.texture.Ov
 const $ClientTickHandler = Java.loadClass("vazkii.botania.client.core.handler.ClientTickHandler");
 const $Sheets = Java.loadClass("net.minecraft.client.renderer.Sheets");
 
+//
+
 StartupEvents.postInit((event) => {
     $CuriosRendererRegistry.register(
         "mel:dream_wings",

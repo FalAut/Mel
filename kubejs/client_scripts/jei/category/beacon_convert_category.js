@@ -1,3 +1,5 @@
+//
+
 JEIAddedEvents.registerCategories((event) => {
     event.custom("mel:beacon_convert", (category) => {
         let jeiHelpers = category.getJeiHelpers();
