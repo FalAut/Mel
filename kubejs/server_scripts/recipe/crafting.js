@@ -306,12 +306,6 @@ ServerEvents.recipes((event) => {
         A: "oak_log",
     });
 
-    kubejs.shaped("farmingforblockheads:market", ["ABA", "C C", "CCC"], {
-        A: "#forge:planks/archwood",
-        B: "#forge:dyes/red",
-        C: "#forge:logs/archwood",
-    });
-
     kubejs.shaped("thermal:press_gear_die", [" A ", "A A", " A "], {
         A: "thermal:iron_plate",
     });

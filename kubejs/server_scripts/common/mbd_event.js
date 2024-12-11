@@ -63,48 +63,48 @@ MBDMachineEvents.onTick("mel:memory_source_drawing_crystal_core", (event) => {
     }
 });
 
-let cobbleGens = [
-    "mel:cobble_gen_tier1",
-    "mel:cobble_gen_tier2",
-    "mel:cobble_gen_tier3",
-    "mel:cobble_gen_tier4",
-    "mel:cobble_gen_tier5",
-    "mel:cobble_gen_tier6",
-];
+// let cobbleGens = [
+//     "mel:cobble_gen_tier1",
+//     "mel:cobble_gen_tier2",
+//     "mel:cobble_gen_tier3",
+//     "mel:cobble_gen_tier4",
+//     "mel:cobble_gen_tier5",
+//     "mel:cobble_gen_tier6",
+// ];
 
-MBDMachineEvents.onTick(cobbleGens, (event) => {
-    const { machine } = event.event;
-    const { pos, customData, level } = machine;
-    const ticksExisted = (customData.getInt("ticksExisted") || 0) + 1;
-    customData.putInt("ticksExisted", ticksExisted);
-    if (ticksExisted % 20 != 0) return;
+// MBDMachineEvents.onTick(cobbleGens, (event) => {
+//     const { machine } = event.event;
+//     const { pos, customData, level } = machine;
+//     const ticksExisted = (customData.getInt("ticksExisted") || 0) + 1;
+//     customData.putInt("ticksExisted", ticksExisted);
+//     if (ticksExisted % 20 != 0) return;
 
-    const upBlock = level.getBlock(pos.above());
-    if (!upBlock.entity) return;
+//     const upBlock = level.getBlock(pos.above());
+//     if (!upBlock.entity) return;
 
-    let machinecap = machine.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null);
-    let upCap = upBlock.entity.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null);
+//     let machinecap = machine.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null);
+//     let upCap = upBlock.entity.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null);
 
-    if (!upCap) return;
+//     if (!upCap) return;
 
-    let isFull = true;
-    for (let slot = 0; slot < upCap.slots; slot++) {
-        let stackInSlot = upCap.getStackInSlot(slot);
-        let maxStackSize = stackInSlot.getMaxStackSize();
-        let currentStackSize = stackInSlot.getCount();
+//     let isFull = true;
+//     for (let slot = 0; slot < upCap.slots; slot++) {
+//         let stackInSlot = upCap.getStackInSlot(slot);
+//         let maxStackSize = stackInSlot.getMaxStackSize();
+//         let currentStackSize = stackInSlot.getCount();
 
-        if (stackInSlot.isEmpty() || currentStackSize < maxStackSize) {
-            isFull = false;
-            break;
-        }
-    }
+//         if (stackInSlot.isEmpty() || currentStackSize < maxStackSize) {
+//             isFull = false;
+//             break;
+//         }
+//     }
 
-    if (isFull) return;
+//     if (isFull) return;
 
-    for (let slot = 0; slot < machinecap.slots; slot++) {
-        let extractItem = machinecap.extractItem(slot, 1, false);
-        if (!extractItem.isEmpty()) {
-            upCap.insertItem(extractItem, false);
-        }
-    }
-});
+//     for (let slot = 0; slot < machinecap.slots; slot++) {
+//         let extractItem = machinecap.extractItem(slot, 1, false);
+//         if (!extractItem.isEmpty()) {
+//             upCap.insertItem(extractItem, false);
+//         }
+//     }
+// });

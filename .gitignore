@@ -8,9 +8,6 @@
 !.github/
 !.github/**
 
-# !updater/
-# !updater/**
-
 ## Config
 !config/
 !config/fml.toml
@@ -25,8 +22,6 @@
 !config/invtweaks-client.toml
 !config/ars_nouveau-client.toml
 !config/ars_nouveau-common.toml
-!config/farmingforblockheads
-!config/farmingforblockheads/**
 !config/embeddium-options.json
 !config/embeddium++.toml
 !config/sodium-extra-options.json

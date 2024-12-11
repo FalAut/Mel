@@ -1,0 +1,117 @@
+name: Handle Modpack Updates
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "CHANGELOG.md"
+      - "config/**"
+      - "defaultconfigs/**"
+      - "hotai/**"
+      - "kubejs/**"
+      - "ldlib/**"
+
+jobs:
+  process-updates:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. Checkout current repository
+      - name: Checkout current repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      # 2. Get latest version from CHANGELOG.md
+      - name: Get latest version
+        id: version
+        run: |
+          LATEST_VERSION=$(sed -n '/^##\s*v[0-9]/p' CHANGELOG.md | head -n1 | sed 's/^## v//')
+          PREV_VERSION=$(sed -n '/^##\s*v[0-9]/p' CHANGELOG.md | head -n2 | tail -n1 | sed 's/^## v//')
+          echo "LATEST_VERSION=${LATEST_VERSION}" >> $GITHUB_OUTPUT
+          echo "PREV_VERSION=${PREV_VERSION}" >> $GITHUB_OUTPUT
+          
+      # 3. Find changed files in specified directories
+      - name: Find changed files
+        id: changed_files
+        run: |
+          CHANGED_FILES=$(git diff --name-only HEAD^ HEAD | grep -E "^(config|defaultconfigs|hotai|kubejs|ldlib)/" || true)
+          if [ -n "$CHANGED_FILES" ]; then
+            echo "files<<EOF" >> $GITHUB_OUTPUT
+            echo "$CHANGED_FILES" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          fi
+
+      # 4. Checkout updater repository
+      - name: Checkout updater repository
+        uses: actions/checkout@v4
+        with:
+          repository: FalAut/Mel-updater
+          token: ${{ secrets.UPDATE_REPO_TOKEN }}
+          path: updater-repo
+
+      # 5. Process changed files and generate hashes
+      - name: Process changed files and generate hashes
+        if: steps.changed_files.outputs.files
+        run: |
+          mkdir -p "updater-repo/hotfixes/${{ steps.version.outputs.PREV_VERSION }}"
+          mkdir -p "updater-repo/hashes/${{ steps.version.outputs.PREV_VERSION }}"
+          
+          echo "${{ steps.changed_files.outputs.files }}" | while IFS= read -r file; do
+            # Create directory structure and copy file
+            mkdir -p "updater-repo/hotfixes/${{ steps.version.outputs.PREV_VERSION }}/$(dirname "$file")"
+            cp "$file" "updater-repo/hotfixes/${{ steps.version.outputs.PREV_VERSION }}/$file"
+            
+            # Generate hash
+            HASH=$(sha256sum "$file" | awk '{print $1}')
+            echo "$file|$HASH" >> "updater-repo/hashes/${{ steps.version.outputs.PREV_VERSION }}/hashes.txt"
+          done
+
+      # 6. Extract and save changelog
+      - name: Extract changelog
+        run: |
+          mkdir -p "updater-repo/versions/${{ steps.version.outputs.LATEST_VERSION }}"
+          sed -n "/^## v${{ steps.version.outputs.LATEST_VERSION }}/,/^## /p" CHANGELOG.md | sed '$d' > "updater-repo/versions/${{ steps.version.outputs.LATEST_VERSION }}/changelog.txt"
+
+      # 7. Update meta.json
+      - name: Update meta.json
+        run: |
+          cd updater-repo
+          
+          if [ ! -f meta.json ]; then
+            echo '{"schemaVersion":1,"hotfixesFormat":null,"versions":[]}' > meta.json
+          fi
+          
+          TIMESTAMP=$(date +%s%3N)
+          VERSION="${{ steps.version.outputs.LATEST_VERSION }}"
+          
+          # Create new version entry
+          NEW_VERSION=$(cat <<EOF
+          {
+            "id": "$VERSION",
+            "releasedAt": $TIMESTAMP,
+            "promotions": {
+              "downloads": {
+                "generic": "https://github.com/FalAut/Mel/releases/download/v${VERSION}/Mel-${VERSION}.zip"
+              }
+            },
+            "updateType": "major"
+          }
+          EOF
+          )
+          
+          # Update meta.json
+          jq --argjson new "$NEW_VERSION" '.versions += [$new]' meta.json > meta.json.tmp
+          mv meta.json.tmp meta.json
+
+      # 8. Commit and push changes to updater repository
+      - name: Commit and push changes
+        run: |
+          cd updater-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Update for version ${{ steps.version.outputs.LATEST_VERSION }}"
+          git push

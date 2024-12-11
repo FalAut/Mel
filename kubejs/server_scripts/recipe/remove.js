@@ -76,7 +76,6 @@ ServerEvents.recipes((event) => {
         "occultism:spirit_fire/otherworld_ashes",
         "occultism:spirit_fire/spirit_attuned_gem",
         "occultism:spirit_fire/otherstone",
-        "farmingforblockheads:market",
         "occultism:crafting/goggles",
         "occultism:ritual/craft_soul_gem",
         "forbidden_arcanus:mundabitur_dust",
